@@ -1,0 +1,694 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>HTML y CSS - UPB</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+		
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<!-- <div class="volver">
+				<a href="index.html"><img src="img/volver.png"></a>
+			</div> -->
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Frontend</h1>
+					<blockquote cite="javascript:void(0);">
+						"Any fool can write code that a computer can understand. Good programmers write code that humans can understand." <br>
+						– Martin Fowler 						
+					</blockquote>
+				</section>
+				<section>
+					<section>
+						<h2>Generalidades y conceptos</h1>
+						<ul>
+							<li>¿Qué es un navegador web?</li>
+							<li>¿Qué es una URL?</li>
+							<li>¿Qué es un dominio?</li>
+							<li>¿Qué es un hosting?</li>
+							<li>¿Qué es FTP?</li>
+						</ul>
+					</section>
+					<section>
+						<h2>¿Qué es un navegador web?</h2>
+						<p>
+							Un navegador o navegador web es el programa o aplicación que te permite acceder a los sitios web que visitas a diario como Google, facebook, youtube, etc, ya que éste interpreta su estructura y te los muestra como el diseñador lo ha planeado.
+
+						Entre los ejemplos más populares de navegadores web tenemos a Google Chrome, Apple Safari, Mozilla Firefox, Opera e Internet Explorer.
+						</p>
+					</section>
+					<section>
+						<p>En la actualidad existen gran variedad de navegadores, a diferencia de hace algunos años donde eran muy pocas las opciones para navegar en la web, Microsoft llego a tener un monopolio con su navegador Internet explorer.</p>
+						<img src="img/tema_02/navegadores.png" width="55%" height="55%" alt=""><br>
+						<a href="https://medium.com/samsung-internet-dev/because-browser-diversity-is-good-for-the-web-910d1cbcdf3b">Browser diversity </a>
+					</section>
+					<section>
+						<p>Los navegadores tienen un motor (engine), el cual es un programa que se encarga de interpretar contenido representado en html, asignarle un look & feel gráfico usando css y agregando interacción por medio de js</p>
+						<a href="img/tema_02/browser_engine_functionality.png" target="_blank"><img src="img/tema_02/browser_engine_functionality.png" width="50%" height="50%" alt=""></a>
+					</section>
+					<section>
+						<p>No todos los motores son iguales, por tanto un sitio web, se puede ver de manera diferente en determinados navegadores, desde hace tiempo y gracias a navegadores como Chrome y Firefox, se a procurado un estandar en la interpretación o render de las reglas gráficas y visualización de contenido con la creación de html5</p>
+						<img src="img/tema_02/engines_browsers.png" width="50%" height="50%" alt=""><br>
+						<a href="https://medium.com/@valerii.sukhov/uth-browsers-rendering-engines-9d9731cc8d08">Browsers rendering engines</a>
+					</section>
+					<section>
+						<p>
+							Procurando mayor accesibilidad, los grandes portales y aplicaciones han promovido que los usuarios se muden a navegadores modernos, ya que si se ingresa a aplicaciones como youtube, facebook... desde un navegador obsoleto. 
+						</p>
+						<p>
+							El sitio por lo general no funciona y además aparece un mensaje invitando al usuario a mudarse a un navegador que soporte las nuevas actualizaciones del estandar html5.
+						</p>
+						<a href="https://browsehappy.com/" target="_blank">Navega Feliz :)</a>
+					</section>
+					<section>
+						<h2>¿Cómo es un servidor? (data center)</h2>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/zDAYZU4A3w0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</section>
+					<section>
+						<h2>¿Qué es una URL?</h2>
+						<p>La URL es la dirección específica que se asigna a cada uno de los recursos disponibles en la red con la finalidad de que estos puedan ser localizados o identificados. 
+						</p>
+						<p>
+							Hay un URL para cada uno de los recursos (páginas, archivos, carpetas) que hay en la World Wide Web.</p>
+						<p>
+							El URL sirve para que podamos encontrar aquello que estamos buscando en la red: una página, un sitio, un archivo, un documento, etc. 
+						</p>
+						<a href="https://www.significados.com/url/">fuente:significados.com</a>
+					</section>
+					<section>
+						<img src="img/tema_02/url_imagen.jpg" width="50%" height="50%" alt="">
+						<p>
+							URL o ruta absoluta: Incluyen todas las partes de la URL (protocolo, servidor y ruta) por lo que no se necesita más información para obtener el recurso enlazado.
+						</p>
+						<p>
+							URL o ruta relativa: Prescinden de algunas partes de las URL para hacerlas más breves.
+						</p>
+						<a href="https://concepto.de/url/">fuente:concepto de</a>
+						<a href="https://uniwebsidad.com/libros/xhtml/capitulo-4/enlaces-relativos-y-absolutos">y uniwebsidad</a>
+					</section>
+					<section>
+						<h2>Dominio y hosting</h2>
+						<a href="img/tema_02/cliente_servidor.jpg" target="_blank">
+						<img src="img/tema_02/cliente_servidor.jpg" width="50%" height="50%" alt="">
+						</a>
+					</section>
+					<section>
+						<h2>¿Qué es un dominio?</h2>
+						<p>
+							Los dominios son los «nombres» de las páginas en Internet  así de simple. Cuando quieres entrar a una página, normalmente escribes el nombre. 
+							<br><br>
+							por ejemplo: www.xacarana.com
+						</p>
+					</section>
+					<section>
+						<p>
+							El nombre de dominio está compuesto por dos partes:	
+						</p>
+						<p>
+							El nombre: El nombre que llevará tu página
+						</p>
+						<p>
+							TLD: La terminación. Que puede ser .com, .org, .net, .tv y muchas otras opciones. Ésta terminación ayuda a indicar el giro de tu empresa y ubicación: .com-> comercial; .com.mx -> comercial en México; .org-> asociación civil u organización sin fines de lucro; .tv -> canal de televisión 
+						</p>
+						<a href="https://www.webhosting.com.bo/que-es-web-hosting-dominio-web/">fuente: webhosting.com.bo</a>				
+					</section>
+					<section>
+						<h2>¿Qué es un hosting?</h2>
+						<p>El alojamiento web (en inglés web hosting) es el servicio que provee a los usuarios de Internet un sistema para poder almacenar información, imágenes, vídeo, o cualquier contenido accesible vía web. Es una analogía de «hospedaje o alojamiento en hoteles o habitaciones» donde uno ocupa un lugar específico</p>
+					</section>
+					<section>
+						<h2>¿Qué es FTP?</h2>
+						<p>
+							Un programa SFTP te permite subir archivos para tu página web a tu espacio web. También puedes crear una copia de seguridad del sitio web con SFTP. Para ello, copia los datos del espacio web localmente en tu ordenador.
+ 						</p>
+ 						<p>
+Con un programa SFTP también puedes borrar ficheros y/o carpetas enteras. Si borras contenidos, estos ya no aparecerán para los visitantes de tu página web.
+						</p>
+					</section>
+					<section>
+						<h2>¿Qué es FTP?</h2>
+						<img src="img/tema_02/portada-core-ftp.png" alt="">
+					</section>
+				</section>
+				<section>					
+					<section>
+						<h2>HTML</h2>
+						<p>Es un código que utiliza etiquetas para representar la estructura de un documento, una etiqueta es un contenedor con un nombre semántico que representa su contenido. Es una herramienta muy antigüa, pero a pasado por diferentes versiones para mantenerse vigente, según las necesidades de los usuarios y el avance de la tecnología. <br> Actualmente usamos el estandar html5, el cual esta relacionado directamente con html5, pero se debe entender como la unión de varias tecnologías, como javascript, css3 y la inclusión de nuevas etiquetas html.</p>
+					</section>
+					<section>
+						<h2>HTML</h2>
+						<p>El código html, definirá por tanto los cimientos del proyecto, donde se estructura el contenido usando principalmente texto e imágenes. Esta etapa de la creación de un programa se considera la obra negra, porque todo el contenido aparece con su apariencia gráfica por defecto y carece de detalles como color, tamaño, posicionamiento, entre otros. El estandar XHTML fue muy importante, porque empieza a crear una visión por capas, donde se debe mantener el html como estructura "pura" que refleje solo el contenido del proyecto, sin tener dependencias.</p>
+					</section>
+					<section>
+						<h2>HTML</h2>
+						<p>El código html, es por tanto el soporte para cualquier aplicación, funciona como una capa independiente, a la cual se le puede extender su funcionalidad por medio de otros elementos como las hojas de estilo y javascript.</p>
+						<img src="img/tema_02/estructura.jpg">
+					</section>
+					<section>
+						<h2>HTML</h2>
+						<p>Para crear un código html escalable y bien construído se recomienda prestarle atención a los siguientes pasos:</p>
+						<p>No se deben escribir atributos en las etiquetas que modifiquen su apariencia gráfica. (Excepción width, height)</p>
+						<p>Cada etiqueta debe abrirse y cerrarse.  <br>
+							<pre><code data-trim > 
+								<div> </div> 
+							</code></pre>
+							Las etiquetas individuales, deben tener un indicador de cierre en la misma etiqueta. Se usa un slash al final. <br>
+							<code class=" hljs nimrod">
+								&#60;<span class="hljs-keyword">img src="" </span> &#47;&#62;
+							</code>
+						</p>
+					</section>
+					<section>
+						<h2>HTML</h2>
+						<p>Se deben usar las etiquetas correctas para representar el contenido, por ejemplo un párrafo debe usar la etiqueta p y no un div, funcionan parecido, pero semánticamente p es más representativo.</p>
+						<p>Las tablas solo se usan para mostrar datos relacionados, no se debe usar para maquetar una interfaz.</p>
+						<p>Usar el doctype estandar definido por htlml</p>
+						<pre>
+							<code data-trim>
+								<&#33;doctype html>
+							</code>
+						</pre>
+						
+					</section>
+					<section>
+						<h2>HTML</h2>
+						<p>Usar el conjunto de caractéres correcto</p>
+						<pre>
+							<code data-trim>
+								<meta charset="utf-8">
+							</code>
+						</pre>
+						<p>Algunas etiquetas importantes: <em>p, div, a, img, iframe, span</em>, entre otras. Para una completa referencia se recomienda visitar el sitio <a href="http://www.w3schools.com/"> w3schools</a></p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>CSS</h2>
+						<p>Son las reglas gráficas que pueden ser aplicadas a los diferentes contenidos, por medio de los estilos se define propiedades como el color, el tamaño, la posición y un sin número de propiedades que manipulan la presentación de un elemento en el documento html. <br>Se considera por tanto una capa dependiente de la existencia del html, pero debe crearse completamente desacoplada del código, para poder cambiar el look de la aplicación sin alterar su contenido o funcionamiento.</p>
+					</section>
+					<section>
+						<h2>CSS</h2>
+						<p>El estandar html5, extendio la funcionalidad para manipulación de la interfaz gráfica y se incluyeron nuevas reglas denominadas CSS3.</p>
+						<img src="img/tema_02/apariencia.jpg" width="60%" />
+					</section>
+					<section>
+						<h2>CSS - USOS</h2>
+						<p>Existen varias formas de crear y usar hojas de estilos o reglas de estilos en un documento html, a continuación se analizarán sus pros y contras.</p>						
+					</section>
+					<section>
+						<h2>CSS - USOS</h2>
+						<p>Es responsabilidad de los implicados en la elaboración del código html y las hojas de estilo, mantener aislada una cosa de la otra, es decir no mezclar la capa de html con la capa de css. Por tanto se debe procurar siempre tener un archivo html y un archivo css (main.css). Su forma de relacionarse debe ser solamente a través de un vínculo o referencia.</p>
+						<img src="img/tema_02/link_css.jpg">
+					</section>
+					<section>
+						<h2>CSS - USOS</h2>
+						<p> <strong>Pros</strong> </p>
+						<ul>
+							<li>Mantiene una independencia entre el código html y las hojas de estilos</li>
+							<li>Permite cambiar el look de la estructura html, con solo cambiar el nombre del archivo de estilos</li>
+							<li>Se puede desarrollar en paralelo el html y el look del documento</li>
+							<li>Mantiene el proyecto ordenado</li>
+							<li>Centraliza la escritura de reglas gráficas</li>
+						</ul>						
+					</section>
+					<section>
+						<h2>CSS - USOS</h2>
+						<p> <strong>Contras</strong> </p>
+						<ul>
+							<li>Si el archivo de estilos no carga, el código html tendrá problemas de render de la interfaz gráfica</li>
+							<li>Si la hoja de estilos es un archivo pesado el render del documento tendrá una visualización lenta dependiendo de la condiciones de conexión a internet y navegador usado para visualizar el documento</li>
+							<li>El abuso de vínculos a diferentes hojas de estilo, impacta el performance del documento, porque por cada vínculo se requiere crear una petición con el servidor</li>
+						</ul>
+					</section>
+					<section>
+						<h2>CSS - USOS</h2>
+						<p>Existe otra forma de incluir estilos directamente en el encabezado ("head") del documento html, se debe procurar solo usar esta forma de escribir cuando se quiere probar propiedades de estilos mientras se construye el sitio. Una vez probada y validada la funcionalidad, se deben poner las reglas en la hoja de estilos a parte del html.</p>
+						<img src="img/tema_02/estilo_cabezote.jpg">
+					</section>
+					<section>
+						<h2>CSS - USOS</h2>
+						<p> <strong>Pros</strong> </p>
+						<ul>
+							<li>Permite escribir y probar rápidamente reglas en el documento actual</li>
+							<li>Permite tener un panorama del documento e interactuar mejor con él</li>
+							<li>Se requiere un solo archivo para mantener la información del documento</li>
+						</ul>
+						
+					</section>
+					<section>
+						<h2>CSS - USOS</h2>
+						<p> <strong>Contras</strong> </p>
+						<ul>
+							<li>Los estilos dependen de la vista, si es necesario modificar una propiedad del documento se debe modificar la vista específica</li>
+							<li>No permite cambiar fácilmente el look de un documento</li>
+							<li>Crea desorden en el proyecto</li>
+							<li>Incrementa el peso del documento html</li>
+						</ul>
+					</section>
+					<section>
+						<h2>CSS - USOS</h2>
+						<p>Todas las etiquetas html, tienen un atributo que permite definir reglas de estilos directamente en la etiqueta. Esta es la forma que crea más acoplamiento entre la vista y la estructura del código html, se debe evitar su uso. En la práctica, solo se usa esta forma de poner estilos cuando se esta construyendo un boletín o newsletter que será enviado por correo electrónico. (El correo electrónico puede ser visualizado en diferentes herramientas limitadas gráficamente y sin interacción)</p>
+						<img src="img/tema_02/atributo_style.jpg">
+					</section>
+					<section>
+						<h2>CSS - USOS</h2>
+						<p> <strong>Pros</strong> </p>
+						<ul>
+							<li>Las reglas de estilo, viajan con el html</li>
+							<li>Sobreescribe reglas directamente en el elemento html</li>
+							<li>Permite validar reglas gráficas en tiempo de contrucción</li>
+							<li>No requiere del uso de selectores para aplicar reglas de estilo</li>
+						</ul>
+					</section>
+					<section>
+						<h2>CSS - USOS</h2>
+						<p> <strong>Contras</strong> </p>
+						<ul>
+							<li>Se vuelve muy complicado modificar el look del documento, ya que se debe cambiar etiqueta por etiqueta el estilo</li>
+							<li>Encontrar errores es una tarea complicada</li>
+							<li>El código html se vuelve difícil de leer</li>
+						</ul>
+					</section>
+					<section>
+						<h2>CSS - Selectores</h2>
+						<p>Para mantener la independencia de la aplicación de estilos de la estructura del documento, se debe relacionar el html con el css solamente a través de selectores. <br> Como su nombre lo indica, los selectores permiten seleccionar que parte de la estructura va a ser afectada por una regla gráfica. Es muy sencillo de aplicar este concepto, pero es responsabilidad de los contructores del documento de usar correctamente los selectores como enlace entre la estructura del documento y el look de presentación.</p>
+					</section>
+					<section>
+						<h2>CSS - Selectores</h2>
+						<p>
+							<strong> <em>Identificador:</em> </strong> Es un selector para seleccionar un <em>único</em> elemento html. Se usa un nombre para identificar el elemento, se espera que el creador del documento cree un nombre único por elemento. Si se usa el mismo nombre para varios elementos, los resultados pueden ser inesperados.
+						</p>								
+					</section>
+					<section>
+						<!-- El caballo que viene ganando hay que seguir apostandole -->
+						<h2>CSS - Selectores</h2>
+						<p>En el html</p>
+						<img src="img/tema_02/selector_identificador_html.jpg">
+						<p>En el CSS</p>
+						<img src="img/tema_02/selector_identificador_css.jpg">
+					</section>
+					<section>
+						<h2>CSS - Selectores</h2>
+						<p>
+							<strong> <em>Clase:</em> </strong> Permite seleccionar un conjunto de elementos que compartan la misma clase. El selector de clase por tanto agrupa bajo una clase elementos del html los cuales pueden ser incluso diferentes.
+						</p>	
+					</section>
+					<section>
+						<!-- El caballo que viene ganando hay que seguir apostandole -->
+						<h2>CSS - Selectores</h2>
+						<p>En el html</p>
+						<img src="img/tema_02/selector_clase_html.jpg">
+						<p>En el CSS</p>
+						<img src="img/tema_02/selector_clase_css.jpg">
+					</section>
+					<section>
+						<h2>CSS - Selectores</h2>
+						<p>
+							<strong> <em>Universal:</em> </strong> Utiliza el nombre de la etiqueta para crear las reglas, que serán aplicadas a todos los elementos del tipo definido por el estilo en el documento. Se debe usar con precaución y casi siempre es el último recurso, ya que en documentos muy grandes su uso puede tener resultados inesperados.
+						</p>	
+					</section>
+					<section>
+						<!-- El caballo que viene ganando hay que seguir apostandole -->
+						<h2>CSS - Selectores</h2>
+						<p>En el html</p>
+						<img src="img/tema_02/selector_universal_html.jpg">
+						<p>En el CSS</p>
+						<img src="img/tema_02/selector_universal_css.jpg">
+					</section>
+					<section>
+						<h2>CSS - Funcionamiento</h2>
+						<p>El motor del navegador, se encarga de leer de arriba hacia abajo el archivo de reglas gráficas y aplicarlas "inmediatamente", por tanto es posible redefinir una regla gráfica con solo usar el identificador y cambiar las reglas aplicadas. </p>
+					</section>
+					<section>
+						<h2>CSS - Funcionamiento</h2>
+						<p>Aplicación corriente de una regla a un elemento html</p>
+
+						<div class="clearfix">
+							<div class="flotar">
+								<em>Html</em> <br>
+								<img src="img/tema_02/uso_html.jpg" />
+							</div>
+							<div class="flotar">
+								<em>CSS</em> <br>
+								<img src="img/tema_02/uso_css.jpg" />
+							</div>
+							<div class="float">
+								<em>Resultado</em> <br>
+								<img src="img/tema_02/uso_css_1.jpg">
+							</div>
+						</div>
+					</section>
+					<section>
+						<h2>CSS - Funcionamiento</h2>
+						<p>Sobreescritura de una regla, por orden de lectura</p>
+
+						<div class="clearfix">
+							<div class="flotar">
+								<em>Html</em> <br>
+								<img src="img/tema_02/uso_html.jpg" />
+							</div>
+							<div class="flotar">
+								<em>CSS</em> <br>
+								<img src="img/tema_02/uso_css_2.jpg" />
+							</div>
+							<div class="float">
+								<em>Resultado</em> <br>
+								<img src="img/tema_02/uso_css_3.jpg">
+							</div>
+						</div>
+					</section>
+					<section>
+						<h2>CSS - Funcionamiento</h2>
+						<p>Sobreescritura redefiniendo la clase</p>
+
+						<div class="clearfix">
+							<div class="flotar">
+								<em>Html</em> <br>
+								<img src="img/tema_02/uso_html.jpg" />
+							</div>
+							<div class="flotar">
+								<em>CSS</em> <br>
+								<img src="img/tema_02/uso_css_4.jpg" />
+							</div>
+							<div class="float">
+								<em>Resultado</em> <br>
+								<img src="img/tema_02/uso_css_5.jpg">
+							</div>
+						</div>
+					</section>
+					<section>
+						<h2>CSS - Funcionamiento</h2>
+						<p>Es posible darle prioridad a una regla, para evitar que sea sobreescrita o para evitar que se sobreescriba</p>
+
+						<div class="clearfix">
+							<div class="flotar">
+								<em>Html</em> <br>
+								<img src="img/tema_02/uso_html.jpg" />
+							</div>
+							<div class="flotar">
+								<em>CSS</em> <br>
+								<img src="img/tema_02/uso_css_6.jpg" />
+							</div>
+							<div class="float">
+								<em>Resultado</em> <br>
+								<img src="img/tema_02/uso_css_7.jpg">
+							</div>
+						</div>
+						<p>*Los estilos de un selector se deben asignar en un solo sitio</p>
+					</section>
+					<section>
+						<h2>CSS - Propiedades</h2>
+						<p> <strong> <em>display:</em> </strong> Define como va a ser interpretada la visualización del elemento html por parte del navegador, existen diferentes tipos de display, vamos a revisar algunos de los más importantes.</p>
+					</section>
+					<section>
+						<h2>CSS - Propiedades</h2>
+						<p>El documento html, se puede ver como una página de un cuaderno, llena de reglones, que van desde el principio de la margen izquierda hasta el final de la margen derecha.</p>
+						<img src="img/tema_02/cuaderno.png">
+					</section>
+					<section>
+						<h2>CSS - display</h2>
+						<p> <strong> <em>in-line:</em> </strong> Indica que el elemento tiene las siguientes características:</p>
+						<ul>
+							<li>Horizontalmente ocupa el tamaño definido por su contenido</li>
+							<li>Se pueden mostrar varios elementos en línea, siempre y cuando el ancho del contenido no supere el ancho total del documento</li>
+							<li>El tamaño vertical del reglón donde se muestra el elemento, se determina por el alto mayor de alguno de los elemento en el mismo reglón</li>
+
+						</ul>
+					</section>
+					<section>
+						<h2>CSS - in-line</h2>
+						<ul>
+							<li>Para saltar de línea o crear un nuevo reglón se debe usar la etiqueta break line, ya que un enter en el código html no es tenido en cuenta</li>
+							<li>Si el ancho del documento cambia, los elementos en línea tienen en cuenta el nuevo ancho para redistribuirse en el reglón al cual pertenencen</li>
+							<li>El elemento debe tener contenido para poder ser visualizado</li>
+							<li>Simula el comportamiento que tiene la mínima expresión de información conocida como un carácter en un documento. </li>
+							<li>Pueden haber múltiples caracteres en el mismo reglón</li>
+
+						</ul>
+					</section>
+					<section>
+						<h2>CSS - in-line</h2>
+						<p></p>
+
+						<div class="clearfix">
+							<div class="flotar">
+								<em>Html</em> <br>
+								<img src="img/tema_02/display_inline_html_1.jpg" />
+							</div>
+							<div class="flotar">
+								<em>CSS</em> <br>
+								<img src="img/tema_02/display_inline_css_1.jpg" />
+							</div>
+							<div class="float">
+								<em>Resultado</em> <br>
+								<img src="img/tema_02/display_inline_resultado_1.jpg">
+							</div>
+						</div>
+					</section>
+					<section>
+						<h2>CSS - display</h2>
+						<p> <strong> <em>block:</em> </strong> Indica que el elemento tiene las siguientes características:</p>
+						<ul>
+							<li>Horizontalmente siempre ocupa el ancho total del documento</li>
+							<li>Solo se muestra un elemento por reglón</li>
+							<li>El tamaño vertical depende del contenido del elemento</li>
+
+						</ul>
+					</section>
+					<section>
+						<h2>CSS - block</h2>
+						<ul>
+							<li>Hay un salto de línea cada vez que se crea un elemento con este display</li>
+							<li>Si el ancho del documento cambia, el contenido se adapta horizontalmente</li>
+							<li>El elemento no necesita contenido para poder ser visualizado</li>
+							<li>Simula el comportamiento de un parrafo en un documento. </li>
+						</ul>
+					</section>
+					<section>
+						<h2>CSS - block</h2>
+						<p></p>
+						<div class="clearfix">
+							<div class="flotar">
+								<em>Html</em> <br>
+								<img src="img/tema_02/display_inline_html_2.jpg" />
+							</div>
+							<div class="flotar">
+								<em>CSS</em> <br>
+								<img src="img/tema_02/display_inline_css_2.jpg" />
+							</div>
+							<div class="float">
+								<em>Resultado</em> <br>
+								<img src="img/tema_02/display_inline_resultado_2.jpg">
+							</div>
+						</div>
+					</section>
+					<section>
+						<!-- Pendiente hablar de visibility -->
+						<h2>CSS - display</h2>
+						<p><strong><em>none:</em></strong> Sin visualización, esto permite que el elemento no se muestre, pero esta presente dentro de la estructura del archivo html.</p>
+					</section>						
+				</section>
+				<section>
+					<section>
+						<h2>HTML y CSS - generalidades</h2>
+						<ul>
+							<li>Comentarios (Desactivar un conjunto de reglas)</li>
+							<li>Prefijos</li>
+							<li>Modelo de color (RGB)</li>
+							<li>Sintaxis correcta</li>
+							<li>Combinar clases</li>
+						</ul>
+					</section>
+					<section>
+						<h2>HTML y CSS - Comentarios</h2>
+						<p>El código html y las reglas de estilos, son instrucciones que entiende el motor del navegador y le permite interpretar gráficamente la interfaz de un documento y "pintarla" en el navegador. </p>
+					</section>
+					<section>
+						<h2>HTML y CSS - Comentarios</h2>
+						<p>Cuando se crea un documento, es importante poder realizar ciertas "anotaciones" sobre el archivo html y sobre la hoja de estilos.</p>
+						<ul>
+							<li>Para reconocer secciones dentro del archivo</li>
+							<li>Poner información de autoría</li>
+							<li>Información de uso de clases o etiquetas</li>
+							<li>Deshabilitar parte de la estructura</li>
+							<li>Para evitar que se aplique alguna propiedad gráfica</li>
+						</ul>
+					</section>	
+					<section>
+						<h2>HTML - Comentario</h2>
+						<p>Para comentar líneas o bloques de código se usa la siguiente sintaxis</p>
+						<div class="clearfix">
+								<div class="flotar">
+									<em>Comentario múltiples líneas</em> <br>
+									<img src="img/tema_02/comentario_html.jpg" />
+								</div>
+								<div class="flotar">
+									<em>Comentario de una sola línea</em> <br>
+									<img src="img/tema_02/comentario_html_2.jpg" />
+								</div>							
+							</div>
+					</section>
+					<section>
+						<h2>CSS - Comentario</h2>
+						<p>Para comentar líneas o bloques de reglas de estilo se usa la siguiente sintaxis</p>
+						<div class="clearfix">
+								<div class="flotar">
+									<em>Comentario múltiples líneas</em> <br>
+									<img src="img/tema_02/comentario_css.jpg" />
+								</div>
+								<div class="flotar">
+									<em>Comentario de una sola línea</em> <br>
+									<img src="img/tema_02/comentario_css_2.jpg" />
+								</div>							
+							</div>
+					</section>
+					<section>
+						<h2>CSS - Prefijos</h2>
+						<p>El nuevo estandar CSS3, procura que todas las reglas de estilos se apliquen correctamente en los diferentes navegadores propietarios, por tal motivo desarrollo una sintaxis de prefijos, que agregandose a ciertas reglas, se puede espeficar los valores que va a tener la regla en un navegador especifico, como se muestra a continuación.</p>
+						<img src="img/tema_02/prefijos_css.jpg">
+					</section>
+					<section>
+						<h2>Modelo de color - RGB</h2>
+						<p>
+							El modelo de color que se debe usar en insumos para internet o para pantallas, es el modelo de color RGB, el cual representa los colores por medio de longitudes de onda primarias, como el rojo, el verde y el azul. Apartir de la adición de estos colores podemos representar 16,7 millones
+						</p>
+					</section>
+					<section>
+						<h2>Modelo de color - RGB</h2>
+						<img src="img/tema_02/modelo_color.jpg">
+						<p>Intente construir colores complementarios utilizando la anterior tabla </p>
+						<p>Se recomienda usar <a href="https://color.adobe.com/">adobe kuler</a> para encontrar paletas de colores populares</p>
+					</section>
+					<section>
+						<h2>Sintaxis correcta</h2>
+						<p>El código html y las hojas de estilos son interpretadas por el motor del navegador, si existe un error el navegador tratara de avisarnos, pero por lo general el control de errores depende del creador del documento, se recomienda seguir algunas buenas prácticas para evitar errores.</p>
+						<ul>
+							<li>Evitar el uso de caráctes especiales</li>
+							<li>Usar entities para representar símbolos como ñ,tíldes..</li>
+							<li>No usar espacios para nombrar identificadores o clases</li>
+							<li>Escribir todo el código en minúscula</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Sintaxis correcta</h2>
+						<ul>
+							<li>
+								Usar palabras nemotécnicas para nombrar identificadores o clases
+							</li>
+							<li>
+								Usar un editor de texto que permita validaciones de código
+							</li>
+							<li>
+								Prestar atención a los punto y coma para finalizar reglas de estilo
+							</li>
+							<li>
+								Identar apropiadamente el código y las reglas de estilo
+							</li>
+							<li>
+								Abrir y cerrar llaves
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h2>CSS - Combinar clases</h2>
+						<p>Es muy frecuente encontrar en aplicaciones modernas, la combinación de varias clases para lograr ciertas funcionalidades por parte de la interfaz gráfica, permitiendo una modularidad en la implementación.</p>
+						<div class="clearfix">
+							<div class="flotar">
+								<em>Clases CSS</em> <br>
+								<img src="img/tema_02/combinar_clases.jpg" />
+							</div>
+							<div class="flotar">
+								<em>Uso en html</em> <br>
+								<img src="img/tema_02/combinar_clases_2.jpg" />
+							</div>							
+						</div>
+					</section>
+				</section>
+				
+				<!-- <section>
+					<h2>Pretty Code</h2>
+					<pre><code data-trim contenteditable>
+function linkify( selector ) {
+  if( supports3DTransforms ) {
+
+    var nodes = document.querySelectorAll( selector );
+
+    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
+      var node = nodes[i];
+
+      if( !node.className ) {
+        node.className += ' roll';
+      }
+    }
+  }
+}
+					</code></pre>
+					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+				</section> -->
+				
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
