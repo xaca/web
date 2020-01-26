@@ -59,6 +59,7 @@
 							<li>¿Qué es un dominio?</li>
 							<li>¿Qué es un hosting?</li>
 							<li>¿Qué es FTP?</li>
+							<li>Estructura de un sitio web</li>
 						</ul>
 					</section>
 					<section>
@@ -105,7 +106,7 @@
 						<p>
 							El URL sirve para que podamos encontrar aquello que estamos buscando en la red: una página, un sitio, un archivo, un documento, etc. 
 						</p>
-						<a href="https://www.significados.com/url/">fuente:significados.com</a>
+						fuente: <a href="https://www.significados.com/url/">significados.com</a>
 					</section>
 					<section>
 						<img src="img/tema_02/url_imagen.jpg" width="50%" height="50%" alt="">
@@ -115,10 +116,11 @@
 						<p>
 							URL o ruta relativa: Prescinden de algunas partes de las URL para hacerlas más breves.
 						</p>
-						<a href="https://concepto.de/url/">fuente:concepto de</a>
+						fuente: <a href="https://concepto.de/url/">concepto de</a>
 						<a href="https://uniwebsidad.com/libros/xhtml/capitulo-4/enlaces-relativos-y-absolutos">y uniwebsidad</a>
 					</section>
 					<section>
+						<!-- Analogía con la busqueda de libros en biblioteca, periodista buscando en cajones -->
 						<h2>Dominio y hosting</h2>
 						<a href="img/tema_02/cliente_servidor.jpg" target="_blank">
 						<img src="img/tema_02/cliente_servidor.jpg" width="50%" height="50%" alt="">
@@ -142,7 +144,7 @@
 						<p>
 							TLD: La terminación. Que puede ser .com, .org, .net, .tv y muchas otras opciones. Ésta terminación ayuda a indicar el giro de tu empresa y ubicación: .com-> comercial; .com.mx -> comercial en México; .org-> asociación civil u organización sin fines de lucro; .tv -> canal de televisión 
 						</p>
-						<a href="https://www.webhosting.com.bo/que-es-web-hosting-dominio-web/">fuente: webhosting.com.bo</a>				
+						fuente:<a href="https://www.webhosting.com.bo/que-es-web-hosting-dominio-web/"> webhosting.com.bo</a>				
 					</section>
 					<section>
 						<h2>¿Qué es un hosting?</h2>
@@ -151,7 +153,7 @@
 					<section>
 						<h2>¿Qué es FTP?</h2>
 						<p>
-							Un programa SFTP te permite subir archivos para tu página web a tu espacio web. También puedes crear una copia de seguridad del sitio web con SFTP. Para ello, copia los datos del espacio web localmente en tu ordenador.
+							Es un protocolo de intercambio de archivos, se usa con un programa SFTP te permite subir archivos para tu página web a tu espacio web. También puedes crear una copia de seguridad del sitio web con SFTP. Para ello, copia los datos del espacio web localmente en tu ordenador.
  						</p>
  						<p>
 Con un programa SFTP también puedes borrar ficheros y/o carpetas enteras. Si borras contenidos, estos ya no aparecerán para los visitantes de tu página web.
@@ -161,8 +163,105 @@ Con un programa SFTP también puedes borrar ficheros y/o carpetas enteras. Si bo
 						<h2>¿Qué es FTP?</h2>
 						<img src="img/tema_02/portada-core-ftp.png" alt="">
 					</section>
+					<section>
+						<h3>Estructura de un documento web</h3>
+						<p>Recomendaciones:</p>
+						<ul>
+							<li>No usar caractéres especiales (ñ,tildes, simbolos, espacios) para nombras carpetas o archivos.</li>
+							<li>Nombras los archivos usando minúscula</li>
+							<li>Usar nombres nemotécnicos, es decir que tengan implícito su significado</li>
+							<li>Utilice rutas relativas, cuando trabaja de manera local</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Estructura de un documento web</h3>
+						<img src="img/tema_02/estructura_sitio_web.jpg" alt="">
+					</section>
+					<section>
+						<h3>Ruta Absoluta</h3>
+						<p>Teniendo en cuanta la estructura de archivos del ejemplo anterior, cuando se ubica un recurso desde la raíz del disco, se debe especificar todo el recorrido hasta llegar a él.</p>
+						<img src="img/tema_02/ruta_absoluta.jpg" alt="">
+					</section>
+					<section>
+						<h3>Ruta Absoluta</h3>
+						<p>El recorrido realizado para encontrar el recurso, se indica por medio de los números.</p>
+						<img src="img/tema_02/ruta_absoluta_2.jpg" width="50%" height="50%" alt="">
+					</section>
+					<section>
+						<h3>Ruta Relativa</h3>
+						<p>La ruta relativa, se calcula con base a una ubicación actual, para este caso se usa la carpeta sitio, esto facilitará subir la estructura de carpetas a un servidor y no habran problemas de rutas.</p>
+						<img src="img/tema_02/ruta_relativa.jpg" alt="">
+					</section>
 				</section>
 				<section>					
+					<section>
+						<h2>Formatos de imágenes</h2>
+						<p>Usar el tipo de imagen correcto, según la información gráfica que se necesita visualizar es clave para una buena experiencia de usuario. Los formatos usados para la web, utilizan un modelo de color RGB creado para pantallas de luz, con respecto a la <a href="http://actpower.blogspot.com/2007/08/el-mito-de-los-72dpi.html" target="_blank">resolución</a>, depende de una relación entre peso y calidad del archivo.</p>
+					</section>
+					<section>
+						<h2>JPEG <i>Joint Photographic Experts Group</i></h2>
+						<ul>
+							<li>Estandar de compresión y codificación de archivos e imágenes fijas creado en 1992</li>
+							<li>El más usado en la web, pero no necesariamente es el mejor</li>
+							<li>Se basa en dos fenómenos visuales del ojo humano: capta mejor cambios de brillo que de color</li>
+							<li>Formato con pérdida acumulativa al comprimir, pero muy flexible a la hora de ajustar grado de compresión</li>
+							<li>Conveniente para archivos que contengan grandes áreas de colores sólidos</li>
+						</ul>
+					</section>
+					<section>
+						<h2>PNG <i>Portable Network Graphics</i></h2>
+						<ul>
+							<li>Originalmente PNG era un acrónimo recursivo que significa que significa PNG no es GIF</li>
+							<li>Desarrollado para solventar las deficiencias del formato GIF, permite almacenar imágenes con una mayor profundidad de contrastes y otros datos importantes</li>
+							<li>Imagen para mapa de bits de hasta 24 bits</li>
+							<li>Compresión sin pérdida</li>
+							<li>En imágenes con mapas de color continuas actúa mejor que JPEG</li>
+						</ul>
+					</section>
+					<section>
+						<h2>GIF <i>Compuserve GIF</i></h2>
+						<ul>
+							<li>Creado en 1987</li>
+							<li>Formato de intercambio de datos de imagen para mapas de bits de hasta 256 color (8 bits) como máximo</li>
+							<li>Muy buena calidad afinando bien el nivel de color y la compresión (si no, se granula)</li>
+							<li>Soporta animación, varias pantallas dentro del mismo archivo y transparencia</li>
+							<li>Ideal para imágenes pequeñas, animadas y de pocos colores, como los banners.</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Principales usos GIF, PNG y JPG</h2>
+						<a href="img/tema_02/infografia_jpg_gif_png.jpg" target="_blank">
+							<img src="img/tema_02/infografia_jpg_gif_png.jpg" height="20%" width="20%" alt="">
+						</a>
+					</section>
+					<section>
+						<h2>Herramientas para editar y optimizar imágenes</h2>						
+						<p>Optimizar los insumos gráficos es una tarea manual que todavía es realizada por los roles que se encargan de la interfaz de usuario.</p>
+					</section>
+					<section>
+						<!-- Diferencia entre mapa de bits y vector, grafico -->
+						<h2>Recomendaciones para el uso de imágenes</h2>
+
+						<ul>
+							<li>Redimensionar las imágenes al tamaño en el cual apareceran en el html, no dejar esta responsabilidad al html o al css</li>
+							<li>Optimizar la imagen al formato adecuado y tamaños correctos, según el diseño.</li>
+							<li>Diseñe para moviles primero</li>
+							<li>Cargue pocos recursos</li>
+							<li>Use un CDN para carga de recursos</li>
+						</ul>
+						
+						<br>
+						fuente: <a href="https://codeburst.io/5-steps-to-speed-up-your-image-heavy-website-65c874a86966"> 5 steps to speed yout images</a>
+					</section>
+					<!-- shortener -->
+					<section>
+						<h2>Optimizar imágenes PNG</h2>
+						<p>El formato png no soporta compresión, para poder optimizar este tipo de archivo es posible recurrir a herramientas en línea como <a href="https://tinypng.com/">tinypng.com</a> este sitio permite bajar el peso del archivo de una manera muy simple, arrastrar, soltar y luego descargar.</p>
+						<p>Otras opciones <a href="https://compressor.io/" target="_blank">compressor</a>, <a href="https://pngquant.org/" target="_blank">pngquant</a> y <a href="https://imagekit.io/" target="_blank">imagekit</a></p>
+					</section>
+				</section>
+				<section>
+					<!-- emmet, editor de texto	 -->
 					<section>
 						<h2>HTML</h2>
 						<p>Es un código que utiliza etiquetas para representar la estructura de un documento, una etiqueta es un contenedor con un nombre semántico que representa su contenido. Es una herramienta muy antigüa, pero a pasado por diferentes versiones para mantenerse vigente, según las necesidades de los usuarios y el avance de la tecnología. <br> Actualmente usamos el estandar html5, el cual esta relacionado directamente con html5, pero se debe entender como la unión de varias tecnologías, como javascript, css3 y la inclusión de nuevas etiquetas html.</p>
