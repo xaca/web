@@ -66,6 +66,26 @@ body {
 .flotar{
   float: left;
 }
+
+#redes_enlace{
+  font-family:sans-serif;
+  position:fixed;
+  transform:rotate(-90deg);
+  bottom: 10%;
+  margin-left: -40px;
+  color:grey;
+  z-index: 999;
+}
+#redes_enlace a{
+  text-decoration: none;
+}
+#redes_enlace a:hover, #redes_enlace a:visited{
+  color:grey;
+}
+
+.mover_derecha{
+  margin-left: 35px !important;
+}
 /* cambios */
 
 /*********************************************
