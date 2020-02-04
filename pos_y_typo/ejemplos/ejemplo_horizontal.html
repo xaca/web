@@ -1,0 +1,102 @@
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		div{
+			background: magenta;
+			height: 50px;
+			margin: 5px;
+		}
+		.contenedor{
+			text-align: center;
+		}
+		.contenedor_bloque{
+			background: pink;
+			width: 200px;
+			height: 200px;
+			border-radius: 20px;
+			padding: 10px;
+		}
+		.contenedor_bloque_centrado{
+			position: relative;
+			background: pink;
+			width: 200px;
+			height: 200px;
+			border-radius: 20px;
+			margin-right: auto;
+			margin-left:auto;
+		}
+		.contenedor_bloque_centrado_relative{
+			position: relative;
+			background: pink;
+			width: 200px;
+			height: 200px;
+			border-radius: 20px;
+			padding: 10px;
+			margin-left: -110px;
+			left: 50%;
+		}
+
+		.contenedor_centrado{
+			position: relative;
+			background: gray;
+			width: 200px;
+			height: 400px;
+			border-radius: 20px;
+			margin-right: auto;
+			margin-left:auto;
+		}
+		.centrado_vertical{
+			position: absolute;
+			background: black;
+			width: 100px;
+			height: 100px;
+			border-radius: 20px;
+			left: 50%;
+			top:50%;
+			margin-left: -50px;
+			margin-top: -50px;
+		}
+	</style>
+</head>
+<body>
+
+
+	<h3>Contenedor con alineación por defecto a la izquierda del contenedor.</h3>
+	<div>
+		<img src="img/Flickr-icon.png" alt="">
+	</div>
+
+	<h3>Se modifica la alineación del contenedor al centro, esto centra la imagen porque esta se visualiza en el mismo reglón por tener display in-line, se comporta similar a una palabra en un párrafo, se ve afectada por las propiedades que modifican el párrafo que la contiene. </h3>
+	<div class="contenedor">
+		<img src="img/Flickr-icon.png" alt="">
+	</div>
+
+	<h3>Contenedor en bloque, con propiedades de alineación por defecto.</h3>
+	<div class="contenedor_bloque">
+		<h4>Esto es un bloque</h4>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, soluta voluptate officia officiis, laborum voluptas. Libero odit quaerat, sed fugit a eum est, modi laboriosam cum consequuntur, autem rerum assumenda.</p>
+	</div>
+
+	<h3>Contenedor alineado, definiendo anchura y márgenes automáticas, para que funcione debe tener un ancho para que las márgenes automáticas se puedan calcular correctamente.</h3>
+
+	<div class="contenedor_bloque_centrado">
+		<h4>Esto es un bloque</h4>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, soluta voluptate officia officiis, laborum voluptas. Libero odit quaerat, sed fugit a eum est, modi laboriosam cum consequuntur, autem rerum assumenda.</p>
+	</div>
+
+	<h3>Es posible centrar un elemento usando posicionamiento absoluto, necesitamos saber el ancho para poder realizar los cálculos de posicionamiento.</h3>
+
+	<div class="contenedor_bloque_centrado_relative">
+	  <h4>Esto es un bloque</h4>
+	  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, soluta voluptate officia officiis, laborum voluptas. Libero odit quaerat, sed fugit a eum est, modi laboriosam cum consequuntur, autem rerum assumenda.</p>
+	</div>
+
+	<div class="contenedor_centrado">
+		<div class="centrado_vertical"></div>
+	</div>
+
+
+</body>
+</html>

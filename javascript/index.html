@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>XACA RANA - UPB</title>
+
+		<meta name="description" content="Introducción a javascript">
+		<meta name="author" content="xaca rana">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+		
+	</head>
+
+	<body>
+		
+		<div class="reveal">
+			<div class="volver">
+				<a href="../"><img src="img/volver.png"></a>
+			</div>
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h2>Introducción a javascript</h2>
+					<ul>
+						<li>Generalidades de javascript</li>
+						<li>Referencia a elementos</li>
+						<li>Manejo de eventos</li>
+						<li>Manipulación del DOM</li>
+						<li>Cambiando estilos dinámicamente</li>
+					</ul>
+				</section>				
+				<section>					
+					<section>
+						<h2>Generalidades de javascript</h2>
+						<p>Javascript es una nueva capa que se agrega al proceso de construcción de un documento, esta capa tiene que ver con la interacción es decir la capacidad de reacción que tiene un documento teniendo en cuenta el uso de la interfaz por parte del usuario.</p>						
+					</section>
+					<section>
+						<h2>Generalidades de javascript</h2>
+						<p>Esta capa es independiente de la estructura y del look de la aplicación. Se puede crear interacción entre el documento y el usuario, entre los estilos y la estructura y muchas más combinaciones entre capas, siempre y cuando se mantengan desacopladas las diferentes partes de todo el sistema.</p>
+					</section>
+					<section>
+						<h3>Generalidades de javascript</h3>
+						<img src="img/tema_03/interaccion_javascript.jpg">
+					</section>
+					<section>
+						<h2>Generalidades de js - Variables</h2>
+						<p>Una de las principales ventajas de javascript, esta en como se aplica el concepto de variable por parte del lenguaje. </p>
+						<ul>
+							<li>No es necesario declarar una variable antes de usarla</li>
+							<li>Las variables se crean en el momento que se usan</li>
+							<li>Se denominan variables tipo camaleón, ya que estas cambian dependiendo de su contenido</li>
+							<li>Son versátiles y muy flexibles a la hora de programar</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Generalidades de js - Variables</h2>
+						<p>Aunque las variables de javascript son muy flexibles y dinámicas, se recomienda tener buenas prácticas</p>
+						<ul>
+							<li>Declarar siempre la variable antes de usarla con la palabra reservada var</li>
+							<li>Evitar el uso de variables globales, es decir las que no se declaran usando var</li>
+							<li>Usar variables nemotécnicas</li>
+						</ul>
+
+						<img src="img/tema_03/declaracion_variable.png" />
+
+					</section>
+					<section>
+						<h2>Generalidades de js - Contexto variable</h2>
+						<p>Normalmente las aplicaciones en javascript, no tienen en cuenta el contexto de una variable, porque no se usa la palabra var para declarar una variable previamente. Es frecuente encontrar problemas donde se ve afectada la logica del programa porque se sobreescriben valores, las variables llegan con valores previos de otros procedimientos entre otras cosas.</p>
+						<p>Por tanto para crear un contexto de variable, se puede empezar a seguir la regla ya mencionada: Declarar la variable usando la palabra reservada var.</p>
+					</section>
+					<section>
+						<h3>Generalidades de js - Manejo de tipos</h3>
+						<p>Javascript no es un lenguaje tipado estricto, podemos reconocer y usar tipos cuando se asigna un dato de un tipo específico a una variable, en ese momente se dice que la variable es del tipo específico. Representación de los datos de frecuente uso:</p>
+						<img src="img/tema_03/tipos_de_variables.png" />
+					</section>
+					<section>
+						<h3>Generalidades de js - Estructuras de control</h3>
+						<p>Javascript se basa en ECMAScript donde se define un lenguaje de tipos dinámicos, con un parecido a java y C. Otros lenguajes con Actionscript se basa en este estandar para definir su sintaxis. Si es su primer acercamiento a javascript y llega de otros lenguajes de programación, se va a dar cuenta que javascript utiliza la misma sintaxis para usar estructuras de control dentro de un programa, salvo algunas diferencias que tienen relación principalmente con los valores tipo camaleón.</p>
+					</section>
+					<section>
+						<h2>Generalidades de js - if</h2>
+						<p>El condicional funciona similar que en otros lenguajes, pero se debe tener en cuenta que la condición que evalua el if, considera verdadero, cualquier  valor diferente de 0, false, undefined o null.</p>
+						<img src="img/tema_03/estructura_si_sino.jpg">
+					</section>
+					<section>
+						<h2>Generalidades de js - Operador ternario</h2>
+						<p>Se usa por lo general para asignar un valor a una variable después de evaluar una condición, se debe mantener la estructura muy simple, en caso contrario se debe usar un if.</p>
+						<img src="img/tema_03/estructura_operador_ternario.jpg" />
+					</section>					
+					<section>
+						<h4>Generalidades de js - if anidado Switch</h4>
+						<p>Se encarga de agrupar varias comparaciones bajo una misma variable, que puede ser un número, una cadena o inlcuso un valor génerico como por ejemplo undefined.</p>
+						<img src="img/tema_03/estructura_switch.jpg" />
+					</section>
+					<section>
+						<h3>Generalidades de js - if anidado Switch</h3>
+						<p>Esta estructura se adapta bien a la mayoria de tipos de datos, pudiendo combinar las opciones. </p>
+						<img src="img/tema_03/estructura_switch_ejemplo.jpg" width="60%" />
+					</section>
+					<section>
+						<h2>Generalidades de js - Ciclos</h2>
+						<p>Al igual que en otros lenguajes esta estructura es de bastante utilidad para iterar sobre un grupo de elementos, la diferencia principal de javascript, radica en como el lenguaje evalua las condiciones de iteracción, como se explicó en los condicionales "if".</p>
+					</section>
+					<section>
+						<h2>Generalidades de js - while</h2>
+						<p>Mientras que la condición sea verdadera se ejecuta el ciclo.</p>
+						<img src="img/tema_03/estructura_while.jpg">
+					</section>
+					<section>
+						<h2>Generalidades de js - while</h2>
+						<p>Se puede crear un ciclo que dependa de una variable númerica, que termina cuando esta llega a cero.</p>
+						<img src="img/tema_03/estructura_while_ejemplo.jpg" width="40%">
+					</section>
+					<section>
+						<h2>Generalidades de js - do While</h2>
+						<p>Ciclo hasta que, este ciclo se ejecuta por lo menos una vez.</p>
+						<img src="img/tema_03/estructura_dowhile.jpg">
+					</section>
+					<section>
+						<h2>Generalidades de js - do While</h2>
+						<p>La cadena vacia se evalua como falsa en una condición por tanto podemos hacer los siguiente.</p>
+						<img src="img/tema_03/estructura_dowhile_ejemplo.jpg" width="40%">
+					</section>
+					<section>
+						<h2>Generalidades de js - for</h2>
+						<p>Ciclo para, que se ejecuta para todos los valores dentro del rango definido por el ciclo, que va desde un valor inicial hasta un valor final. Es clave el incremento o decremento que debe en lo posible debe estar relacionado con la condición de parada.</p>
+						<img src="img/tema_03/estructura_for.jpg" />
+					</section>
+					<section>
+						<h2>Generalidades de js - for</h2>
+						<p>El decremento o decremento de un ciclo for, también se puede operar usando el operador asignación y combinando los operadores algebráicos. Note que la variable se declaro usando var dentro del ciclo, pero esto no determina que la variable no exista por fuera de él.</p>
+						<img src="img/tema_03/estructura_for_ejemplo.jpg" width="50%" />
+					</section>
+					<section>
+						<h2>Generalidades de js - Uso de funciones</h2>
+						<p>El uso de funciones es una de las principales características del lenguaje, se debe tener precaución porque su facilidad facilita un uso incorrecto y la creación de código espagueti.</p>
+					</section>
+					<section>
+						<h2>Generalidades de js - Uso de funciones</h2>
+						<p>Firma de una función:</p>
+						<img src="img/tema_03/firma_funcion.jpg" />
+					</section>
+					<section>
+						<h2>Generalidades de js - Uso de funciones</h2>
+						<p>Invocando una función:</p>
+						<img src="img/tema_03/llamado_funcion.jpg" />
+					</section>
+					<section>
+						<h2>Generalidades de js - Uso de funciones</h2>
+						<p>Función que espera argumentos y retorna un valor:</p>
+						<img src="img/tema_03/funcion_sumar.png" />
+					</section>
+					<section>
+						<h2>Generalidades de js - Uso de funciones</h2>
+						<p>Función que espera un argumento pero no retorna un valor:</p>
+						<img src="img/tema_03/funcion_probar_saludo.png" />
+					</section>
+					<section>
+						<h2>Generalidades de js - Uso de funciones</h2>
+						<p>Función que no espera argumentos y no retorna un valor:</p>
+						<img src="img/tema_03/funcion_mensaje_bienvenida.png" />
+					</section>
+					<section>
+						<h2>Generalidades de js - Uso de funciones</h2>
+						<p>Función que no espera argumentos y retorna un valor:</p>
+						<img src="img/tema_03/funcion_calcular_aleatorio.png" />
+					</section>
+					<section>
+						<h3>Generalidades de js - Contexto variable</h3>
+						<img src="img/tema_03/contexto_funcion_01.png" />
+					</section>
+					<section>
+						<h2>Generalidades de js - Contexto variable</h2>
+						<p>Es muy importante tener el control del contexto de la variable, para evitar errores en la lógica del programa. Al invocar las funciones se obtiene una respuesta diferente a la esperada.</p>
+						<img src="img/tema_03/contexto_funcion_02.png" />
+					</section>
+					<section>
+						<h2>Generalidades de js - Cadenas</h2>
+						<p>Las cadenas son muy importantes en javascript, sobretodo cuando se manipula el DOM del documento html, para preparar el formato que se va a inyectar (imprimir) en el documento.</p>
+						<img src="img/tema_03/cadenas_01.png" />
+					</section>
+					<section>
+						<h2>Generalidades de js - Cadenas</h2>
+						<p>El operador concatencación de cadenas (+) puede funcionar de manera diferente, dependiendo del valor previo de la variable.</p>
+						<img src="img/tema_03/cadenas_02.png" />
+					</section>
+					<section>
+						<h2>Generalidades de js - Arrays</h2>
+						<p>Un array en javascript es una estructura dinámica por defecto, es posible agregar, remover y consultar propiedades en tiempo de ejecución usando una sitnaxis muy simple.</p>
+						<img src="img/tema_03/array.jpg">
+					</section>
+					<section>
+						<h2>Generalidades de js - Arrays</h2>
+						<p>Los indices de un array por lo general son números enteros, pero en javascript, puede ser casi que cualquier valor representable en el lenguaje. Cuando se usa un valor diferente como indice, se debe usar la estructura for-in para recorrer los valores del array.</p>
+						<img src="img/tema_03/array_ejemplo.jpg">
+					</section>
+					<section>
+						<h2>Generalidades de js - Objetos</h2>
+						<p>Los objetos en javascript se benefician de las capacidades dinámicas del lenguaje, por tanto es posible tener objetos que van mutando en tiempo de ejecución, creando nuevas propiedades, nuevos métodos, nuevas relaciones. Los objetos no estan amarrados a la definición de una clase, pero podrían estarlo. El lenguaje trae por defecto la definición de varias clase, como Math y String o otras más nuevas aportadas por el estandar html5 como LocalStorage, Workers, entre otros.</p>
+					</section>
+
+					<section>
+						<h2>Generalidades de js - Objetos</h2>
+						<p>Para crear un objeto en javascript se puede hacer de diferentes formas, la más usada es por medio de el uso de llaves y luego por medio del operador punto asignar valores o pregutnar por un valor. </p>
+						<img src="img/tema_03/objeto.jpg" width="70%">
+					</section>
+					<section>
+						<h2>Generalidades de js - Objetos</h2>
+						<p>Javascript tiene predefinidos una serie de objetos bastante útiles a la hora de programar para no empezar desde cero.</p>
+						<img src="img/tema_03/objeto_js.jpg" width="80%">
+					</section>
+					<section>
+						<h2>Generalidades de js - Objetos</h2>
+						<p> 
+						<strong><em>console.log:</em></strong> Función que permite hacer debug en la ventana de desarrollador del navegador y se encarga de dar imprimir un valor que se le pase como argumento. <br><br>
+						<strong><em>console.dir:</em></strong> Similar a la función anterior, pero utiliza un formato más descriptivo para ver una variable en memoria, se usa por lo general para imprimir objetos o arrays.	
+						</p>
+					</section>
+					<section>
+						<h2>Generalidades de js - Objetos</h2>
+						<img src="img/tema_03/objeto_dir.jpg" width="60%">
+					</section>
+					<section>
+						<h2>Generalidades de js - JSON</h2>
+						<p>Javascript Object Notation, es el formato de representación de objetos en javascript y se ha vuelto popular como interfaz para el intercambio de información entre sistema, por su fácil representación y lo más importante es que no necesita un tiempo extra para ser parseado o cargado en una estructura en memoria. </p>
+					</section>
+					<section>
+						<h2>Generalidades de js - JSON</h2>
+						<img src="img/tema_03/json.jpg">
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Referencia a elementos</h2>
+						<p>Para manipular elementos de la estructura del documento html es importante tener una referencia a uno o varios elementos html, para esto es importante recordar los selectores que se usan en el documento para realizar la maquetación de estilos. Cuando asignamos reglas de estilos a un elemento se debe hacer a través de un selector, javascript retoma esta práctica que permite al desarrollador usar la misma mécanica para obtener referencias de los elementos que se quieren manipular.</p>	
+					</section>
+					<section>
+						<h2>Referencia a elementos</h2>
+						<p>Hay varias formas de obtener elementos del DOM <em>"El DOM es una interfaz de programación de aplicaciones para acceder, añadir y cambiar dinámicamente contenido estructurado en documentos con lenguajes como ECMAScript"-wikipedia</em></p>
+						<ul>
+							<li>Por identificador</li>
+							<li>Por clase</li>
+							<li>Por selector universal</li>
+							<li>Por selector CSS</li>
+							<li>Por colecciones de objetos</li>
+						</ul>
+					</section>
+					<section>
+						<!-- http://www.w3schools.com/js/js_htmldom_elements.asp -->
+						<h2>Por identificador</h2>
+						<p>Los identificadores como atributos en el código html no solamente sirven para asignar reglas de estilos al elemento que queremos modificar, incluso es posible tener identificadores y clases que no tengan ningún set de reglas definidas en la hoja de estilos. Un identificador se usa en javascript para hacer referencia a un solo elemento html, es responsabilidad del desarrollador garantizar que sea un identificador único, en caso de tener varios identificadores el valor devuelto puede ser inesperado. Para que un selector pueda ser devuelto por javascript, este debe haber sido cargado en el navegador.</p>
+
+					</section>	
+					<section>
+						<h2>Por identificador</h2>
+						<p>Se recomienda guardar la referencia a un selector luego de haber sido encontrado, ya que el llamado a la función getElementById, es una búsqueda sobre todo el <em>DOM</em>, por lo tanto hay un tiempo mientras se realiza la búsqueda que aumenta dependiendo de la estructura del documento.</p>
+						<div class="ancho_fijo clearfix">
+							<div class="flotar">
+								<h4>Código javascript</h4>
+								<img src="img/tema_05/selector_identificador_js.png" alt="">
+							</div>
+							<div class="flotar">
+								<h4>En el html</h4>
+								<img src="img/tema_05/selector_identificador_html.png" alt="">
+							</div>
+						</div>
+					</section>
+					<section>
+						<h2>Por clase</h2>
+						<p>Esta es una forma de agrupar varios elementos que comparten características similares, es muy importante recordar que un elemento puede tener varias formas de ser referenciado dependiendo el uso que se le de, se pueden combinar estas formas, por ejemplo un elemento podría tener un selector por identificador y además una clase. </p>
+					</section>
+					<!-- section>h2{Por clase}+p+div.ancho_fijo.clearfix>(div.flotar>(h4{Código javascript}+img[img/tema_05/]))*2	 -->
+					<section>
+						<h2>Por clase</h2>
+						<p>Invocar la función <em>getElementByClassName</em> devuelve un array con todas las referencias a los elementos encontrados en el documento.</p>
+						<h4>Código javascript</h4>
+						<img src="img/tema_05/selector_clase_js.png" alt=""> <br>
+						<h4>Código Html</h4>
+						<img src="img/tema_05/selector_clase_html.png" alt="">
+					</section>
+
+					<section>
+						<h2>Por clase</h2>
+						<p>Para usar los selectores de clase devuelto, se debe usar notación de array para acceder a los elementos en el orden que fueron encontrados en el documento.</p>
+						<img src="img/tema_05/selector_clase_ejemplo.png" alt="">
+					</section>
+					<section>
+						<h3>Selector universal</h3>
+						<p>Utiliza como selector el nombre de la etiqueta, no se debe crear manualmente ningún atributo dentro de la etiqueta html, por tanto puede ser más fácil su uso.</p>
+						<h4>Código javascript</h4>
+						<img src="img/tema_05/selector_clase_js.png" alt=""><br>
+						<h4>Código Html</h4>
+						<img src="img/tema_05/selector_clase_html.png" alt="">
+					</section>
+					<section>
+						<h2>Selector universal</h2>
+						<p>Tener precaución ya que si se usan nombres de etiquetas como <em>div</em> la cantidad de respuestas pueden ser muchas, por la generalidad de funcionamiento. <br>¿Cuántos <em>divs</em> usa la página de un periódico?</p>
+						<img src="img/tema_05/selector_universal_ejemplo.png" alt="">
+					</section>	
+					<!-- https://css-tricks.com/snippets/javascript/loop-queryselectorall-matches/ -->
+					<section>
+						<h3> 
+							<a href="http://www.w3.org/TR/selectors-api/#selector-string">
+								Por selector CSS
+							</a> 
+						</h3>
+						<p>Este selector devuelve un elemento <em>NodeList</em>, es un array con una imagen estática (Es decir no es una vista en vivo) en el momento de la búsqueda, de los elementos que coinciden con el término de consulta.</p>
+						<em>Código html</em><br>
+						<img src="img/tema_05/selector_query_html.png" alt="">
+					</section>	
+					<section>
+						<h3> 
+							<a href="http://www.w3.org/TR/selectors-api/#selector-string">
+								Por selector CSS
+							</a> 
+						</h3>
+						<p>Cambios subsecuentes en la estructura del <em>DOM</em>, no se veran reflejados en el <em>NodeList</em>, esto quiere decir que el objeto solo contendrá una lista de los elementos que tenía la consulta cuando se realizó la búsqueda y se creo la lista.</p>
+						<em>Código javascript</em><br>
+						<img src="img/tema_05/selector_query_js.png" alt="">
+					</section>
+					<section>
+						<h3> 
+							<a href="http://www.w3.org/TR/selectors-api/#selector-string">
+								Por selector CSS
+							</a> 
+						</h3>
+						<p></p>
+						<em>Resultado consola</em><br>
+						<img src="img/tema_05/selector_query_ejemplo.png" alt="">
+					</section>
+					<section>
+						<h3>Por colecciones de objetos</h3>
+						<p>Javascript puede acceder a un grupo de arrays con tipos de elementos html conocidos. Facilita el acceso a una selección generalizada de estos elementos y su uso depende del conocimiento de la estructura del <em>DOM</em> en un momento dado</p>
+						<div class="clearfix">
+							<ul class="float">
+								<li>document.anchors</li>
+								<li>document.body</li>
+								<li>document.documentElement&nbsp;&nbsp;</li>
+								<li>document.embeds</li>
+								<li>document.forms</li>							
+							</ul>
+							<ul class="float">
+								<li>document.head</li>
+								<li>document.images</li>
+								<li>document.links</li>
+								<li>document.scripts</li>
+								<li>document.title</li>
+							</ul>	
+						</div>
+					</section>
+					<section>
+						<h3>Por colecciones de objetos</h3>
+						<p>Se podría usar la colección de enlaces de un documento para conocer todos los enlaces del documento actual y obtener el nombre del documento.</p>
+						<em>Código javascript</em><br>
+						<img src="img/tema_05/selector_coleccion_html.png" alt=""><br>
+						<em>Código javascript</em><br>
+						<img src="img/tema_05/selector_coleccion_js.png" alt="">
+					</section>	
+					<section>
+						<h3>Por colecciones de objetos</h3>
+						<p>Si se aplica el siguiente código, en la página de un portal web de un periódico, obtenemos todo el lista de enlaces del home o cualquier página interna.</p>
+						<em>Código javascript</em><br>
+						<img src="img/tema_05/selector_coleccion_ejemplo_02.png" alt="">
+					</section>
+					<section>
+						<h3>Por colecciones de objetos</h3>
+						<p>Luego de usar la colección de enlaces en la consola de debug de un navegador, podemos manipular la lista de todos los enlaces del documento actual.</p>
+						<em>Resultado</em><br>
+						<img src="img/tema_05/selector_coleccion_ejemplo_03.png" alt=""><br>
+					</section>		
+				</section>
+				<section>
+					<section>
+						<h2>Manejo de eventos</h2>										
+						<p>Los eventos son mecanismos mediante los cuales los elementos html (botones, imágenes, ventana, ...) pueden notificar de la ocurrencia de sucesos. Un evento puede ser causado por una acción del usuario (por ejemplo, cuando pasa el mouse por encima de un enlace), por el sistema (por ejemplo, transucrrió un determinado tiempo) o indirectamente por el código (Cuando el código realiza una precarga). Los elementos pueden responder a ciertos tipos de eventos predefinidos. Cuando ocurre uno de estos eventos, javascript ejecutará la función que tiene para responder a ese evento.</p>	
+					</section>
+					<section>
+						<h3>Manejo de eventos</h3>
+						<p>El navegador funciona como una antena que esta transmitiendo todo el tiempo diferentes mensajes, y las funciones son los listeners o radios que se encargan de escuchar la señal y procesarla.</p>
+						<img src="img/tema_05/eventos.jpg" alt="">
+					</section>
+					<section>
+						<h2>Manejo de eventos</h2>
+						<p>En javascript es muy importante saber el momento indicado de ejecutar el código, ya que al ser un lenguaje que se interpreta línea a línea por el motor del navegador, debemos garantizar que todo el código y los elementos html han cargado para poder intereactuar con ellos.</p>
+						<img src="img/tema_05/evento_01.png" alt="">
+					</section>
+					<section>
+						<h2>Manejo de eventos</h2>
+						<p>Usando <em>addEventListener</em> matriculamos una función para que escuche un evento específico que se produce cuando se hace click sobre un elemento. Fijese la declaración de la variable que referencia al botón.</p>
+						<img src="img/tema_05/evento_02.png" alt="">
+					</section>
+					<section>
+						<h2>Manejo de eventos</h2>
+						<p>Note que el evento se envia como argumento a la función que escucha por un evento específico, con información muy completa de lo que acaba de pasar con la interacción del usuario.</p>
+						<img src="img/tema_05/evento_03.png" alt="">
+					</section>
+				</section>
+				<!--
+				<section>
+					<h2>Manipulación del DOM</h2>
+					<p></p>
+				</section>
+				<section>
+					<h2>Cambiando estilos dinámicamente</h2>
+					<p></p>
+				</section> -->
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Fundamentos de programación - UPB</title>
+
+		<meta name="description" content="Fundamentos de programación C sharp">
+		<meta name="author" content="Andrés Bedoya">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/moon.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+		
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<div class="volver">
+				<a href="index.html"><img src="img/volver.png"></a>
+			</div>
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h2>Pseudocódigo</h2>
+					<p>
+						Es un falso lenguaje de programación, se usa para describir en lenguaje natural (español) una serie de pasos que permiten
+						la solución de un problema. Cuando se explica una dirección, una receta, o cualquier procedimiento se esta creando el pseudocódigo de lo que se quiere comunicar.
+					</p>					
+				</section>
+
+				<section>
+					<section>
+						<h2>Ejemplo 1</h2>
+						<img src="img/tema_01/silvafigura_a_01.jpg" />
+					</section>
+					<section>
+						<img src="img/tema_01/silvafigura_a_02.jpg" />
+					</section>
+					<section>
+						<img src="img/tema_01/silvafigura_a_03.jpg" />
+					</section>
+					<section>
+						<img src="img/tema_01/silvafigura_a_04.jpg" />						
+					</section>
+					<section>
+						<p>
+							¿Logro el objetivo?, ¿los pasos son suficientemente claros para solucionar el problema la primera vez?, ¿Que agregaria o quitaria para hacer más entendible la solución del problema?.<br>
+							<br>
+							Nota: Recuerde que las instrucciones cuando el usuario las usa, no tiene a una persona al lado explicando como se deben interpretar y ejecutar.
+						</p>
+					</section>
+					<section>
+						<h2>Ejemplo 2</h2>
+						<img src="img/tema_01/tb15-03.jpg">
+					</section>
+					<section>
+						<h2>Ejemplo 3</h2>
+						<a href="img/tema_01/cereal.jpg" target="blank"><img src="img/tema_01/cereal.jpg" width="40%" height="100%"></a>
+					</section>
+					<section>
+						<h2>Ejemplo 4</h2>
+						<a href="img/tema_01/como_llegar.jpg"><img src="img/tema_01/como_llegar.jpg" width="80%" height="80%"></a>
+					</section>
+				</section>
+				<section>
+					<h2>Pasos para crear un pseudocódigo</h2>
+					<ul>
+						<li>Enumerar cada paso</li>
+						<li>El primer paso siempre es el inicio y el último es el fin</li>
+						<li>Se debe garantizar que siempre se llegue hasta el fin</li>
+						<li>Los pasos deben tener prioridad</li>
+						<li>Se permite crear saltos entre pasos, se recomienda usar la frase "ir a __" seguido del número del paso</li>
+						<li>Se debe escribir el mayor número de pasos posible</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Simbolos para crear un diagrama de flujo</h2>
+					<img src="img/tema_01/simbolos_diagramas_flujo.jpg" width="100%">
+				</section>
+				
+				<section>
+					<section>
+						<h2>Familiares cercanos de los diagramas de flujo, usados en el humor gráfico.</h2>
+						<p>Las gráficas permiten explicar y entender una idea, resuelve dudas, clarifica, no deja información a la interpretación. Los siguientes ejemplos aunque no siguen las relgas de la creación de los diagramas de flujo, si permiten comprender una idea, y lo más importante en el humor, captar el mensaje rapidamente sin explicaciones extra es la medida para ser gracioso o no. Adicionalmente mire el comportamiento visual de las flechas y de la jerarquía del contenido.</p>
+					</section>
+					<section>
+						<a href="http://isopixel.net/wp-content/uploads/2012/01/medico.jpg" target="_blank"><img src="img/tema_01/medico.jpg" /></a>
+					</section>
+					<section>
+						<a href="http://cuantohipster.com/wp-content/uploads/2013/07/diagrama-flujos-hipster-o-no.jpg" target="_blank"><img src="img/tema_01/diagrama-flujos-hipster-o-no.jpg" /></a>
+					</section>
+					<section>
+						<img src="img/tema_01/518_flow_charts.png">
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Prueba de escritorio</h2>
+						<p>Una prueba de escritorio es una forma de validar la solución que se ha pensado previamente en el pseudocódigo y en el diagrama de flujo. Se recomienda hacer prueba por cada herramienta, ya que cada vez, se conoce mejor la solución, se puede completar, detectar casos especiales y mejorar el funcionamiento. Además esta prueba permite evitar errores en tiempo de ejecución, estos errores son difíciles de detectar mientra se escribe el programa, pero en la prueba de escritorio, salen a flote con la interacción.</p>
+					</section>
+					<section>
+						<h2>Factorial de un número</h2>
+						<p>En el siguiente ejemplo, se observa como se puede realizar la prueba de escritorio de un diagrama que soluciona la necesidad de calcular el factorial de un número <i>"n"</i>. Note que el algoritmo es la solución general, sin embargo en la prueba de escritorio, se prueban dos o tres valores, los más representativos. Además se recomienda probar que pasa con casos especiales, para validar la respuesta del algoritmo a situaciones extremas. Por ejemplo, el factorial es un número que crece rapidamente, por tanto puede desbordar la capacidad de un computador o calculadora muy rápido.</p>
+					</section>
+					<section>
+						<a href="img/tema_01/prueba_escritorio.jpg" target="_blank">
+							<img src="img/tema_01/prueba_escritorio.jpg" width="52%" height="30%" alt="">
+						</a>
+					</section>
+					<section>
+						<p>La prueba de escritorio se realiza con lapiz, borrador y un papel. Hay que probar varios pasos, hasta identificar comportamientos correctos o incorrectos del algoritmo. Si se detecta algo por mejorar, se debe ir a el pseudocodigo o al diagrama, ajustar y nuevamente probar más casos, hasta llegar a un estado de tranquilidad para escribir el programa en el lenguaje de programación.</p>
+					</section>
+					<section>
+						<a href="img/tema_01/prueba_escritorio.jpg" target="_blank">
+							<img src="img/tema_01/prueba_escritorio_en_cuaderno.jpg" width="52%" height="30%" alt="">
+						</a>
+					</section>
+				</section>
+				<!-- Example of nested vertical slides -->
+				<section>
+						<section>
+							<h2>Ejercicios</h2>
+							<ol>
+								<li>
+									Realice el pseudocódigo y el diagrama de flujo de una actividad cotidiana (vers siguiente slide).
+								</li>
+								<li>
+									Realice el diagrama de flujo de un cuento corto infantil. 
+								</li>
+							</ol>
+						</section>
+						<section>
+							<h2>Actividades cotidianas</h2>
+							<p>Leer un libro, sacar el perro, montar bicicleta, ir al gimnasio, jugar en el computador, jugar en una consola, cepillarse los dientes, bañarse, ir a la universidad, escuchar música, mercar, manejar carro, ir a cine, prestar un libro, motilarse, sacar la cédula, hacer una consignación, montar en metro, trapear, planchar, ordenar el closet, dibujar, salir de paseo, rumbear, comprar un regalo, conseguir novia, casarse, terminar con la novia, pedir la mano de la novia, ir a un concierto. </p>
+						</section>
+						<section>
+							<h2>Para tener en cuenta</h2>
+							<p>Cada pseudocodigo debe tener mínimo 30 pasos para describir las actividades.</p>
+							<!-- p>fp_01_NombreEstudiante_ddmmaaaa. < /p-->
+							<p>
+								Todo programador debe saber usar git, por tanto se recomienda ver estos tutoriales:
+								<a href="http://holamundo.co/viewtopic.php?f=17&t=10" target="_blank">Videos git</a>
+							</p>
+						</section>
+				</section>
+
+				
+
+				<!-- <section>
+					<h2>Pretty Code</h2>
+					<pre><code data-trim contenteditable>
+function linkify( selector ) {
+  if( supports3DTransforms ) {
+
+    var nodes = document.querySelectorAll( selector );
+
+    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
+      var node = nodes[i];
+
+      if( !node.className ) {
+        node.className += ' roll';
+      }
+    }
+  }
+}
+					</code></pre>
+					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+				</section> -->
+				
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

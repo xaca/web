@@ -1,0 +1,28 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script>
+
+		var ref_boton;
+
+		window.onload = init; //ASignamos quien va a escuchar el evento
+		function init(){
+			//Función que se llama cuando se produce el evento de carga
+			//Se obtiene la referencia, un solo llamado
+			ref_boton = document.getElementById("boton");
+			//Se matricula el evento con el listener
+			ref_boton.addEventListener("click",procesarClick);
+		}
+
+		//listener del evento click sobre un botón
+		function procesarClick(evento){
+			console.dir(evento);
+		}
+
+	</script>
+</head>
+<body>
+	<input type="button" value="Clickeame!" id="boton">
+</body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title></title>
+	<script>
+		
+	window.onload = function(){
+
+		var tabs = document.getElementsByClassName("tab_menu");
+		
+		var resultado = "";
+		for(var i in tabs)
+		{
+			resultado+=i+",";
+
+		}
+		console.log(resultado.substring(0,resultado.length-1));
+		//0,1,2,3,seccion_1,seccion_2,seccion_3,seccion_4,length,item,namedItem
+		
+	}
+
+	</script>
+</head>
+<body>
+
+
+	<nav>
+		<span id="seccion_1" class="tab_menu"></span>
+		<span id="seccion_2" class="tab_menu"></span>
+		<span id="seccion_3" class="tab_menu"></span>
+		<span id="seccion_4" class="tab_menu"></span>
+	</nav>
+</body>
+</html>

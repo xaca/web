@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Posicionamiento y tipografía - UPB</title>
+
+		<meta name="description" content="Posicionamiento de elementos html usando estilos y uso de tipografías de familias no estandar en el navegador">
+		<meta name="author" content="Andrés Bedoya Tobón">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+		
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<!-- <div class="volver">
+				<a href="index.html"><img src="img/volver.png"></a>
+			</div> -->
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h2>Posicionamiento de elementos en el documento</h2>
+					<blockquote cite="http://www.epdlp.com/texto.php?id2=2156">
+						"Descubrí que mi obsesión de que cada cosa estuviera en su puesto, cada asunto en su tiempo, cada palabra en su estilo, no era el premio merecido de una mente en orden, sino al contrario, todo un sistema de simulación inventado por mí para ocultar el desorden de mi naturaleza." <br>
+						– Gabriel García Márquez  						
+					</blockquote>
+				</section>
+				<section>					
+					<section>
+						<h2>Posicionamiento</h2>
+						<p>Posicionar correctamente elementos en el html es todo un arte, teniendo en cuenta la variedad de tipos de dispositivos para visualizar documentos html celulares, tablets, portátiles, computadores de escritorio, televisores, entre otros. El ancho de la pantalla cambia drásticamente entre dispositivos, un primer paso para lograr una buena visualización es el posicionamiento y luego aplicar reglas más versátiles como los media queries. </p>
+					</section>
+					<section>
+						<h2>Posicionamiento</h2>
+						<ul>
+							<!-- <li>Dominio y hosting (charla introducción)</li> -->
+							<li>Coordenadas en pantalla</li>
+							<li>Position static</li>
+							<li>Position fixed</li>
+							<li>Position relative</li>
+							<li>Position absolute</li>
+							<li>Centrar horizontal</li>
+							<li>Centrar vertical</li>
+							<!-- <li>Manejo de la profundidad</li>
+							<li>Anexo tipografías</li> -->
+						</ul>
+					</section>
+					<section>
+						<h2>Coordenadas en el documento</h2>
+						<p>Para posicionar correctamente elementos en el documento, es importante entender como esta compuesta la ventana del navegador y como su tamaño influye en la visualización de los elementos html. 
+						</p>
+						<p>Por un lado esta el tamaño de la pantalla, este tamaño es fijo y luego esta el tamaño de la ventana del navegador este tamaño cambia dependiendo del uso.</p>
+						<p>Por último esta el tamaño del viewport del documento, que es el tamaño que tiene disponible el documento para ser visualizado.</p>
+					</section>
+					<section>
+						<h2>Coordenadas de la pantalla</h2>
+						<p>Sistema de coordenadas de pantalla</p>
+						<img src="img/resolucion_pantalla.jpg" />
+					</section>
+					<section>
+						<h3>Coordenada del viewport horizontal</h3>
+						<p>Se calcula el ancho luego de restarle el ancho de la barra de scroll y de las márgenes del documento al ancho del navegador.</p>
+						<img src="img/viewport_horizontal.jpg" />
+					</section>
+					<section>
+						<h3>Coordenada del viewport vertical</h3>
+						<p>Se calcula luego de restarle el tamaño del área de las pestañas, barras de herramientas y de direcciones del navegador menos la parte del área de las barras de estado y descarga.</p>
+						<img src="img/viewport_vertical.jpg" />
+					</section>
+					<section>
+						<h2>Coordenadas en el documento</h2>
+						<p>Finalmente para maquetar el documento, contamos con un área que llamaremos el viewport y es la parte con la que finalmente el usuario interactúa.</p>
+						<img src="img/medidas_pantalla.jpg" />
+					</section>
+					<section>
+						<h2>Posicionamiento estático - Position static</h2>
+						<p>Posicionamiento por defecto, que ignora las propiedades top, left, right y bottom. Los elementos se "pintan" en orden, como ellos aparecen en el flujo del documento.</p>
+					</section>
+					<section>
+						<h2>Posicionamiento fijo - Position fixed</h2>
+						<p>Es un posicionamiento que saca un elemento del flujo normal del documento html y permite ubicarlo por encima de los demás elementos, en otras palabras el elemento se posiciona relativo a la ventana del navegador. Este posicionamiento no se ve afectado por el scroll del documento y hace que los elementos siempre esten visibles y fijos en la posición en la cual fueron ubicados.</p>
+					</section>
+					<section>
+						<h2>Posicionamiento fijo - Position fixed</h2>
+						<p>Como ejemplo veamos, como crear una barra de redes sociales que siempre esta presente en la esquina superior derecha del navegador.</p>
+						<em>En el html</em><br>
+						<a href="ejemplos/ejemplo_fixed.html" target="_blank"><img src="img/posicionamiento_fijo_html.png" /></a>
+					</section>
+					<section>
+						<h2>Posicionamiento fijo - Position fixed</h2>
+						<p>La estructura del documento, crea un contenedor con tres imágenes con los logos de tres redes sociales, y en l hoja de estilo es donde pasa la mágia.</p>
+						<em>En la hoja de estilos</em><br>
+						<a href="ejemplos/ejemplo_fixed.html" target="_blank"><img src="img/posicionamiento_fijo_css.png" /></a>
+					</section>
+					<section>
+						<h2>Posicionamiento fijo - Position fixed</h2>
+						<p>Es frecuente encontrar elementos posicionados fijos en el documento para presentar funcionalidades como menús de navegación, botones para volver arriba, botones de redes sociales entre otros, a continuación un ejemplo con algunas ubicaciones importantes.</p>
+					</section>
+					<section>
+						<h2>Posicionamiento fijo - Position fixed</h2>
+						<img src="img/position_estandar.jpg" />
+					</section>
+					<section>
+						<h2>Posicionamiento relativo - Position relative</h2>
+						<p>El posicionamiento se controla con las propiedades top, left, right y bottom. El elemento se posiciona relativo a su posicionamiento normal, se ve afectado por el scroll y no hay desplazamiento de elementos que continuen después del elemento que se modifica usando posicionamiento relativo.</p>
+					</section>
+					<section>
+						<h2>Posicionamiento relativo - Position relative</h2>
+						<p>Se va a usar la misma estructura del ejemplo anterior, para demostrar la importancia de desacoplar los elementos de su presentación.</p>
+						<em>En el html</em><br>
+						<a href="ejemplos/ejemplo_relative.html" target="_blank"><img src="img/posicionamiento_fijo_html.png" /></a>
+					</section>
+
+					<section>
+						<h4>Posicionamiento relativo - Position relative</h4>
+						<p>Cambia el valor de la propiedad position y se agregan cambios en las propiedades, note que pasa con el scroll y con los demás elementos html.</p>
+						<em>En el css</em><br>
+						<a href="ejemplos/ejemplo_relative.html" target="_blank"><img src="img/posicionamiento_relative_css.png" /></a>
+					</section>
+
+					<section>
+						<h2>Posiconamiento absoluto - Position absolute</h2>
+						<p>El posicionamiento se calcula respecto al contenedor padre del elemento, de tal forma que los valores top, left, right y bottom se calcuan con base en un viewport definido por el elemento contenedor.</p>
+					</section>
+
+					<section>
+						<h2>Posiconamiento absoluto - Position absolute</h2>
+						<p>Se va a modificar el contenedor html, para posicionar elementos con una configuración específica simulando un formulario.</p>
+						<em>En el html</em><br>
+						<a href="ejemplos/ejemplo_absolute.html" target="_blank"><img src="img/posicionamiento_absolute_html.png" /></a>
+					</section>
+
+					<section>
+						<h4>Posicionamiento absoluto - Position absolute</h4>
+						<p>Luego se posicionan los elementos con respecto a un contenedor padre, se recomienda que este contenedor padre tenga un posicionamiento relativo, no importa que no se usen los valores top, left, right o bottom.</p>
+						<em>En el css</em><br>
+						<a href="ejemplos/ejemplo_absolute.html" target="_blank"><img src="img/posicionamiento_absolute_css.png" width="80%" /></a>
+					</section>
+					<section>
+						<h2><a href="ejemplos/ejemplo_horizontal.html" target="_blank">Centrar horizontal</a></h2>
+						<p>Para centrar un elemento html horizontalmente, se puede hacer de diferentes formas que dependen principalmente del tipo de display que tenga el elemento además de otras reglas de estilos que se esten aplicando.</p>
+					</section>
+					<section>
+						<h2><a href="ejemplos/ejemplo_horizontal.html" target="_blank">Centrar horizontal</a></h2>
+						<p>Elementos que se visualizan línea</p>
+						<div class="clearfix">
+							<div class="flotar">
+								<h4>Código html</h4>
+								<img src="img/centrado_horizontal_inline_html.png" alt="">
+							</div>
+							<div class="flotar">
+								<h4>Código CSS</h4>
+								<img src="img/centrado_horizontal_inline_css.png" alt="">
+							</div>
+						</div>
+					</section>
+					<section>
+						<h2><a href="ejemplos/ejemplo_horizontal.html" target="_blank">Centrar horizontal</a></h2>
+						<p>Elementos en bloque, para centrar estos elementos es usar la margen tanto a la derecha como izquierda para que se cálcule el espacio a cada lado automáticamente, dejando el elemento posicionado en el centro horizontalmente.</p>
+						<div class="clearfix">
+							<div class="flotar">
+								<h4>Código html</h4>
+								<img src="img/centrado_horizontal_bloque_html.png" alt="">
+							</div>
+							<div class="flotar">
+								<h4>Código CSS</h4>
+								<img src="img/centrado_horizontal_bloque_css.png" alt="">
+							</div>
+						</div>
+					</section>
+					<section>
+						<h2><a href="ejemplos/ejemplo_horizontal.html" target="_blank">Centrar horizontal</a></h2>
+						<p>También es posible centrar un elemento que este posicionado absolutamente dentro de un contenedor padre, usando la ubicación en porcentajes, lo cual obliga al navegador a tener que realizar ajustes en la posición del elemento.</p>
+						<div class="clearfix">
+							<div class="flotar">
+								<h4>Código html</h4>
+								<img src="img/centrado_horizontal_relativo_html.png" alt="">
+							</div>
+							<div class="flotar">
+								<h4>Código CSS</h4>
+								<img src="img/centrado_horizontal_relativo_css.png" alt="">
+							</div>
+						</div>
+					</section>
+					<section>
+						<h2><a href="ejemplos/ejemplo_horizontal.html" target="_blank">Centrar vertical</a></h2>
+						<p>Centrar verticalmente un elemento requiere de tener presente el comportamiento del documento sobretodo el scroll vertical que genera el contenido. Una buena práctica es usar un contenedor para posicionar un elemento de un tamaño conocido verticalmente usando porcentajes.  </p>
+						<div class="clearfix">
+							<div class="flotar">
+								<h4>Código html</h4>
+								<img src="img/centrado_vertical_html.png" alt="">
+							</div>
+							<div class="flotar">
+								<h4>Código CSS</h4>
+								<img src="img/centrado_vertical_css.png" alt="">
+							</div>
+						</div>
+					</section>
+				</section>
+				<section>
+					
+					<section>
+						<!-- http://learn.shayhowe.com/html-css/working-with-typography/ -->
+						<h2>Texto y Tipografía</h2>
+						<p>El texto es uno de los principales elementos del documento, html retoma y mejora la mayoría de los conceptos presentes en el diseño editorial y los representa por medio de reglas de estilo sencillas de seguir.</p>
+						<ul>
+							<li>Color y tamaño</li>
+							<li>Propiedades del texto</li>
+							<li>Pseudo-clases</li>
+							<li>Tipos de fuentes predefinidas</li>
+							<li>Tipos de fuentes personalizadas</li>
+						</ul>
+					</section>
+					<section>
+						<h2><a href="ejemplos/ejemplo_color.html" target="_blank">Color</a></h2>
+						<p>Para cambiar el color del texto, se utiliza el color representado en alguna de las formas ya vistas: rgb, rgba, hexadecimal o una cosntante. Se utiliza la propiedad <em>color</em> sobre una etiqueta que contenga texto.</p>
+					</section>
+					<section>
+						<h2><a href="ejemplos/ejemplo_color.html" target="_blank">Color</a></h2>
+						<p>Usando cualquiera de los selectores que ya hemos visto, en este caso el selector universal, se modifica la presentación del color de texto del elemento.</p>
+						<div class="clearfix">
+							<div class="flotar">
+								<h4>Código html</h4>
+								<img src="img/color_fuente_html.png" alt="">
+							</div>
+							<div class="flotar">
+								<h4>Código CSS</h4>
+								<img src="img/color_fuente_css.png" alt="">
+							</div>
+						</div>
+					</section>
+					<section>
+						<h2><a href="ejemplos/ejemplo_tamano.html" target="_blank">Tamaño</a></h2>
+						<p> 
+							Para específicar la medida de la fuente, se pueden usar varios tipos de unidades, el más usado es el <em>pixel (px)</em> se recomienda usar números naturales para que el render en la página se ralice mejor, también se soporta usar porcentajes para que el texto se adapte mejor al contenedor al igual que los <em>em</em> donde un m, es valor del ancho de la m, esto también se usa mucho para ajustar el contenido entre dispositivos.
+						</p>
+					</section>
+					<section>
+						<h2><a href="ejemplos/ejemplo_tamano.html" target="_blank">Tamaño</a></h2>
+						<p> Se usa la propiedad	<em>font-size</em> y se le específica el valor que tendrá el texto en alguno de los sitemas de unidades soportado.
+						</p>
+						<div class="clearfix">
+							<div class="flotar">
+								<h4>Código html</h4>
+								<img src="img/tamano_fuente_html.png" alt="">
+							</div>
+							<div class="flotar">
+								<h4>Código CSS</h4>
+								<img src="img/tamano_fuente_css.png" alt="">
+							</div>
+						</div>
+					</section>
+					<section>
+						<h2>
+							<a href="ejemplos/ejemplo_propiedades.html" target="_blank">
+								Propiedades del texto
+							</a>
+						</h2>
+						<p>
+							<em>text-align</em> Sirve para alinear el texto, los posibles valores son: justify, left, right, center... Recuerde que esta propiedad también sirve para centrar horizontalmente elementos con display in-line.
+						</p>
+						<div class="clearfix">
+							<div class="flotar">
+								<h4>Código html</h4>
+								<img src="img/alineacion_fuente_html.png" alt="">
+							</div>
+							<div class="flotar">
+								<h4>Código CSS</h4>
+								<img src="img/alineacion_fuente_css.png" alt="">
+							</div>
+						</div>
+					</section>
+					<section>
+						<h2>Bordes</h2>
+						<p>No es precisamente una propiedad del texto, sino un adorno que se le puede poner a la mayoría de elementos html y nos permite definir un contorno que cumpla algunas propiedades como color, grosor, estilo, entre otros. Para este caso se incluye en la explicación para que sea fácil ver gráficamente que pasa con otras propiedades que veremos a continuación.</p>
+						<div class="clearfix">
+							<div class="flotar">
+								<h4>Código html</h4>
+								<img src="img/border_html.png" alt="">
+							</div>
+							<div class="flotar">
+								<h4>Código CSS</h4>
+								<img src="img/border_css.png" alt="">
+							</div>
+						</div>
+					</section>
+					<section>
+						<h2>
+							<a href="ejemplos/ejemplo_propiedades.html" target="_blank">
+								Propiedades del texto
+							</a>
+						</h2>
+						<p>
+							<em>margin - padding</em> Estas dos propiedades tiene efectos similares sobre los elementos html, el margin define la margen externa del elemento contenedor y el padding se considera la sangría interna del elemento. Se puede definir cuatro valores principales: top, left, rigth, bottom. Recuerde que un elemento html es un contenedor que tiene estas características comunes.
+						</p>						
+					</section>
+					<section>
+						<h2>
+							<a href="ejemplos/ejemplo_propiedades.html" target="_blank">
+								Propiedades del texto
+							</a>
+						</h2>
+						<p>La siguiente imagen, muestra como se ve gráficamente el margin y el padding, hablamos de afuera y adentro del contenedor. Recuerde que si un elemento tienen un ancho definido y margen automática a la derecha y a la izquierda, quiere decir que el elemento queda centrado.</p>
+						<img src="img/margin_padding_chrome.png" alt="">
+					</section>
+					<section>
+						<h3>
+							<a href="ejemplos/ejemplo_propiedades.html" target="_blank">
+								Propiedades del texto
+							</a>
+						</h3>
+						<p>Se define de dos formas, especificando cada uno de los valores, <em>padding-top, padding-rigth, padding-bottom, padding-left</em> o usando un atajo definiendo los valores usando el nombre de la propiedad <em>padding</em> seguída de los valores top, right, bottom, left.</p>
+						<div class="clearfix">
+							<div class="flotar">
+								<h4>Código html</h4>
+								<img src="img/padding_margin_html.png" alt="">
+							</div>
+							<div class="flotar">
+								<h4>Código CSS</h4>
+								<img src="img/padding_margin_css.png" alt="">
+							</div>
+						</div>
+					</section>
+
+					<section>
+						<h3>
+							<a href="ejemplos/ejemplo_propiedades.html" target="_blank">
+								Propiedades del texto
+							</a>
+						</h3>
+						<p>
+							<em>letter-spacing:</em> Define el espacio entre letras, a esta propiedad se le conoce comunmente como tracking.<br>
+							<em>line-height:</em> Define el interlineado del párrafo, o espacio entre reglones.
+						</p>
+						<div class="clearfix">
+							<div class="flotar">
+								<h4>Código html</h4>
+								<img src="img/espaciado_texto_html.png" alt="">
+							</div>
+							<div class="flotar">
+								<h4>Código CSS</h4>
+								<img src="img/espaciado_texto_css.png" alt="">
+							</div>
+						</div>
+					</section>
+					<section>
+						<h2>
+							<a href="ejemplos/ejemplo_propiedades.html" target="_blank">
+							Pseudo-clases
+							</a>
+						</h2>
+						<p>Son palabras claves que pueden agregarse al final de un selector para definir estilos que va tener el elemento cuando este en un estado único, para este caso vamos a ver como cambiar el estilo de un elemento cuando pasa el mouse por encima de él.</p>
+						<div class="clearfix">
+							<div class="flotar">
+								<h4>Código html</h4>
+								<img src="img/pseudo_clases_html.png" alt="">
+							</div>
+							<div class="flotar">
+								<h4>Código CSS</h4>
+								<img src="img/pseudo_clases_css.png" alt="">
+							</div>
+						</div>
+					</section>
+					<section>
+						<h2><a href="http://www.w3schools.com/cssref/css_websafe_fonts.asp">Tipos de fuentes predefinidas</a></h2>
+						<p>Son el conjunto de fuentes que esta presentes en la mayoría de computadores, recuerde que una fuente tipografíca para poder ser visualizada en el computador, la fuente debe estar instalada. Las siguientes fuentes se consideran fuentes seguras, porque "casi" siempre van a estar instaladas en el computador donde se ve el documento html</p>
+						<em>Verdana, Georgia, "Palatino Linotype", "Times New Roman", Arial, "Comic Sans MS", Impact, "Trebuchet MS", Tahoma, "Lucida Console"</em>
+					</section>
+					<section>
+						<h2><a href="http://www.w3schools.com/cssref/css_websafe_fonts.asp">Tipos de fuentes predefinidas</a></h2>
+						<p><em>font-family:</em>Define la fuente que va a ser aplicada al elemento, si el nombre de la fuente tiene varias palabras, se debe poner entre comillas sino se pone sin comillas.</p>
+						<div class="clearfix">
+							<div class="flotar">
+								<h4>Código html</h4>
+								<img src="img/fuente_predefinida_html.png" alt="">
+							</div>
+							<div class="flotar">
+								<h4>Código CSS</h4>
+								<img src="img/fuente_predefinida_css.png" alt="">
+							</div>
+						</div>
+					</section>
+					<section>
+						<h2>Tipos de fuentes personalizadas</h2>
+						<p>Los tipos personalizados, son las fuentes de una familia específica, que normalmente se debe pagar por ella o puede ser gratuita, pero debemos tener los derechos de uso en la web. Estas fuentes como no son estandar, se deben incluir en una carpeta dentro de la carpeta donde esta el documento, se recomienda llamar a esta carpeta <em>fonts</em> y debemos incluir el formato de fuente compatible con las diferentes plataformas, esta puede ser una tarea dispendiosa, por tanto usamos una herramienta online que nos facilita la conversión de la fuente. Para este caso usaremos <a href="http://www.fontsquirrel.com/tools/webfont-generator">font squirrel</a></p>
+					</section>
+					<section>
+						<h2><a href="fuente_personalizada/">Tipos de fuentes personalizadas</a></h2>
+						<p>Se debe primero convertir la tipografía y guardarla en una carpeta del proyecto y luego usarla en los estilos de los elementos.</p>
+						<div class="clearfix">
+							<div class="flotar">
+								<h4>Código html</h4>
+								<img src="img/fuente_personalizada_html.png" alt="">
+							</div>
+							<div class="flotar">
+								<h4>Código CSS</h4>
+								<!-- No haga esto <img style="height:290px;" aparece como fines educativos  -->
+								<img style="height:290px;" src="img/fuente_personalizada_css.png" alt="">
+							</div>
+						</div>
+					</section>
+					<section>
+						<h3>
+							<a href="ejemplos/fuente_personalizada/index.html" target="_blank">
+								Tipos de fuentes personalizadas
+							</a>
+						</h3>
+						<img src="img/tipografia_personalizada_01.gif" alt="">
+					</section>
+					<section>
+						<h3>
+							<a href="ejemplos/fuente_personalizada/index.html" target="_blank">
+								Tipos de fuentes personalizadas
+							</a>
+						</h3>
+						<img src="img/tipografia_personalizada_02.gif" alt="">
+					</section>
+				</section>
+				<!-- <section>
+					<h2>Pretty Code</h2>
+					<pre><code data-trim contenteditable>
+function linkify( selector ) {
+  if( supports3DTransforms ) {
+
+    var nodes = document.querySelectorAll( selector );
+
+    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
+      var node = nodes[i];
+
+      if( !node.className ) {
+        node.className += ' roll';
+      }
+    }
+  }
+}
+					</code></pre>
+					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+				</section> -->
+				
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

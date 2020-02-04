@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Fundamentos de programación - UPB</title>
+
+		<meta name="description" content="Ejercicios con cadenas usando c#">
+		<meta name="author" content="Andrés Bedoya Tobón">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/moon.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<div class="volver">
+					<a href="index.html"><img src="img/volver.png"></a>
+				</div>
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				
+					<section>
+						<h2>Entrada y salida de datos</h2>
+						<p>Todo valor que se le pide al usuario por medio de la consola es de tipo cadena, ya que el usuario utiliza el teclado y este le permite ingresar cualquier combinación de caracteres, números y símbolos. La entrada es clave para un programa, por tanto si se pide al usuario un número se debe validar que el usuario si haya ingresado un número con las características solicitadas.</p>
+					</section>
+					<section>
+						<h2>Entrada y salida de datos</h2>
+						<p>Términos importantes:</p>
+						<ul>
+							<li>Representación de una cadena</li>
+							<li>Lectura de una cadena</li>
+							<li>Conversión de una cadena a un número (Si los valores son compatibles)</li>
+							<li>Casting explicito e implícito</li>
+							<li>Validaciones en tiempo de ejecución</li>
+						</ul>
+					</section>
+				<section>
+					<section>
+						<h2>Taller #3</h2>
+						<p>Se pone a prueba el uso de las diferentes estructuras de control, operaciones básicas de entrada y salida y operaciones básicas con cadenas. Recuerde: TODO LO QUE SE LEE POR TECLADO ES DE TIPO CADENA (string)</p>
+						<p>Crear un programa que permita escoger entre las siguientes operaciones usando un menú <em>infinito</em> con adornos de <a href="http://www.chris.com/ascii/">ascii art</a></p>
+						<ol>
+							<li>Crear un nuevo repositorio según las normas vistas en clase, se deben hacer mínimo 10 commits</li>
+							<li>
+								Decir si una palabra es palíndroma
+							</li>
+							<li>Convertir una palabra a clave morse</li>
+						</ol>
+					</section>
+					<section>
+						<h2>Taller #3</h2>
+						<p>Para desordenar la cadena, se espera que se invente una estrategia para desordenar los caracteres de una cadena.</p>
+						<ol start="4">
+							<li>
+								Crear un password aleatorio, consultar comando <em>Random</em>
+							</li>
+							<li>
+								Desordenar una cadena
+							</li>
+							<li>
+								Generar un rectángulo compuesto por un ancho que es el total de caracteres en una línea y el alto que es el total de líneas que se imprimen. Se debe pedir un carácter que será el símbolo que se repite.
+							</li>
+						</ol>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Algunos códigos vistos en clase</h2>
+						<p>Recopilación de ejercicios de caracteres, cadenas, estructuras de control, casting implícito y casting explícito.</p>
+					</section>
+					<section>
+						<h2>Impresión usando ascii art</h2>
+						<p>Usando un generador de letreros en ascii art, se códifica la impresión línea a línea usando Console.Write</p>
+						<pre>
+							<code data-trim contenteditable>
+Console.ForegroundColor = ConsoleColor.DarkRed; //Observe esta línea, descubra para que sirve
+Console.WriteLine(" _      _              _                    _             _            ");
+Console.WriteLine("/_/\\    /\\ \\           / /\\                /\\ \\           / /\\          ");
+Console.WriteLine("\\ \\ \\   \\ \\_\\      / /  \\              /  \\ \\         / /  \\         ");
+Console.WriteLine(" \\ \\ \\__/ / /        / / /\\ \\            / /\\ \\ \\       / / /\\ \\        ");
+Console.WriteLine("  \\ \\__ \\/_/        / / /\\ \\ \\          / / /\\ \\ \\     / / /\\ \\ \\       ");
+Console.WriteLine("   \\/_/\\__/\\       / / /  \\ \\ \\        / / /  \\ \\_\\   / / /  \\ \\ \\      ");
+Console.WriteLine("    _/\\/__\\ \\     / / /___/ /\\ \\      / / /    \\/_/  / / /___/ /\\ \\     ");
+Console.WriteLine("   / _/_/\\ \\ \\   / / /_____/ /\\ \\    / / /          / / /_____/ /\\ \\    ");
+Console.WriteLine("  / / /   \\ \\ \\ / /_________/\\ \\ \\  / / /________  / /_________/\\ \\ \\   ");
+Console.WriteLine(" / / /    /_/ // / /_       __\\ \\_\\/ / /_________\\/ / /_       __\\ \\_\\  ");
+Console.WriteLine(" \\/_/     \\_\\/ \\_\\___\\     /____/_/\\/____________/\\_\\___\\     /____/_/  ");
+Console.WriteLine("         _           _                   _             _                ");
+Console.WriteLine("        /\\ \\        / /\\                /\\ \\     _    / /\\              ");
+Console.WriteLine("       /  \\ \\      / /  \\              /  \\ \\   /\\_\\ / /  \\             ");
+Console.WriteLine("      / /\\ \\ \\    / / /\\ \\            / /\\ \\ \\_/ / // / /\\ \\            ");
+Console.WriteLine("     / / /\\ \\_\\  / / /\\ \\ \\          / / /\\ \\___/ // / /\\ \\ \\           ");
+Console.WriteLine("    / / /_/ / / / / /  \\ \\ \\        / / /  \\/____// / /  \\ \\ \\          ");
+Console.WriteLine("   / / /__\\/ / / / /___/ /\\ \\      / / /    / / // / /___/ /\\ \\         ");
+Console.WriteLine("  / / /_____/ / / /_____/ /\\ \\    / / /    / / // / /_____/ /\\ \\        ");
+Console.WriteLine(" / / /\\ \\ \\  / /_________/\\ \\ \\  / / /    / / // /_________/\\ \\ \\       ");
+Console.WriteLine("/ / /  \\ \\ \\/ / /_       __\\ \\_\\/ / /    / / // / /_       __\\ \\_\\      ");
+Console.WriteLine("\\/_/    \\_\\/\\_\\___\\     /____/_/\\/_/     \\/_/ \\_\\___\\     /____/_/      ");
+
+Console.WriteLine("           .--._.--.");
+Console.WriteLine("          ( O     O )");
+Console.WriteLine("          /   . .   \\");
+Console.WriteLine("         .`._______.'.");
+Console.WriteLine("        /(           )\\");
+Console.WriteLine("      _/  \\  \\   /  /  \\_");
+Console.WriteLine("   .~   `  \\  \\ /  /  '   ~.");
+Console.WriteLine("  {    -.   \\  V  /   .-    }");
+Console.WriteLine("_ _`.    \\  |  |  |  /    .'_ _");
+Console.WriteLine(">_       _} |  |  | {_       _&lt;");
+Console.WriteLine(" /. - ~ ,_-'  .^.  `-_, ~ - .\\");
+Console.WriteLine("         '-'|/   \\|`-`");								
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h2>Entrada de datos númericos primitivos</h2>
+						<p>Teniendo en cuenta que todo lo que se lee por teclado es una cadena, acá se muestra un ejemplo de una de las formas correctas que existen para leer un número desde la consola.</p>
+						<pre>
+						<code data-trim contenteditable>
+string temp;
+double n;
+
+Console.WriteLine("Ingrese un número");
+temp = Console.ReadLine();
+
+if(double.TryParse(temp,out n))
+{
+    
+    if(n>1)
+    {
+       Console.WriteLine("Muy bien reclama "+n+" panzzerotis del rey "); 
+    }
+    else
+    {
+        Console.WriteLine("Muy bien reclama "+n+" panzzeroti del rey ");
+    }
+    
+}
+else{
+    Console.WriteLine("Lo siento pero no ingreso un número, muere.");
+}
+						</code>
+						</pre>
+					</section>
+					<section>
+						<h2>Caracteres</h2>
+						<p>En el siguiente bloque se observa el uso del casting explícito y la relación entre el <a href="http://www.asciitable.com/">código ascii</a> y un caracter.</p>
+						<pre>
+						<code data-trim contenteditable>
+for(int i=33;i&lt;=126;i++)
+{
+	Console.Write((char)i);
+}
+						</code>
+						</pre>
+					</section>
+					<section>
+						<h2>Imprimir una cadena en orden inverso</h2>
+						<p>En este bloque se observa como se puede leer, imprimir y manipular una <a href="" https://msdn.microsoft.com/en-us/library/system.string(v="vs.110).aspx">cadena</a></p>
+						<pre>
+						<code data-trim contenteditable>
+string cadena = "";
+Console.WriteLine("Ingrese una cadena");
+cadena = Console.ReadLine();
+
+//Console.WriteLine(cadena.Replace("hola","adios"));
+Console.WriteLine("Longitud o el numero total de caracteres "+cadena.Length);
+Console.WriteLine("Primer caracter "+cadena[0]);
+Console.WriteLine(" Ultimo caracter"+cadena[cadena.Length-1]);
+for(int i=cadena.Length-1;i&gt;=0;i--)
+{
+    Console.Write(cadena[i]);
+}
+Console.WriteLine();
+						</code>
+						</pre>
+					</section>
+					<section>
+						<h2>Promedio de datos quemados</h2>
+						<p>Observe como se inicializan con literales variables de tipo float</p>
+						<pre>
+							<code data-trim contenteditable>
+float a, b, c, d, e;
+float resultado;
+
+a = 4;
+b = 5;
+c = 7;
+d = 9;
+e = 23.5F;
+resultado = (a + b + c + d + e) / 5;
+
+Console.WriteLine("El resultado es = "+resultado);								
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h2>Promedio de n números de punto flotante</h2>
+						<p>Acá ponemos a prueba la lectura de un dato de tipo entero y otro de tipo double.</p>
+						<pre>
+						<code data-trim contenteditable>
+int n,contador;
+double numero,total;
+string temp;
+
+total = 0;
+contador = 1;
+
+Console.WriteLine("Ingrese el total de datos para el promedio");
+temp = Console.ReadLine();
+
+if (int.TryParse(temp, out n))
+{
+	while (contador &lt;= n)
+	{
+		Console.WriteLine("Ingrese el dato " + contador);
+		temp = Console.ReadLine();
+
+		if (double.TryParse(temp, out numero))
+		{
+			total = total + numero;
+			contador++;
+		}
+		else
+		{
+			Console.WriteLine("Dato incorrecto, intente nuevamente");
+		}
+	}
+
+Console.WriteLine("El promedio es "+(total/n));
+}
+else
+{
+Console.WriteLine("Valor incorrecto para n");
+}	
+						</code></pre>
+					</section>
+					<section>
+						<h2>Desde cero hasta n</h2>
+						<p>Observe como se pueden usar los datos que se piden al usuario como condicional de un ciclo while</p>
+						<pre>
+							<code data-trim contenteditable>
+int n;
+int contador = 0;
+string dato;
+
+Console.WriteLine("Ingrese n");
+dato = Console.ReadLine();
+
+if (int.TryParse(dato, out n))
+{
+	while (contador &lt;= n)
+	{
+		Console.WriteLine(contador);
+		contador = contador + 1;
+	}
+}
+else
+{
+	Console.WriteLine("Error en el ingreso de n");
+}
+							</code>
+						</pre>
+					</section>
+					
+				</section>
+				
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

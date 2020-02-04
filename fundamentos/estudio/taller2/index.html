@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Fundamentos de programación taller #1</title>
+
+		<meta name="description" content="Taller de estudio #2 para prepara examen parcial">
+		<meta name="author" content="Andrés Bedoya Tobón">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/moon.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+		<style type="text/css">
+			h1{
+			    font-size: 120px !important;
+			}
+			h2{
+				font-size: 60px !important;
+			}
+			.volver{
+				position: fixed;
+				top: 10px;
+				right: 10px;
+				z-index: 999;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<div class="volver">
+				<a href="../../"><img src="../../img/volver.png"></a>
+			</div>
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Taller estudio parcial #2</h1>
+					<p>Taller de estudio para preparar el primer parcial, no es necesario entregarlo, ni se calificará. Se recomienda estudiarlo y leerlo completamente, para que conozca el tipo de preguntas que encontrará en el examen.</p>
+				</section>
+				<section>
+					<section>
+						<h2>Taller de estudio - Ejercicios</h2>
+						<p>1. Escriba un programa que calcule el factorial de un número, tenga en cuenta los casos especiales y controle errores en tiempo de ejecución, realice varias pruebas y conteste.</p>
+						<ul>
+							<li>¿Qué tipo de variable es el más indicado para solucionar este ejercicio?</li>
+							<li>¿Qué pasa con el factorial de 4, 15, 20, 100, 1000?</li>
+							<li>Hay algún valor que arroje comportamientos inesperados</li>
+							<li>Conclusiones de las pruebas</li>
+						</ul>
+						<p>2. Realice un programa que calcule las raices reales usando la fórmula del estudiante, tenga en cuenta los casos especiales y controle errores en tiempo de ejecución.</p>
+					</section>
+					<section>
+						<h2>Taller de estudio - Ejercicios</h2>
+						<p>3. Realice el diagrama y el programa que permita calcular los divisores de un número n donde n es entero mayor a 0.</p>
+						<p>4. Programa que descomponga un número en unidades, decenas y centenas, debe funcionar para números de 1 hasta 1'000.000.</p>
+						<p>5. Diagrama y programa que lea un número entero entre 5000 y 10000 e imprima el número invertido (* No se puede usar arrarys)</p>
+						<pre>
+						<code data-trim contenteditable>
+Ejemplo: 6345 ----> imprime 5436.
+						</code>
+						</pre>
+					</section>
+					<section>
+						<h2>Taller de estudio - Ejercicios</h2>
+						<p>6. Programa que imprima los número pares de m hasta n, donde m &gt; n, calcule el promedio de los número impares  y la suma de los números primos.</p>
+						<p>7. Programa que sume los dígitos de un número hasta que solo quede un dígito, debe funcionar para números de 100 hasta 1'000.000. Y se debe mostrar la operación como se muestra en el ejemplo.</p>
+						<pre>
+							<code data-trim contenteditable>
+Ejemplo:
+-  5112  ---&gt; 5 + 1 + 1 + 2 = 9       OK
+-  62398 ---&gt; 6 + 2 + 3 + 9 + 8  = 28 Queda un número de dos dígitos
+         ---&gt; 2 + 8 = 10              Queda un número de dos dígitos
+		 ---&gt; 1 + 0 = 1               OK
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h2>Taller de estudio - Ejercicios</h2>
+						<p>8. Escriba la sintaxis necesaria para realizar conversiones entre los siguientes: string, int, float, bool.</p>
+						<p>9. Escriba un programa que imprima números de 1 ---> 1000  use: while para los números de 1 hasta 100, luego un for para los números de 101 hasta 500, y por último un do while para los números de 501 hasta 1000, utilice la misma variable en todas las estructuras de control.</p>
+					</section>
+					<section>
+						<h2>Taller de estudio - Ejercicios</h2>
+						<p>10. 2 elevado a las 15 es igual a 32768 y la suma de sus digitos es 3 + 2 + 7 + 6 + 8 = 26. ¿Cuál es la suma de los digitos de 2 elevado a 10000? Resuelva usando múltiplicaciones sucesivas.</p>
+						<p>11. Un triple de pitagoras es un conjunto de tres números naturales, a&lt;b&lt;c, para los cuales: <br>
+<pre>
+	<code>
+a*a + b*b = c*c
+Ejemplo 3*3 + 4*4 = 9 + 16 = 25 = 5*5
+	</code>
+</pre>
+					Existe exactamente un triple de pitagoras para el cual a + b + c = 1000 encuentre el producto de a*b*c.</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Taller de estudio - Calcular el valor de la i</h2>
+						<p>Prueba de escritorio, calcule el valor de la i. (Click en la imagen para agrandar)</p>
+						<a href="img/diagramas_flujo_1.jpg" target="blank">
+							<img src="img/diagramas_flujo_1.jpg">
+						</a>
+					</section>
+					<section>
+						<h2>Taller de estudio - Calcular el valor de la i</h2>
+						<a href="img/diagramas_flujo_2.jpg" target="blank">
+							<img src="img/diagramas_flujo_2.jpg">
+						</a>
+					</section>
+				</section>	
+				<section>
+					<section>
+						<h2>Taller de estudio - Teoría</h2>
+						<ul>
+							<li>¿Qué es una variable?</li>
+							<li>¿Qué es una palabra reservada?</li>
+							<li>Escriba una lista de 20 palabras reservadas.</li>
+							<li>¿Qué es desbordamiento?, ¿Por qué se presenta?</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Taller de estudio - Teoría</h2>
+						<ul>
+							<li>Escriba 5 buenas prácticas para escoger el nombre de una variable.</li>
+							<li>Explique para que se usa el casting en programación (recuerde: En programación no hay actores)</li>
+							<li>Escriba 20 condicionales usando operadores de relación, booleanos y operadores alfanuméricos.</li>
+							<li>Escriba 3 tipos diferentes de operadores de asignación y explique su significado.</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Taller de estudio - Teoría</h2>
+						<ul>
+							<li>¿Qué diferencia existe entre el operador incremento y el operador posincremento?</li>
+							<li>¿Qué es un dato primitivo? Escriba 5 ejemplos de estos datos.</li>
+							<li>¿Qué es el operador ternario y como funciona en c sharp? Escriba un ejemplo.</li>
+							<li>¿Explique por qué es importante usar el tipo de dato adecuado?, escriba tres ejemplos</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Taller de estudio - Teoría</h2>
+						<p>Explique y ejemplifique los siguientes errores.</p>
+						<ul>
+							<li>Tiempo de ejecución</li>
+							<li>Compilación</li>
+							<li>Lógico</li>
+							<li>Sintaxis	</li>
+						</ul>
+					</section>
+				</section>
+				
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
