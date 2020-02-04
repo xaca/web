@@ -239,6 +239,16 @@
 						</a>
 					</section>
 					<section>
+						<h2>SVG - Scalable Vector Graphics</h2>
+						<p>Es un lenguaje de marcado XML para describir gráficos vectoriales en dos dimensiones. Básicamente, es a los gráficos lo que HTML es al texto.</p>						
+					</section>									
+					<section data-background="img/tema_02/ejemplo.svg">
+						<h2>SVG - Scalable Vector Graphics</h2>
+						<p>Los gráficos SVG, son livianos, permiten representar una imágen por medio de fórmulas mátematicas llamadas primitivas (circulo, línea, cuadrado), es un formato compatible con programas de diseño como illustrator, affinity, sketch, figma, adobe xd.</p>
+						<p>Se usa para realizar patrones de fondo, íconos, logos. Funciona similar al formato de las tipografías.</p>
+						fuente: <a href="https://developer.mozilla.org/es/docs/Web/SVG" target="_blank">MDN web docs</a>
+					</section>
+					<section>
 						<h2>Herramientas para editar y optimizar imágenes</h2>						
 						<p>Optimizar los insumos gráficos es una tarea manual que todavía es realizada por los roles que se encargan de la interfaz de usuario. Web UI, maquetador, ingeniero frontend.</p>
 					</section>
@@ -538,7 +548,12 @@
 					<section>
 						<h2>CSS - Propiedades</h2>
 						<p>El documento html, se puede ver como una página de un cuaderno, llena de reglones, que van desde el principio de la margen izquierda hasta el final de la margen derecha.</p>
-						<img src="img/tema_02/cuaderno.png">
+						<img src="img/tema_02/cuaderno.png"><br>
+						Lecturas recomendada: 
+						<ul>
+							<li><a href="https://medium.com/@DaphneWatson/css-display-properties-block-inline-and-inline-block-how-to-tell-the-difference-7d3a1e6e3051" target="_blank">¿Cómo saber la diferencia entre displays?</a></li>
+							<li><a href="https://medium.com/better-programming/understanding-css-display-none-block-inline-and-inline-block-63f6510df93">Entender CSS display</a></li>
+						</ul>
 					</section>
 					<section>
 						<h2>CSS - display</h2>
@@ -618,7 +633,6 @@
 						</div>
 					</section>
 					<section>
-						<!-- Pendiente hablar de visibility -->
 						<h2>CSS - display</h2>
 						<p><strong><em>none:</em></strong> Sin visualización, esto permite que el elemento no se muestre, pero esta presente dentro de la estructura del archivo html.</p>
 					</section>
@@ -652,6 +666,7 @@
 							<li>Sintaxis correcta</li>
 							<li>Combinar clases</li>
 							<li>Abreviación de reglas de estilo</li>
+							<li>Herramientas de desarrollador</li>
 						</ul>
 					</section>
 					<section>
@@ -712,7 +727,7 @@
 						<h2>Modelo de color - RGB</h2>
 						<img src="img/tema_02/modelo_color.jpg">
 						<p>Intente construir colores complementarios utilizando la anterior tabla </p>
-						<p>Se recomienda usar <a href="https://color.adobe.com/">adobe kuler</a> para encontrar paletas de colores populares</p>
+						<p>Se recomienda usar <a href="https://color.adobe.com/">adobe kuler</a> para encontrar paletas de colores populares. Para consultar los principales códigos de colores <a href="https://www.quackit.com/css/css_color_codes.cfm" target="_blank">quackit.com</a></p>
 					</section>
 					<section>
 						<h2>Sintaxis correcta</h2>
@@ -760,6 +775,50 @@
 					</section>
 					<section>
 						<h2>Abreviación de reglas</h2>
+						<p>Las reglas de estilo permiten escribir una regla de manera detallada y personalizada por medio de una instrucción específica, por cada detalle (color, fondo, unidades).</p>
+						<p>Algunas reglas permiten definir de golpe en una sola instrucción varias características gráficas. </p>
+						<ul>
+							<li>background</li>
+							<li>border</li>
+							<li>margin</li>
+							<li>padding</li>
+							<li>font</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Background</h2>
+						<p>La propiedad background permite asignar un fondo de color, una imagen de fondo, definir la ubicación del fondo, asignar varias imágenes entre otras características.</p>						
+					</section>
+					<section>
+						<h2>Background</h2>
+						<p>En el siguiente ejemplo se puede ver el uso largo o abreviado de la propiedad.</p>
+						<div class="clearfix">
+							<div class="flotar">
+								<em>Html</em> <br>
+								<img src="img/tema_02/background_01.png" />
+							</div>
+							<div class="flotar">
+								<em>CSS</em> <br>
+								&nbsp;&nbsp;<img src="img/tema_02/background_02.png" />
+							</div>
+							<div class="float">
+								<em>Resultado</em> <br>
+								<img src="img/tema_02/background_03.png">
+							</div>
+						</div>
+						fuente: <a href="https://www.svgbackgrounds.com/" target="_blank">background svg</a>
+					</section>
+					<section>
+						<h2>Herramientas de desarrollador</h2>
+						<ul>
+							<li>Es una funcionalidad que traen algunos navegadores como chrome o firefox, para poder inspeccionar e interactuar con el html, css y js de cualquier pagina web.</li>
+							<li>Permite editar en caliente las propiedades y ver el resultado en el navegador.</li>
+							<li>Se accede facilmente, por lo general, simplemente se presiona click derecho en cualquier parte de la pagina web, y luego se selecciona inspeccionar.</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Herramientas de desarrollador</h3>
+						<img src="img/tema_02/instrucciones_inspector.gif" width="80%" alt="">
 					</section>
 				</section>
 				
