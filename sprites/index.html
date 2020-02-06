@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Sprites y background images - UPB</title>
+
+		<meta name="description" content="Optimización de las imágenes usadas en un documento html">
+		<meta name="author" content="Andrés Bedoya Tobón">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+		
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<!-- <div class="volver">
+				<a href="index.html"><img src="img/volver.png"></a>
+			</div> -->
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h2>Agregando imágenes</h2>
+					<blockquote cite="http://edition.cnn.com/2015/07/13/asia/gallery/japan-satoru-iwata-quotes/">
+							"Even a small amount of power can have a great effect when concentrated on a certain area." <br> - Satoro Iwata (Nintendo)				
+					</blockquote>
+				</section>
+				<section>
+					<h2>Agregando imágenes</h2>
+					<ul>
+						<li>Mapa de imagen - Image Map</li>
+						<li>Fondo - Background</li>
+						<li>Sprite</li>
+					</ul>
+				</section>
+				<section>
+					<section>
+						<!-- http://www.w3schools.com/tags/att_area_shape.asp -->
+						<h2>Mapa de imagen</h2>
+						<p>Esta es una de las formas clásicas de agregar interactividad por medio de una imagen en un documento html, para crear un mapa, se deben combinar tres etiquetas, <em>img</em>, <em>map</em>, <em>area</em>. La primera etiqueta define la imagen que se va a usar como referencia para crear el mapa, el mapa define un mapa sobre la imagen y se vínculan a través del atributo <i>usemap</i> en la etiqueta <em>img</em>. Finalmente <em>area</em> define zonas sobre la imagen expresada en coordenadas.</p>
+					</section>
+					<section>
+						<h2>Mapa de imagen</h2>
+						<p>Existen 4 tipos de areas</p>
+						<ul>
+							<li>default: Define una región completa</li>
+							<li>rect: Define una región rectangular (2 puntos)</li>
+							<li>circle: Define una región circular (3 puntos)</li>
+							<li>poly: Define un poligono (n puntos)</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Mapa de imagen</h2>
+						<p>Este tipo de imágenes se usan todavía, sobretodo en newsletters (boletines de emailing) ya que es fácil asociar enlaces a las diferentes áreas que se definen sobre la imagen. Sin embargo su uso en maquetación de paginas web, ha disminuído por la existencia de nuevas opciones más potentes.</p>
+
+						<img src="img/mapa_imagenes.jpg" alt="">
+
+					</section>
+					<section>
+						<!-- http://www.todouniversal.com/wp-content/uploads/2014/01/Universal-Orlando-Resort.jpg -->
+						<h2>Mapa de imagen</h2>
+						<p>Sacar las coordenadas manualmente puede ser un trabajo dispendioso, por tanto se recomienda usar un editor con interfaz gráfica que permita acelerar el proceso, se recomienda usar dreamweaver  una herramienta online, como la encontrada <a href="http://imagemap-generator.dariodomi.de/">acá.</a></p>
+					</section>
+					<section>
+						<h3>Mapa de imagen</h3>
+						<img src="img/mapa_de_imagenes.gif" alt="Creando el mapa de imagen online, para determinar las coordenadas. Pruebe dreamweaver para que compare la funcionalidad.">
+					</section>
+				</section>				
+				<section>
+					<section>
+						<h2>Fondo - Background</h2>
+						<p>En el modelo de caja de los elementos html, existe la posibilidad de modificar gráficamente la propiedad que define el fondo del contenido. Hay una variedad de opciones para modificar sus caracteristicas.</p>
+					</section>
+					<section>
+						<h2><a href="ejemplos/fondo_color.html" target="_blank">Fondo - Color plano</a></h2>
+						<p>Observe la diferencia entre asignar el color de fondo y asignar el color del contenido que es el texto.</p>
+						<div class="clearfix">
+							<div class="flotar_3">
+								<h4>Código html</h4>
+								<img src="img/background_color_html.jpg" alt="">
+							</div>
+							<div class="flotar_3">
+								<h4>Código CSS</h4>
+								<img src="img/background_color_css.jpg" alt="">
+							</div>
+							<div class="flotar_3">
+								<h4>Resultado</h4>
+								<img src="img/background_color_resultado.jpg" alt="">
+							</div>
+						</div>
+					</section>
+					<section>
+						<!-- http://philbit.com/svgpatterns/ -->
+						<h2><a href="ejemplos/fondo_imagen.html" target="_blank">Fondo - Fondo que se repite</a></h2>
+						<p>Es posible asignar una imagen de fondo, esta se repetira por defecto a lo largo del eje horizontal y vertical, es posible usar varios formatos de imagen, png, jpg, gif, svg.</p>
+						<div class="clearfix">
+							<div class="flotar_3">
+								<h4>Código html</h4>
+								<img src="img/background_body_html.jpg" alt="">
+							</div>
+							<div class="flotar_3">
+								<h4>Código CSS</h4>
+								<img src="img/background_imagen_css.jpg" alt="">
+							</div>
+							<div class="flotar_3">
+								<h4>Resultado</h4>
+								<img src="img/background_imagen_resultado.jpg" alt="">
+							</div>
+						</div>
+					</section>
+					<section>
+						<!-- http://philbit.com/svgpatterns/ 
+							 http://codepen.io/
+						-->
+						<h2><a href="ejemplos/fondo_repite.html" target="_blank">Fondo - Fondo que se repite</a></h2>
+						<p>Se puede controlar como se va a repetir la imagen, se puede escoger entre vertical, horizontal o en ambos sentidos, como en el ejemplo anterior. Para el ejemplo se asigna el valor <em>repeat-y</em></p>
+						<div class="clearfix">
+							<div class="flotar_3">
+								<h4>Código html</h4>
+								<img src="img/background_body_html.jpg" alt="">
+							</div>
+							<div class="flotar_3">
+								<h4>Código CSS</h4>
+								<img src="img/background_repeat_css.jpg" alt="">
+							</div>
+							<div class="flotar_3">
+								<h4>Resultado</h4>
+								<img src="img/background_repeat_resultado.jpg" alt="">
+							</div>
+						</div>
+					</section>
+					<section>
+						<!-- 
+						http://www.tutosytips.com/css3-backgrounds-y-sus-nuevas-propiedades/
+						-->
+						<h2><a href="ejemplos/fondo_combinar.html" target="_blank">Fondo - Varios fondos</a></h2>
+						<p>Podemos superponer varias imágenes como fondo, teniendo en cuenta la combinación de la propiedad repetir.</p>
+						<div class="clearfix">
+							<div class="flotar_3">
+								<h4>Código html</h4>
+								<img src="img/background_body_html.jpg" alt="">
+							</div>
+							<div class="flotar_3">
+								<h4>Código CSS</h4>
+								<img src="img/background_mix_css.jpg" alt="">
+							</div>
+							<div class="flotar_3">
+								<h4>Resultado</h4>
+								<img src="img/background_mix_resultado.jpg" alt="">
+							</div>
+						</div>
+					</section>
+					<section>
+						<h2><a href="ejemplos/fondo_posicion.html" target="_blank">Fondo - Posicionar</a></h2>						
+						<p>Se puede asignar una imagen en una posición específica</p>
+						<div class="clearfix">
+							<div class="flotar_3">
+								<h4>Código html</h4>
+								<img src="img/background_body_html.jpg" alt="">
+							</div>
+							<div class="flotar_3">
+								<h4>Código CSS</h4>
+								<img src="img/background_position_css.jpg" alt="">
+							</div>
+							<div class="flotar_3">
+								<h4>Resultado</h4>
+								<img src="img/background_position_resultado.jpg" alt="">
+							</div>
+						</div>
+					</section>
+					<section>
+						<h2>Fondo - Posicionar</h2>
+						<p>Hay valores constantes que permite definir valores fijos sobre el contenedor, como las esquinas y el centro.</p>
+						<img src="img/fondo_position.gif" alt="">
+					</section>
+					<section>
+						<h2>Fondo - Posicionar</h2>
+						<p>Usando la propiedad position, podemos optimizar el uso de imágenes dentro del documento, ya que disminuimos el número de imágenes que se deben cargar, combinando varias imágenes en una sola, a esta imagen se le conoce como un sprite.</p>
+						<div class="clearfix">
+							<div class="flotar_3">
+								<h4>Código html</h4>
+								<img src="img/background_body_html.jpg" alt="">
+							</div>
+							<div class="flotar_3">
+								<h4>Código CSS</h4>
+								<img src="img/background_hover_css.jpg" alt="">
+							</div>
+							<div class="flotar_3">
+								<h4>Resultado</h4>
+								<img src="img/fondo_hover.gif" alt="">
+							</div>
+						</div>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Fondo - Sprite</h2>
+						<p>Actualmente la capacidad de almacenamiento, ancho de banda y de energía de un computador de escritorio es ilimitada, sin embargo el consumo de contenido web desde dispositivos móviles tiene restricciones, en ancho de banda, capacidad de almacenamiento y batería del dispositivo. Por tal motivo es necesario ser muy eficiente con la creación de los documentos html, de tal forma que se optimice el desempeño del archivo al ser cargado en cualquier dispositivo. </p>
+					</section>
+					<section>
+						<h2>Fondo - Sprite</h2>
+						<p>Hay una serie de técnicas que han sido creadas como estrategías para optimizar el uso de recursos en juegos de videos, un conjunto de estrategías muy usadas por nintendo en sus primeras consolas, logrando resultados increíbles para las restricciones de la epoca.</p>
+					</section>
+					<section>
+						<h2>Fondo - Sprite</h2>
+						<p></p>
+						<div class="clearfix">
+							<div class="flotar_3">
+								<h4>Tilesets</h4>
+								<a href="img/tileset_mario_bros.png" target="_blank">
+									<img src="img/tileset_mario_bros.png" alt="">
+								</a>
+							</div>
+							<div class="flotar_3">
+								<h4>Sprite sheet</h4>
+								<a href="img/ryusheet.gif" target="_blank">
+									<img src="img/ryusheet.gif" height="500px" alt="">
+								</a>
+							</div>
+							<div class="flotar_3">
+								<h4>Animación</h4>
+								<a href="img/Ryu-denjin.gif" target="_blank">
+									<img src="img/Ryu-denjin.gif" alt="">
+								</a>
+							</div>
+						</div>
+					</section>
+					<section>
+						<h2>Fondo - Sprite</h2>
+						<p>Las imágenes del ejemplo anterior, recopilan todos los elementos que hacen parte de la interfaz (tilestets) o de los elementos que tienen interacción como los personajes representados en spritesheets, estos últimos son usados para la creación de juegos 2d, para maquetar documentos html, entre otros usos. </p>
+					</section>
+					<section>
+						<h2>Fondo - Sprite</h2>
+						<p>Lo que se hace entonces es enmascarar una parte de la imagen que se va a usar.</p>
+						<a href="img/sprite_colombiano.png" target="_blank">
+							<img src="img/sprite_colombiano.png" height="450px" alt="">
+						</a>
+					</section>
+					<section>
+						<h2>Fondo - Sprite</h2>
+						<p>Se recomienda definir un flujo de trabajo para la creación de la imagen del sprite, este es un proceso que empieza en el diseño de los elementos de la interfaz, hasta la implementación de la hoja de estilos. La forma de uso sería entonces:</p>
+						<div class="clearfix">
+							<div class="flotar_3">
+								<h4>Código html</h4>
+								<a href="img/sprite_html.png" target="_blank">
+									<img src="img/sprite_html.png" alt="">
+								</a>
+							</div>
+							<div class="flotar_3">
+								<h4>Código css</h4>
+								<a href="img/sprite_css.png" target="_blank">
+									<img src="img/sprite_css.png" alt="">
+								</a>
+							</div>
+							<div class="flotar_3">
+								<h4>Resultado</h4>
+								<a href="img/logo.png" target="_blank">
+									<img src="img/logo.png" alt="">
+								</a>
+							</div>
+						</div>
+					</section>
+					<section>
+						<h2>Fondo - Sprite</h2>
+						<p>El proceso para crear un sprite, empieza por tanto en el archivo fuente de diseño, este se recomienda que este organizado por capas, para que sea fácil separar cada parte. Por el momento se va a omitir el proceso de optimización de cada parte del diseño de un documento, en imágenes pngs con fondo transparente, para crear el sprite usando la herramienta <a href="http://renderhjs.net/shoebox/">shoebox</a> para armar la imagen que consolida las diferentes imágenes en pocos pasos de manera eficiente, incluso esta herramienta crea la hoja de estilos para usar cada imagen por separado.</p>
+					</section>
+					<section>
+						<h2>Fondo - Sprite</h2>
+						<a href="img/shoe_box.gif">
+							<img src="img/shoe_box.gif" alt="">
+						</a>
+					</section>
+					<section>
+						<h2>Fondo - Sprite</h2>
+						<p>Teniendo el insumo de la imagen, se procede con el montaje en el html, "emascarando" la parte de la imagen que se va a usar, shoebox crea la hoja de estilo, pero si por alguna razón es necesario realizar algún ajuste en el posicionamiento de la máscara, se puede usar la herramienta de desarrollador de google chrome para obtener el valor exacto de las coordenadas.</p>
+					</section>
+					<section>
+						<h2>Fondo - Sprite</h2>
+						<a href="img/sprite_montaje.gif">
+							<img src="img/sprite_montaje.gif" height="500px" alt="">
+						</a>
+					</section>
+				</section>
+				<!-- <section>
+					<h2>Pretty Code</h2>
+					<pre><code data-trim contenteditable>
+function linkify( selector ) {
+  if( supports3DTransforms ) {
+
+    var nodes = document.querySelectorAll( selector );
+
+    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
+      var node = nodes[i];
+
+      if( !node.className ) {
+        node.className += ' roll';
+      }
+    }
+  }
+}
+					</code></pre>
+					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+				</section> -->
+				
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
