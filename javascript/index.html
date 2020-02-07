@@ -38,28 +38,154 @@
 	<body>
 		
 		<div class="reveal">
-			<div class="volver">
+			<!-- <div class="volver">
 				<a href="../"><img src="img/volver.png"></a>
-			</div>
+			</div> -->
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
 					<section>
-						<h2>
+						<h2> 
+							<!-- https://hackernoon.com/the-2019-web-developer-roadmap-ab89ac3c380e -->
 							<a href="https://www.freecodecamp.org/news/2019-web-developer-roadmap/" target="_blank">
 								Herramientas - Workflow
 							</a>
 						</h2>
 						<ul>
-							<li>Repositorio</li>
 							<li>Administrador de paquetes</li>
+							<li>Repositorio</li>
 							<li>CSS - Preprocesadores</li>
 							<li>Task Runners - Module Bundlers</li>
 							<li>Linter</li>
 						</ul>
 					</section>
 					<section>
-						<h2></h2>
+						<h2>Administrador de paquetes</h2>
+						<p>
+							Antes de los administradores de paquetes, era muy complicado mantener la información de versión del código, de las librerías y de las herramientas de un proyecto. Cuando se enviaba el código a producción, también habian problemas de configuración porque el ambiente de desarrollo y de pruebas era diferente.
+						</p>						
+					</section>
+					<section>
+						<h2>Administrador de paquetes</h2>
+						<p>Actualmente se ha mitigado el esfuerzo que requiere administrar las versiones del código y de librerías, por medio de uso de un repositorio con una buenas prácticas, pero sobretodo por el uso de herramientas como los adminsitradores de paquetes, que estan presente como un complemento a los lenguajes de programación.</p>
+					</section>
+					<section>
+						<h2>
+							<a href="Read more https://ayudalinux.com/1846-2/">
+							Definición
+							</a>
+						</h2>
+						<p>
+						Los administradores de paquetes no tienen nada de complicados, se pueden ver como una tienda de aplicaciones. Es decir, simplemente se tiene que buscar el programa que se quiere instalar y decirle al administrador que lo descargue y lo instale en nuestro equipo. Todo esto sin que el usuario tenga que ir pasando por los asistentes de instalación como es el caso con los archivos .exe.
+						</p>
+						<p>
+						Cuando una actualización está disponible, el administrador de paquetes detectará la actualización y la descargará. A diferencia de Windows, en donde las aplicaciones necesitan tener su propio actualizador.
+						</p>
+					</section>
+					<section>
+						<h2>
+							<a href="https://www.npmjs.com/" target="_blank">
+								NPM (Node Package Manager)
+							</a>
+						</h2>
+						<p>
+							NPM es el administrador de paquetes de javascript, se instala junto con la instalación de node js, esta es una herramienta que se ejecuta en la consola, no tiene interfaz gráfica. Cuando se instala, lo que usamos es un comando, llamado npm, que por medio de parametros, es decir formas diferentes de escribir el comando en consola, permite realizar diferentes actividades sobre un proyecto.
+						</p>
+					</section>
+					<section>
+						<h2>Estructura de un proyecto</h2>
+						<p>El archivo package.json y la carpeta node_modules, se pueden crear usando npm</p>
+						<img src="img/estructura_proyecto_web_mobile.jpg" width="60%" alt="">
+					</section>
+					<section>
+						<p>Para crear el archivo "package.json" de la imagen anterior, se usa el siguiente comando:</p>
+						<pre>
+							<!-- <mark>subraya codigo<mark> -->
+							<code data-trim data-noescape>
+							npm init -y
+							</code>
+						</pre>
+						<small>init -y: son parametros que indica que el archivo se crea sin pedir datos.</small>
+					</section>
+					<section>
+						<p>Se crea el archivo package.json, con el siguiente contenido:</p>
+						<pre>
+							<code data-trim data-noescape>
+{
+	"name": "javascript",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+	"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC"
+}
+							</code>
+						</pre>
+					</section>
+					<section>
+						<p>El archivo package.json, contiene la información del proyecto, por el momento nos enfocamos en las dependencias, para instalar una dependencia, se debe leer la documentación del paquete que se va a vincular al proyecto, por ejemplo</p>
+						<pre>
+							<!-- <mark>subraya codigo<mark> -->
+							<code data-trim data-noescape>
+							npm install grunt --save-dev
+							</code>
+						</pre>
+						<small>Se espera que se descargue el paquete (requiere conexión a internet) y luego se actualiza el archivo package.json y se crea la carpeta node_modules, con los archivos del paquete.</small>
+					</section>
+					<section>
+						<p>Se agrega una nueva instrucción al archivo package.json, cada nueva dependencia se actualiza en este archivo.</p>
+
+						<pre>
+							<code data-trim data-noescape>
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  <mark>"devDependencies": {
+    "grunt": "^1.0.4"
+  }</mark>
+}
+							</code>
+						</pre>
+						<small>🚨⚠️ node_modules NO se debe subir al servidor de producción ⚠️🚨</small>
+						<small> 📝 node_modules se debe ignorar en el repositorio</small>
+					</section>
+					<section>
+						<p>
+							node_modules, nos se sube al repositorio, ya que no es necesario, porque las dependencias ocupan espacio, son archivos creados por terceros y en el repositorio la idea es tener solamente código que cambia, que es el que esta en constante desarrollo. 
+						</p>
+						<p>
+							Los paquetes se descargan de manera controlada por el administrador de paquetes, utilizando la información presente en el archivo package.json.
+						</p>
+					</section>
+					<section>
+						<p>Para instalar los paquetes, debemos tener el archivo package.json con la información de las dependencias, luego se escribe el siguiente comando en la terminal:</p>
+						<pre>
+							<code data-trim data-noescape>
+								npm install
+							</code>
+						</pre>
+						<small> 🚨 Recuerde ejecutar el archivo abriendo la terminal en la raíz del proyecto</small>
+						<small> ✅package.json se debe agregar al repositorio, ya que este es el archivo de configuración con la información de las dependencias del proyecto.</small>
+					</section>
+					<section data-background-image="https://media.giphy.com/media/ZC0ATzzJnKqn2SNDHR/giphy.gif">
+						<p>
+							Las dependencias se descargan y la carpeta <br>node_modulos se crea, cada vez que se ejecuta <br>el comando con el parametro de instalación.
+						</p>
+						<p>
+							 Si por alguna razón se daña algun archivo, o las dependencias quedan en un estado corrupto, se puede borrar la carpeta node_modulos, y se reinstala <br> nuevamente los paquetes.
+						</p>
 					</section>
 				</section>
 				<section>
