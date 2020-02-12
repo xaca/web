@@ -86,6 +86,11 @@ body {
 .mover_derecha{
   margin-left: 35px !important;
 }
+
+.flotar_3{
+  float:left;
+  width: 33.33%;
+}
 /* cambios */
 
 /*********************************************
