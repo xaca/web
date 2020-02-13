@@ -160,19 +160,69 @@
 						<h2>
 							Ejemplo Pseudocodigo, diagrama de flujo y <mark>programa</mark>
 						</h2>
-						<iframe width="100%" height="475" src="https://dotnetfiddle.net/Widget/HLtQtI" frameborder="0"></iframe>
+						<pre>
+							<code>
+float pago,resultado,valor_final;
+//Porque el descuento es exacto 10%, 30%, 45% ...
+sbyte descuento; 
+
+pago = 1200;
+
+//De la prueba de escritorio tenemos los valores 20 y -2    
+descuento = -20; 
+
+if(descuento > 0)
+{
+	resultado = pago*descuento/100;
+	valor_final = pago - resultado;
+	Console.WriteLine(valor_final);
+}
+else
+{
+	Console.WriteLine("Datos incorrectos");
+}
+
+/*
+// Primera versión sin feedback al entrar datos incorrectos
+if(descuento > 0)
+{
+	resultado = pago*descuento/100;
+	valor_final = pago - resultado;
+	Console.WriteLine(valor_final);
+}*/
+							</code>
+						</pre>
+						<!-- <iframe width="100%" height="475" src="https://dotnetfiddle.net/Widget/HLtQtI" frameborder="0"></iframe> -->
 					</section>
 					<section>
-						<h2>Realice el pseudocodigo y el diagrama de flujo</h2>
+						<h2>Pseudocodigo, diagrama de flujo y programa</h2>
 						<ul>
 							<li>
-								
+								Calcular el valor de una factura, si el valor a pagar es mayor a 500 US, se le descuenta el 15% y menor a 700 US, si es mayor a 700 y menor a 1250US US se le descuenta el 25%. Luego del descuento se calcula el impuesto del 8%, si el valor a pagar es menor a 30 US, no se le cobra impuesto. Al final imprima el valor a pagar con el siguiente formato como muestra el ejemplo: <br>
 							</li>
+							<pre>
+							<code data-trim data-noescape>
+Subtotal:  $ 534    US
+Descuento: $ 80,1   US
+Impuesto:  $ 42,72  US
+Total:     $ 496,62 US
+							</code>
+							</pre>
+						</ul>
+					</section>
+					<section>
+						<h2>Pseudocodigo, diagrama de flujo y programa</h2>
+						<ul>
 							<li>
-								Calcular el área del 1. triangulo, 2. cuadrado, 3. trapecio.
-								Se selecciona que operación se realiza, teniendo en cuenta el valor de una variable. Si la variable vale 2, se calcula el area del cuadrado. 
+								Calcular el área de las siguientes figuras: <br> 
+								1. triángulo, 2. cuadrado, 3. trapecio. <br>
+								Se selecciona que operación se realiza, teniendo en cuenta el valor de una variable. ej: Si la variable vale 2, se calcula el área del cuadrado.
+								Solo se ejecutan las sentencias para un área que depende de la opción. Tenga en cuenta el control de errores. 
 							</li>
 						</ul>
+						<br><br>
+						<small>* No es necesario pedir valores al usuario, ya que no sabemos como se piden los datos, por tanto se almacena el valor en una variable, al ejecutar el programa se cambia este valor.</small>
+						<small>El ejercicio es un solo programa.</small>
 					</section>
 				</section>
 				<section>
@@ -315,6 +365,10 @@
 						</div>
 					</section>
 					<section>
+						<h2>Buenas prácticas</h2>
+						<!-- definición Palabras reservadas, no usar letras como l, base -->
+					</section>
+					<section>
 						<h2>Escribir código C#</h2>
 						<p>Realice el pseudocódigo, el diagrama y el código de un programa que:</p>
 						<ul>
@@ -345,7 +399,25 @@
 							<li>¿Por qué es importante la prioridad de ejecución en un algoritmo?</li>
 						</ul>
 					</section>
+					<section>
+						<section>
+							<h2>Estructuras de control</h2>
+							<ul>
+								<li>¿Qué es una condición?</li>
+								<li>Feeback al usuario</li>
+								<li>If anidados</li>
+								<li>Switch</li>
+								<li>Operador ternario</li>
+							</ul>
+						</section>
+
+					</section>
 				</section>
+				<!-- <section>
+				<section>
+				<h2>Soluciones</h2>
+				</section>
+				</section> -->
 				<!-- 
 				Ejercicios ciclos
 				<li>Calcular la suma de los primeros n números naturales</li>
