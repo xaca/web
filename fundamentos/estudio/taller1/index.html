@@ -222,7 +222,7 @@ Total:     $ 496,62 US
 						</ul>
 						<br><br>
 						<small>* No es necesario pedir valores al usuario, ya que no sabemos como se piden los datos, por tanto se almacena el valor en una variable, al ejecutar el programa se cambia este valor.</small>
-						<small>El ejercicio es un solo programa.</small>
+						<small>El ejercicio es un solo programa, y se realiza solo un calculo por ejecución, NO se calculan todas las áreas.</small>
 					</section>
 				</section>
 				<section>
@@ -413,11 +413,36 @@ Total:     $ 496,62 US
 
 					</section>
 				</section>
-				<!-- <section>
 				<section>
-				<h2>Soluciones</h2>
+					<section>
+					<h2>Soluciones</h2>
+					<pre>
+						<code data-trim data-noescape>
+//base es reservada, no usar l, porque parece 1
+float base_triangulo = 2, altura_triangulo = 3, lado = 5;
+sbyte opcion = 1;
+
+if(opcion == 1)
+{
+	Console.WriteLine("EL area del triangulo es = "+(base_triangulo*altura_triangulo)/2);
+}
+else
+{
+	if(opcion == 2)
+	{
+		Console.WriteLine("EL area del cuadro es"+(lado*lado));	
+	}
+	else{
+		//Acá se calcula el área del trapecio y se muestra mensaje error en caso que la opcion no sea 3
+	}
+}
+						</code>
+					</pre>
+					<a href="https://dotnetfiddle.net/IbLRGN" target="_blank">
+						Ejecutar código
+					</a>
+					</section>
 				</section>
-				</section> -->
 				<!-- 
 				Ejercicios ciclos
 				<li>Calcular la suma de los primeros n números naturales</li>
