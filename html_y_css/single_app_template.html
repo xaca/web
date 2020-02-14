@@ -61,7 +61,16 @@
 
 	function cambiarSplash(){
 		secciones[1].className = "splash oculto";
-		secciones[1].className = "home";
+		secciones[2].className = "home";
+	}
+
+	function cambiarSeccion(id_seccion){
+
+		for (var i in secciones) {
+			secciones[i].classList.add("oculto");
+		}
+
+		secciones[id_seccion].classList.remove("oculto");
 	}
 	</script>
 </head>
@@ -79,13 +88,13 @@
 		<img src="http://icons.iconarchive.com/icons/sonya/swarm/128/ivoted-2014-icon.png" alt="">
 		<br>
 		<br>
-		<a href="#">Juego</a><br><br>
-		<a href="#">Instrucciones</a><br><br>
-		<a href="#">Créditos</a><br>
+		<a href="javascript:void();" onClick="cambiarSeccion(3);">Juego</a><br><br>
+		<a href="javascript:void();" onClick="cambiarSeccion(5);">Instrucciones</a><br><br>
+		<a href="javascript:void();" onClick="cambiarSeccion(4);">Créditos</a><br>
 	</section>
 	<!-- Juego -->
 	<section id="seccion_3" class="juego oculto">
-		<a href="#" class="boton volver">&lt;</a>
+		<a href="javascript:void();" onClick="cambiarSeccion(2);" class="boton volver">&lt;</a>
 		<br>
 		<h1>Juego</h1>
 		<br>
@@ -99,7 +108,7 @@
 	</section>
 	<!-- Créditos / Autores -->
 	<section id="seccion_4" class="creditos oculto">
-		<a href="#" class="boton volver">&lt;</a>
+		<a href="#" onClick="cambiarSeccion(2);" class="boton volver">&lt;</a>
 		<br>
 		<br>
 		<h1>Créditos - Estudiantes</h1>
@@ -113,7 +122,7 @@
 	</section>
 	<!-- Instrucciones -->
 	<section id="seccion_5" class="instrucciones oculto">
-		<a href="#" class="boton volver">&lt;</a>
+		<a href="#" onClick="cambiarSeccion(2);" class="boton volver">&lt;</a>
 		<h1>Instrucciones</h1>
 		<p>
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, explicabo ducimus voluptates suscipit consequatur eligendi eos, hic aperiam sit! Recusandae explicabo provident sapiente beatae nam soluta ab minima omnis sed! <br>
