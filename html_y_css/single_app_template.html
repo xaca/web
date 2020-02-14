@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Single App ejemplo</title>
+	<link rel="stylesheet" href="css/animate.css">
 	<style type="text/css">
 		section{
 			width:340px;
@@ -64,19 +65,23 @@
 		secciones[2].className = "home";
 	}
 
+	//https://developer.mozilla.org/es/docs/Web/API/Element/classList
+	//https://www.youtube.com/watch?v=2z0wMNHPbzk
 	function cambiarSeccion(id_seccion){
 
 		for (var i in secciones) {
 			secciones[i].classList.add("oculto");
 		}
 
+		secciones[id_seccion].classList.add("animated");
+		secciones[id_seccion].classList.add("headShake");
 		secciones[id_seccion].classList.remove("oculto");
 	}
 	</script>
 </head>
 <body>
 	<!-- Splash -->
-	<section id="seccion_1" class="splash">
+	<section id="seccion_1" class="splash animated fadeIn">
 		<br>
 		<h1>Splash del juego</h1>
 		<img src="http://icons.iconarchive.com/icons/sonya/swarm/128/ivoted-2014-icon.png" alt="">
