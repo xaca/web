@@ -59,57 +59,194 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Taller estudio parcial #1</h1>
-					<p>Taller de estudio para preparar el primer parcial, no es necesario entregarlo, ni se calificará. Se recomienda estudiarlo y leerlo completamente, para que conozca el tipo de preguntas que encontrará en el examen.</p>
+					<section>
+						<h1>Taller estudio - Temas</h1>
+						<ul>
+							<li>Pseudocódigo</li>
+							<li>Diagramas de flujo</li>
+							<li>Operaciones con variables</li>
+							<li>Tipos de datos</li>
+							<li>Operadores (relación, lógicos, aritmeticos, precedencia)</li>
+							<li>Condiciones</li>
+							<li>Teoría</li>
+							<li>Ejercicios</li>
+						</ul>
+					</section>
+					<section>
+						<h1>Taller estudio</h1>
+						<p>
+							Este es un repaso de lo visto hasta el momento, algunos ejercicios se resolveran en clase, pero la mayoría de ejercicios es para que el estudiante emplee en su tiempo de trabajo autonomo para recordar los temas vistos, preparar la primera evaluación y para estudiar.
+						</p>
+						<p>
+							Recomiendo durante la clase, prestar atención a los ejercicios que el profesor resuelve y aprovechar a preguntar si algo no queda claro, ya que la idea de la clase en no llevarse dudas para la casa.
+						</p>
+					</section>
+					<section>
+						<h1>Taller estudio</h1>
+						<p>
+						Durante el estudio fuera de clase, tener presente llevar notas y si aparecen dudas o preguntas, escribir todo lo que pasa con el ejercicio, valores de las variables, casos especiales, funcionamientos extraños, etc. Para ser compartidas en el aula, esto es muy útil, ya que de esta forma podemos aprender de la experimentación de todos.
+					</p>
+					</section>
 				</section>
 				<section>
 					<section>
-						<h2>Taller de estudio - Pseudocodigo y diagramas de flujo</h2>
+						<h2>Pseudocodigo y diagramas de flujo</h2>
 						<p>Primera parte, escriba el pseudocodigo y el diagrama de flujo, mínimo 30 pasos.</p>
 						<ul>
 							<li>Actividad sacar al perro a pasear</li>
 							<li>Actividad montar en patines</li>
-							<li>Actividad conseguir novia</li>
+							<li>Actividad conseguir pareja</li>
 							<li>Actividad pedir un domicilio</li>
 							<li>Actividad canción <a href="https://www.youtube.com/watch?v=NPcX3KKCI90">Salchipapa y rock and roll</a></li>
 							<li>Actividad canción <a href="https://www.youtube.com/watch?v=vx13U_QuM_M">Atún con pan</a></li>
 							<li>Actividad Batalla musical <a href="https://www.youtube.com/watch?v=3wPKJQx2flE">Scott Pilgrim Vs The World</a> </li>
 						</ul>
 					</section>
+
 					<section>
-						<h2>Taller de estudio - Pseudocodigo y diagramas de flujo</h2>
+						<h2>Flujos de un diagrama</h2>
+						<p>En un diagrama debe ser posible ir del inicio al final, por varios caminos, escriba todos los posibles caminos del siguiente diagrama. ej: (1->2->3...->14)</p>
+						<a href="img/diagramas_ejemplo_flujo.jpg" target="_blank">
+							<img src="img/diagramas_ejemplo_flujo.jpg" width="50%" alt="">
+						</a>
+						<br>
+						<small>Utilice los números para definir un camino</small>
+					</section>
+					<section>
+						<h2>Ejemplo, pseudocodigo, diagrama y programa</h2>
+						<p>Calcular el descuento de x por ciento de un valor.</p>
+					</section>
+					<section>
+						<h2>Ejemplo <mark>Pseudocodigo</mark>, diagrama de flujo y programa</h2>
+						<pre>
+						<code  data-noescape data-trim>
+1. Inicio
+2. Ingrese el valor inicial
+3. Ingrese el descuento
+4. Se múltiplica el valor inicial por el descuento dividido entre 100
+5. Se almacena el resultado en variable resultado
+6. Se le resta al valor inicial el resultado anterior y se guarda en valor final	
+7. Se imprime valor final
+8. Fin
+						</code>
+						</pre>
+						<small>Contiene un error en la lógica. ¿Cuál es?</small>
+					</section>
+					<section>
+						<h2>Ejemplo <mark>Pseudocodigo</mark>, diagrama de flujo y programa</h2>
+						<pre>
+						<code  data-noescape data-trim>
+1. Inicio
+2. Ingrese el valor inicial
+3. Ingrese el descuento
+4. Si descuento > 0 ir a 5 sino ir a 9
+5. Se múltiplica el valor inicial por el descuento dividido entre 100
+6. Se almacena el resultado en variable resultado
+7. Se le resta al valor inicial el resultado anterior y se guarda en valor final	
+8. Se imprime valor final ir a 10
+9. Imprimir Error en los datos
+10. Fin
+						</code>
+						</pre>
+						<small>Versión con un condicional y control de error de lógica</small>
+					</section>
+					<section>
+						<h2>Ejemplo Pseudocodigo, <mark>diagrama de flujo</mark> y programa</h2>
+						<a href="img/diagrama_descuento.jpg" target="_blank">
+							<img src="img/diagrama_descuento.jpg"  width="40%" alt="">
+						</a>
+					</section>
+					<section>
+						<h2>
+							Ejemplo Pseudocodigo, diagrama de flujo y <mark>programa</mark>
+						</h2>
+						<pre>
+							<code>
+float pago,resultado,valor_final;
+//Porque el descuento es exacto 10%, 30%, 45% ...
+sbyte descuento; 
+
+pago = 1200;
+
+//De la prueba de escritorio tenemos los valores 20 y -2    
+descuento = -20; 
+
+if(descuento > 0)
+{
+	resultado = pago*descuento/100;
+	valor_final = pago - resultado;
+	Console.WriteLine(valor_final);
+}
+else
+{
+	Console.WriteLine("Datos incorrectos");
+}
+
+/*
+// Primera versión sin feedback al entrar datos incorrectos
+if(descuento > 0)
+{
+	resultado = pago*descuento/100;
+	valor_final = pago - resultado;
+	Console.WriteLine(valor_final);
+}*/
+							</code>
+						</pre>
+						<!-- <iframe width="100%" height="475" src="https://dotnetfiddle.net/Widget/HLtQtI" frameborder="0"></iframe> -->
+					</section>
+					<section>
+						<h2>Pseudocodigo, diagrama de flujo y programa</h2>
 						<ul>
-							<li>Calcular la suma de los primeros n números naturales</li>
-							<li>Calcular el factorial de un número</li>
-							<li>Imprimir en orden decrecientes, los números de m hasta n, donde m debe ser mayor a n.</li>
-							<li>Pedir un número al usuario y responder si el número es primo.</li>
-							<li>Imprimir los primeros n números primos</li>
-							<li>Resolver la formula del estudiante, para valores que ingresa el usuario</li>
+							<li>
+								Calcular el valor de una factura, si el valor a pagar es mayor a 500 US, se le descuenta el 15% y menor a 700 US, si es mayor a 700 y menor a 1250US US se le descuenta el 25%. Luego del descuento se calcula el impuesto del 8%, si el valor a pagar es menor a 30 US, no se le cobra impuesto. Al final imprima el valor a pagar con el siguiente formato como muestra el ejemplo: <br>
+							</li>
+							<pre>
+							<code data-trim data-noescape>
+Subtotal:  $ 534    US
+Descuento: $ 80,1   US
+Impuesto:  $ 42,72  US
+Total:     $ 496,62 US
+							</code>
+							</pre>
 						</ul>
+					</section>
+					<section>
+						<h2>Pseudocodigo, diagrama de flujo y programa</h2>
+						<ul>
+							<li>
+								Calcular el área de las siguientes figuras: <br> 
+								1. triángulo, 2. cuadrado, 3. trapecio. <br>
+								Se selecciona que operación se realiza, teniendo en cuenta el valor de una variable. ej: Si la variable vale 2, se calcula el área del cuadrado.
+								Solo se ejecutan las sentencias para un área que depende de la opción. Tenga en cuenta el control de errores. 
+							</li>
+						</ul>
+						<br><br>
+						<small>* No es necesario pedir valores al usuario, ya que no sabemos como se piden los datos, por tanto se almacena el valor en una variable, al ejecutar el programa se cambia este valor.</small>
+						<small>El ejercicio es un solo programa, y se realiza solo un calculo por ejecución, NO se calculan todas las áreas.</small>
 					</section>
 				</section>
 				<section>
 					<section>
-						<h2>Taller de estudio - Calcular el valor de la i</h2>
+						<h2>Calcular el valor de la i</h2>
 						<p>Prueba de escritorio, calcule el valor de la i. (Click en la imagen para agrandar)</p>
 						<a href="img/diagramas_flujo_1.jpg" target="blank">
 							<img src="img/diagramas_flujo_1.jpg">
 						</a>
 					</section>
 					<section>
-						<h2>Taller de estudio - Calcular el valor de la i</h2>
+						<h2>Calcular el valor de la i</h2>
 						<a href="img/diagramas_flujo_2.jpg" target="blank">
 							<img src="img/diagramas_flujo_2.jpg">
 						</a>
 					</section>
 					<section>
-						<h2>Taller de estudio - Calcular el valor de la i</h2>
+						<h2>Calcular el valor de la i</h2>
 						<a href="img/diagramas_flujo_3.jpg" target="blank">
 							<img src="img/diagramas_flujo_3.jpg">
 						</a>
 					</section>
 					<section>
-						<h2>Taller de estudio - Calcular el valor de la i</h2>
+						<h2>Calcular el valor de la i</h2>
 						<a href="img/diagramas_flujo_4.jpg" target="blank">
 							<img src="img/diagramas_flujo_4.jpg">
 						</a>
@@ -117,48 +254,225 @@
 				</section>
 				<section>
 					<section>
-						<h2>Taller de estudio - Prueba de escritorio</h2>
+						<h2>Prueba de escritorio</h2>
 						<p>Validar el pseudocodigo, escribir el diagrama y realizar la prueba de escritorio</p>
-						<a href="img/pseudocodigo_1.png" target="blank"><img src="img/pseudocodigo_1.png"></a>
+						<a href="img/pseudocodigo_1.png" target="blank"><img src="img/pseudocodigo_1.png" width="50%"></a>
 					</section>
 					<section>
-						<h2>Taller de estudio - Prueba de escritorio</h2>
+						<h2>Prueba de escritorio</h2>
 						<a href="img/pseudocodigo_2.png" target="blank"><img src="img/pseudocodigo_2.png"></a>
 					</section>
 					<section>
-						<h2>Taller de estudio - Prueba de escritorio</h2>
+						<h2>Prueba de escritorio</h2>
 						<a href="img/pseudocodigo_3.png" target="blank"><img src="img/pseudocodigo_3.png"></a>
 					</section>
 					<section>
-						<h2>Taller de estudio - Prueba de escritorio</h2>
+						<h2>Prueba de escritorio</h2>
 						<a href="img/diagrama_5.png" target="blank"><img src="img/diagrama_5.png" height="100%" width="300"></a>
 					</section>
 					<section>
-						<h2>Taller de estudio - Prueba de escritorio</h2>
+						<h2>Prueba de escritorio</h2>
 						<a href="img/diagrama_6.png" target="blank"><img src="img/diagrama_6.png" height="100%" width="300"></a>
 					</section>
 					<section>
-						<h2>Taller de estudio - Prueba de escritorio</h2>
+						<h2>Prueba de escritorio</h2>
 						<a href="img/diagrama_7.png" target="blank"><img src="img/diagrama_7.png" height="100%" width="400"></a>
 					</section>
 				</section>
 				<section>
-					<h2>Taller de estudio - Teoría</h2>
-					<ul>
-						<li>¿Qué es una condición?</li>
-						<!-- <li>¿Qué es una variable?</li> -->
-						<li>¿Qué es un operador de relación?</li>
-						<li>¿Qué es un operador binario?</li>
-						<li>¿Qué es un error en tiempo de lógica?</li>
-						<li>¿Qué es un error en tiempo de ejecución?</li>
-						<!-- <li>¿Qué es desbordamiento?, ¿Por qué se presenta?</li> -->
-						<li>¿Por qué es importante la prioridad de ejecución en un algoritmo?</li>
-					</ul>
+					<section>
+						<iframe src="http://www.slideshare.net/slideshow/embed_code/key/sga5nQMhvZSTcz" width="100%" height="600px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> 
+					</section>
+					<section>
+						<h2>Operaciones con variables</h2>
+						<p>Recuerde que hay dos operaciones importantes para usar con variables, declarar la variable e inicializar la variable.</p>
+						<ul>
+							<li>Declare 4 variables númericas, de diferente tipo</li>
+							<li>Asigne valores compatibles de otro tipo a una variable, por ejemplo a un double asigne un int.</li>
+							<li>Realice una lista de 20 de tipos de dato diferente que se pueden usar como datos primitivos en C#</li>
+							<li>¿Para que sirve el operador signación?, ¿Cómo se usa correctamente?</li>
+						</ul>
+						<br>
+						<br>
+						<small>Por el momento nos enfocamos en los tipos de datos primitivos, consulte la documentación <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/value-types#built-in-value-types" target="_blank">aquí</a></small>
+					</section>
+					<section>
+						<h2>Operaciones con variables</h2>
+						<p>El desbordamiento es un error que se presenta cuando una variable supera su capacidad, recuerde que las variables no pueden guardar datos infinitos, ya que la memoría del programa es limitada, además es importante hacer un uso correcto del espacio para lograr crear programas eficientes y con un buen desempeño.</p>
+						<p>¿Qué pasa con la siguiente sentencia?</p>
+						<!-- http://wsmoak.net/2015/09/16/presenting-source-code.html -->
+						<pre>
+							<code data-trim data-noescape>
+								sbyte x = 127 <mark>+ 1</mark>;
+							</code>
+						</pre>
+						<br>
+						<small>Realice pruebas similares con otros tipos de variables.</small>
+					</section>
 				</section>
 				<section>
 					<section>
+						<h2>Escritura de código</h2>
+						<p>Luego de hacer el pseudocódigo y el diagramas de flujo de una necesidad específica y ya tenemos el algoritmo del programa claro, es importante realizar la prueba de escritorio para validar casos especiales y posibles errores lógicos y de tiempo de ejecución.</p>
+					</section>
+					<section>
+						<h2>Estructura recomendada de un programa</h2>
+						<ul>
+							<li>Como recomendación, se espera que al principio del programa se declaren las variables, esto permite tener un solo lugar donde se define el inventario de variables con sus respectivos tipos que se usarán.</li>
+							<li>Luego se inicializan las variables con un valor inicial, que depende de la solución. 
+								<code>ej. float vel = 2.5f;</code></li>
+							<li>Por último se escriben las sentencias, es decir las diferentes instrucciones que hacen parte del programa. 
+								<code>ej. c =a+b;</code>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Estructura recomendada de un programa</h2>
+						<img src="img/estructura_recomendada_de_un_programa.jpg" width="50%" alt="">
+					</section>
+					<section>
+						<h2>Buenas prácticas</h2>
+						<p>Recuerde identar, para esto se usa la tecla tabulador (tab)</p>
+						<!-- http://flexboxgrid.com/ -->
+						<div style="display:flex;flex-flow: row wrap;">
+							<div style="flex:1;">
+								<img src="img/tecla_tab.png" alt="">
+								<br>
+								<small>
+									Ubicada en la parte izquierda del teclado.
+								</small>
+							</div>
+							<div style="flex:1;">
+								<img src="img/hadouken_code.jpg" alt="">
+							</div>
+						</div>
+					</section>
+					<section>
+						<h2>Buenas prácticas</h2>
+						<p>Cree variables nemotécnicas, es decir que tengan implícito su significado.</p>
+						<div style="display:flex;flex-flow: row wrap;">
+							<div style="flex:1;">
+								<img src="img/bob_esponja_nemotecnia.jpg" alt="">
+							</div>
+							<div style="flex:1;">
+								<br><br>
+								<code>
+									int numero_vidas=3; 👌
+									float xyze = 1f; 😲👎💩
+								</code>
+								
+							</div>
+						</div>
+					</section>
+					<section>
+						<h2>Buenas prácticas</h2>
+						<!-- definición Palabras reservadas, no usar letras como l, base -->
+					</section>
+					<section>
+						<h2>Escribir código C#</h2>
+						<p>Realice el pseudocódigo, el diagrama y el código de un programa que:</p>
+						<ul>
+							<li>Sume 4 números</li>
+							<li>Calcule el promedio de 8 números</li>
+							<li>Imprima mayor si el número en una variable es mayor a cero o menor en caso contrario</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Teoría</h2>
+						<ul>
+							<li>¿Qué es una condición?</li>
+							<li>¿Qué es una variable?</li>
+							<li>¿Qué es un operador de relación?</li>
+							<li>¿Qué es un operador binario?</li>
+							<li>¿Qúe es un comentario?</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Teoría</h2>
+						<ul>
+							<li>¿Qué es un error lógico?</li>
+							<li>¿Qué es un error de sintaxis?</li>
+							<li>¿Qué es un error en tiempo de ejecución?</li>
+							<li>¿Qué es desbordamiento?, ¿Por qué se presenta?</li>
+							<li>¿Por qué es importante la prioridad de ejecución en un algoritmo?</li>
+						</ul>
+					</section>
+					<section>
+						<section>
+							<h2>Estructuras de control</h2>
+							<ul>
+								<li>¿Qué es una condición?</li>
+								<li>Feeback al usuario</li>
+								<li>If anidados</li>
+								<li>Switch</li>
+								<li>Operador ternario</li>
+							</ul>
+						</section>
+
+					</section>
+				</section>
+				<section>
+					<section>
+					<h2>Soluciones</h2>
+					<pre>
+						<code data-trim data-noescape>
+//base es reservada, no usar l, porque parece 1
+float base_triangulo = 2, altura_triangulo = 3, lado = 5;
+sbyte opcion = 1;
+
+if(opcion == 1)
+{
+	Console.WriteLine("EL area del triangulo es = "+(base_triangulo*altura_triangulo)/2);
+}
+else
+{
+	if(opcion == 2)
+	{
+		Console.WriteLine("EL area del cuadro es"+(lado*lado));	
+	}
+	else{
+		//Acá se calcula el área del trapecio y se muestra mensaje error en caso que la opcion no sea 3
+	}
+}
+						</code>
+					</pre>
+					<a href="https://dotnetfiddle.net/IbLRGN" target="_blank">
+						Ejecutar código
+					</a>
+					</section>
+				</section>
+				<!-- 
+				Ejercicios ciclos
+				<li>Calcular la suma de los primeros n números naturales</li>
+				<li>Calcular el factorial de un número</li>
+				<li>Imprimir en orden decrecientes, los números de m hasta n, donde m debe ser mayor a n.</li>
+				<li>Pedir un número al usuario y responder si el número es primo.</li>
+				<li>Imprimir los primeros n números primos</li>
+				Requiere la raiz
+				<li>
+					Resolver la fórmula del estudiante, para valores fijos representados en variables.
+				</li>
+				 -->
+				<!-- <section>
+					<section>
 						<h3>Sección especial, serie de fibonacci.</h3>
 						<img src="img/fibonacci.jpg" height="100%" width="400">
+					</section>
+					<section data-background="https://media.giphy.com/media/dh33gjlp6pApG/giphy.gif">
+						<h2>La sucesión de Fibonacci</h2>
+						<p style="color:white;background:black;opacity:.7; padding:5px;">
+							También conocida como secuencia de Fibonacci o incorrectamente como serie de Fibonacci, es en sí una sucesión matemática infinita. Consta de una serie de números naturales que se suman de a 2, a partir de 0 y 1. Básicamente, la sucesión de Fibonacci se realiza sumando siempre los últimos 2 números (Todos los números presentes en la sucesión se llaman números de Fibonacci) de la siguiente manera:
+						</p>
+						<pre>
+							<code data-trim data-noescape>
+							 0,1,1,2,3,5,8,13,21,34...	
+							</code>
+						</pre>
+					</section>
+					<section>
+						<iframe width="100%" height="600" src="https://www.youtube.com/embed/DKGsBUxRcV0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					</section>
 					<section>
 						<h3>Realizar el pseudocodigo y el diagrama de flujo de los siguientes ejercicios.</h3>
@@ -193,7 +507,7 @@
 							</li>
 						</ul>
 					</section>
-				</section>
+				</section> -->
 			</div>
 
 		</div>
