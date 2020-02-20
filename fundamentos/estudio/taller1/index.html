@@ -232,6 +232,8 @@ Total:     $ 496,62 US
 						<a href="img/diagramas_flujo_1.jpg" target="blank">
 							<img src="img/diagramas_flujo_1.jpg">
 						</a>
+						<br>
+						<small>⚠️ ¿Cuál es el valor final de impresión?</small>
 					</section>
 					<section>
 						<h2>Calcular el valor de la i</h2>
@@ -283,101 +285,9 @@ Total:     $ 496,62 US
 					<section>
 						<iframe src="http://www.slideshare.net/slideshow/embed_code/key/sga5nQMhvZSTcz" width="100%" height="600px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> 
 					</section>
-					<section>
-						<h2>Operaciones con variables</h2>
-						<p>Recuerde que hay dos operaciones importantes para usar con variables, declarar la variable e inicializar la variable.</p>
-						<ul>
-							<li>Declare 4 variables númericas, de diferente tipo</li>
-							<li>Asigne valores compatibles de otro tipo a una variable, por ejemplo a un double asigne un int.</li>
-							<li>Realice una lista de 20 de tipos de dato diferente que se pueden usar como datos primitivos en C#</li>
-							<li>¿Para que sirve el operador signación?, ¿Cómo se usa correctamente?</li>
-						</ul>
-						<br>
-						<br>
-						<small>Por el momento nos enfocamos en los tipos de datos primitivos, consulte la documentación <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/value-types#built-in-value-types" target="_blank">aquí</a></small>
-					</section>
-					<section>
-						<h2>Operaciones con variables</h2>
-						<p>El desbordamiento es un error que se presenta cuando una variable supera su capacidad, recuerde que las variables no pueden guardar datos infinitos, ya que la memoría del programa es limitada, además es importante hacer un uso correcto del espacio para lograr crear programas eficientes y con un buen desempeño.</p>
-						<p>¿Qué pasa con la siguiente sentencia?</p>
-						<!-- http://wsmoak.net/2015/09/16/presenting-source-code.html -->
-						<pre>
-							<code data-trim data-noescape>
-								sbyte x = 127 <mark>+ 1</mark>;
-							</code>
-						</pre>
-						<br>
-						<small>Realice pruebas similares con otros tipos de variables.</small>
-					</section>
+					
 				</section>
-				<section>
-					<section>
-						<h2>Escritura de código</h2>
-						<p>Luego de hacer el pseudocódigo y el diagramas de flujo de una necesidad específica y ya tenemos el algoritmo del programa claro, es importante realizar la prueba de escritorio para validar casos especiales y posibles errores lógicos y de tiempo de ejecución.</p>
-					</section>
-					<section>
-						<h2>Estructura recomendada de un programa</h2>
-						<ul>
-							<li>Como recomendación, se espera que al principio del programa se declaren las variables, esto permite tener un solo lugar donde se define el inventario de variables con sus respectivos tipos que se usarán.</li>
-							<li>Luego se inicializan las variables con un valor inicial, que depende de la solución. 
-								<code>ej. float vel = 2.5f;</code></li>
-							<li>Por último se escriben las sentencias, es decir las diferentes instrucciones que hacen parte del programa. 
-								<code>ej. c =a+b;</code>
-							</li>
-						</ul>
-					</section>
-					<section>
-						<h2>Estructura recomendada de un programa</h2>
-						<img src="img/estructura_recomendada_de_un_programa.jpg" width="50%" alt="">
-					</section>
-					<section>
-						<h2>Buenas prácticas</h2>
-						<p>Recuerde identar, para esto se usa la tecla tabulador (tab)</p>
-						<!-- http://flexboxgrid.com/ -->
-						<div style="display:flex;flex-flow: row wrap;">
-							<div style="flex:1;">
-								<img src="img/tecla_tab.png" alt="">
-								<br>
-								<small>
-									Ubicada en la parte izquierda del teclado.
-								</small>
-							</div>
-							<div style="flex:1;">
-								<img src="img/hadouken_code.jpg" alt="">
-							</div>
-						</div>
-					</section>
-					<section>
-						<h2>Buenas prácticas</h2>
-						<p>Cree variables nemotécnicas, es decir que tengan implícito su significado.</p>
-						<div style="display:flex;flex-flow: row wrap;">
-							<div style="flex:1;">
-								<img src="img/bob_esponja_nemotecnia.jpg" alt="">
-							</div>
-							<div style="flex:1;">
-								<br><br>
-								<code>
-									int numero_vidas=3; 👌
-									float xyze = 1f; 😲👎💩
-								</code>
-								
-							</div>
-						</div>
-					</section>
-					<section>
-						<h2>Buenas prácticas</h2>
-						<!-- definición Palabras reservadas, no usar letras como l, base -->
-					</section>
-					<section>
-						<h2>Escribir código C#</h2>
-						<p>Realice el pseudocódigo, el diagrama y el código de un programa que:</p>
-						<ul>
-							<li>Sume 4 números</li>
-							<li>Calcule el promedio de 8 números</li>
-							<li>Imprima mayor si el número en una variable es mayor a cero o menor en caso contrario</li>
-						</ul>
-					</section>
-				</section>
+				
 				<section>
 					<section>
 						<h2>Teoría</h2>
@@ -389,7 +299,7 @@ Total:     $ 496,62 US
 							<li>¿Qúe es un comentario?</li>
 						</ul>
 					</section>
-					<section>
+					<!-- <section>
 						<h2>Teoría</h2>
 						<ul>
 							<li>¿Qué es un error lógico?</li>
@@ -398,20 +308,7 @@ Total:     $ 496,62 US
 							<li>¿Qué es desbordamiento?, ¿Por qué se presenta?</li>
 							<li>¿Por qué es importante la prioridad de ejecución en un algoritmo?</li>
 						</ul>
-					</section>
-					<section>
-						<section>
-							<h2>Estructuras de control</h2>
-							<ul>
-								<li>¿Qué es una condición?</li>
-								<li>Feeback al usuario</li>
-								<li>If anidados</li>
-								<li>Switch</li>
-								<li>Operador ternario</li>
-							</ul>
-						</section>
-
-					</section>
+					</section> -->
 				</section>
 				<section>
 					<section>
@@ -441,6 +338,9 @@ else
 					<a href="https://dotnetfiddle.net/IbLRGN" target="_blank">
 						Ejecutar código
 					</a>
+					</section>
+					<section>
+						<img src="img/tema_01/prueba_escritorio_valor_de_frontera.jpg" alt="">
 					</section>
 				</section>
 				<!-- 

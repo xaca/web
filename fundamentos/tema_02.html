@@ -127,6 +127,186 @@
 				</section>
 				<section>
 					<section>
+						<h2>Escritura de código</h2>
+						<p>Luego de hacer el pseudocódigo y el diagramas de flujo de una necesidad específica y ya tenemos el algoritmo del programa definido. Es importante realizar la prueba de escritorio para validar casos especiales y posibles errores lógicos y de tiempo de ejecución.</p>
+						<br><br>
+						<small>🌟 Escriba 10 errores lógicos y 10 errores de tiempo de ejecución.</small>
+					</section>
+					<section>
+						<h2>Estructura recomendada de un programa</h2>
+						<ul>
+							<li>Como recomendación, se espera que al principio del programa se declaren las variables, esto permite tener un solo lugar donde se define el inventario de variables con sus respectivos tipos que se usarán.</li>
+							<li>Luego se inicializan las variables con un valor inicial, que depende de la solución. 
+								<code>ej. float vel = 2.5f;</code></li>
+							<li>Por último se escriben las sentencias, es decir las diferentes instrucciones que hacen parte del programa. 
+								<code>ej. c =a+b;</code>
+							</li>
+						</ul>
+						<br><br>
+						<small>🌟 ¿Qué pasa si intento usar una variable que no ha sido inicializada?</small>
+					</section>
+					<section>
+						<h2>Estructura recomendada de un programa</h2>
+						<img src="img/estructura_recomendada_de_un_programa.jpg" width="50%" alt="">
+						<small>🌟 Realice un programa donde utilice esta estructura recomendada, separe las secciones con comentarios.</small>
+					</section>
+					<section>
+						<h2>Buenas prácticas</h2>
+						<p>Recuerde identar, para esto se usa la tecla tabulador (tab)</p>
+						<!-- http://flexboxgrid.com/ -->
+						<div style="display:flex;flex-flow: row wrap;">
+							<div style="flex:1;">
+								<img src="img/tecla_tab.png" alt="">
+								<br>
+								<small>
+									Ubicada en la parte izquierda del teclado.
+								</small>
+							</div>
+							<div style="flex:1;">
+								<img src="img/hadouken_code.jpg" alt="">
+							</div>
+						</div>
+						<br>
+						<small>🌟 Utilice la tecla tab para avanzar hacia adelante. ¿Cómo se avanza hacia átras?</small>
+					</section>
+					<section>
+						<h2>Buenas prácticas</h2>
+						<p>Cree variables nemotécnicas, es decir que tengan implícito su significado.</p>
+						<div style="display:flex;flex-flow: row wrap;">
+							<div style="flex:1;">
+								<img src="img/bob_esponja_nemotecnia.jpg" alt="">
+							</div>
+							<div style="flex:1;">
+								<br><br>
+								<code>
+									int numero_vidas=3; 👌
+									float xyze = 1f; 😲👎💩
+								</code>
+								
+							</div>
+						</div>
+						<br>
+						<small>🌟 Pruebe el desbordamiento de diferentes variables. ¿El desbordamiento es que tipo de error?</small>
+					</section>
+					<section>
+						<h2>Buenas prácticas</h2>
+						<!-- definición Palabras reservadas, no usar letras como l, base -->
+						<ul>
+							<li>
+								El lenguaje de programación tiene unas palabras que utiliza para su sintaxis, estas palabras estan reservadas y no se pueden usar para nombrar variables.
+							</li>
+							<li>
+								Algunos ejemplos de plabras reservadas en C#: base, int, if, class, long, char, decimal.
+							</li>
+						</ul>
+						<br><br>
+						<small>🌟 Cree una lista de 20 palabras reservadas en C#</small>
+					</section>
+					<section>
+						<h2>Buenas prácticas</h2>
+						<ul>
+							<li>
+								La definición de las palabras del lenguaje por lo general se hace en inlgés, por tanto no se recomienda usar símbolos del español. No use caracteres como ñ, tildes, diéresis, Signos de pregunta o exclamación inicial. Ya que estos simbolos no estan presentes en inglés y por tanto podría tener problemas según la configuración regional del computador.
+							</li>
+							<li>
+								No se debe utilizar espacios, comas, puntos o paréntesis para nombrar variables. (Error de sintaxis, NO compila) 
+							</li>
+						</ul>
+						<br><br>
+						<small>🌟 Escriba 4 tipos de errores</small>
+					</section>
+					<section>
+						<h2>Escribir código C#</h2>
+						<p>Realice el pseudocódigo, el diagrama y el código de un programa que:</p>
+						<ul>
+							<li>Sume 4 números</li>
+							<li>Calcule el promedio de 8 números</li>
+							<li>Imprima mayor si el número en una variable es mayor a cero o menor en caso contrario</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Estructuras de control</h2>
+						<ul>
+							<li>¿Qué es una condición?</li>
+							<li>Feeback al usuario</li>
+							<li>If anidados</li>
+							<li>Switch</li>
+							<li>Operador ternario</li>
+							<li>Corto circuito</li>
+							<li>ifelse</li>
+						</ul>
+					</section>
+					<section>
+						<h2>¿Qué es una condición?</h2>
+						<p>Es una pregunta, cuya única posible respuesta es verdadero (si, true) o falso (no, false).</p>
+						<p>Si al hacer la pregunta, se puede contestar de múltiples formas, esta no es una condición.</p>
+						<br>
+						<div style="display:flex;justify-content:center;">
+							<div style="margin-right:20px;padding-right:10px;border-right:3px white dashed;">
+								<span>¿Cuantos años tienes? ❌</span><br>
+								<mark>R/. 12, 34, 8, 45 ...</mark>
+							</div>
+							<div>
+								<span>¿Tienes entre 18 y 25 años? ✅</span><br> <mark>R/. Si o No</mark>
+							</div>
+						</div>
+						<br>
+						<small>🌟 Escriba 10 condiciones correctas</small>
+					</section>
+					<section>
+						<h2>Feeback al usuario</h2>
+						<p>Es muy importante darle retroalimentación al usuario, por tanto, al ejecutar el programa, se debe dar una respuesta por ejemplo el resultado de una operación o un mensaje de error o de información, si el usuario requiere ingresar información extra para realizar un procedimiento.</p>
+					</section>
+					<section>
+						<h2>Feeback al usuario</h2>
+						<p>En el siguiente ejemplo, el programa compila, ejecuta, pero la falta de feeback puede ser percibido como un error por el usuario. &nbsp; Ej: El programa no responde.</p>
+						<pre>
+							<code data-trim data-noescape>
+int i = 10;
+
+if(i>10){
+	Console.WriteLine("El valor de i es mayor");
+}
+							</code>
+						</pre>
+						<br>
+						<small>🌟 ¿Cómo se le podría dar feedback al usuario y que sienta que no hay un error con el programa?</small>
+					</section>
+					<section>
+						<h2>If anidados</h2>
+						<p>El condicional es una estructura básica del lenguaje y muy sencilla. Aunque es fácil de identificar los condicionales anidados en el diagrama de flujo, la implementación en el código puede ser un poco confusa, por tanto en esta sección aclararemos con un ejemplo como funcionan los ifs anidados.</p>
+					</section>
+				</section>
+				<section>
+						<h2>Operaciones con variables</h2>
+						<p>Recuerde que hay dos operaciones importantes para usar con variables, declarar la variable e inicializar la variable.</p>
+						<ul>
+							<li>Declare 4 variables númericas, de diferente tipo</li>
+							<li>Asigne valores compatibles de otro tipo a una variable, por ejemplo a un double asigne un int.</li>
+							<li>Realice una lista de 20 de tipos de dato diferente que se pueden usar como datos primitivos en C#</li>
+							<li>¿Para que sirve el operador asignación?, ¿Cómo se usa correctamente?</li>
+						</ul>
+						<br>
+						<br>
+						<small>Por el momento nos enfocamos en los tipos de datos primitivos, consulte la documentación <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/value-types#built-in-value-types" target="_blank">aquí</a></small>
+					</section>
+					<section>
+						<h2>Operaciones con variables</h2>
+						<p>El desbordamiento es un error que se presenta cuando una variable supera su capacidad, recuerde que las variables no pueden guardar datos infinitos, ya que la memoría del programa es limitada, además es importante hacer un uso correcto del espacio para lograr crear programas eficientes y con un buen desempeño.</p>
+						<p>¿Qué pasa con la siguiente sentencia?</p>
+						<!-- http://wsmoak.net/2015/09/16/presenting-source-code.html -->
+						<pre>
+							<code data-trim data-noescape>
+								sbyte x = 127 <mark>+ 1</mark>;
+							</code>
+						</pre>
+						<br>
+						<small>Realice pruebas similares con otros tipos de variables.</small>
+					</section>
+				<!-- <section>
+					<section>
 						<h2>
 							Taller #2
 						</h2>
@@ -181,7 +361,7 @@
 							</li>
 						</ol>
 					</section>
-				</section>
+				</section> -->
 				<!-- <section>
 					<section>
 						<h2>Variable</h2>
