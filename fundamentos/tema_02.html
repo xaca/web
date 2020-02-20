@@ -38,7 +38,7 @@
 
 		<div class="reveal">
 				<div class="volver">
-					<a href="index.html"><img src="img/volver.png"></a>
+					<a href="../index.html"><img src="img/volver.png"></a>
 				</div>
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
@@ -230,12 +230,13 @@
 						<h2>Estructuras de control</h2>
 						<ul>
 							<li>¿Qué es una condición?</li>
-							<li>Feeback al usuario</li>
-							<li>If anidados</li>
-							<li>Switch</li>
 							<li>Operador ternario</li>
+							<li>Feedback al usuario</li>
+							<li>If anidados</li>
+							<li>esle if</li>
+							<li>Switch</li>
 							<li>Corto circuito</li>
-							<li>ifelse</li>
+							<li>Recomendaciones</li>
 						</ul>
 					</section>
 					<section>
@@ -256,11 +257,21 @@
 						<small>🌟 Escriba 10 condiciones correctas</small>
 					</section>
 					<section>
-						<h2>Feeback al usuario</h2>
+						<h2>Operador ternario</h2>
+						<p>Es una forma abreviada de escribir un if, se usa por lo general para asignarle un valor a una variable, se recomienda usarlo solo cuando hay una sentencia dentro del if y dentro del else.</p>
+						<pre>
+							<code>
+	string moneda = (new Random()).Next(0, 10)>5?"cara":"sello";
+							</code>
+						</pre>
+						<small>🐢 La expresión <mark>(new Random()).Next(0, 10)</mark> calcula un número aleatorio entre 0 y 10</small>
+					</section>
+					<section>
+						<h2>Feedback al usuario</h2>
 						<p>Es muy importante darle retroalimentación al usuario, por tanto, al ejecutar el programa, se debe dar una respuesta por ejemplo el resultado de una operación o un mensaje de error o de información, si el usuario requiere ingresar información extra para realizar un procedimiento.</p>
 					</section>
 					<section>
-						<h2>Feeback al usuario</h2>
+						<h2>Feedback al usuario</h2>
 						<p>En el siguiente ejemplo, el programa compila, ejecuta, pero la falta de feeback puede ser percibido como un error por el usuario. &nbsp; Ej: El programa no responde.</p>
 						<pre>
 							<code data-trim data-noescape>
@@ -278,7 +289,128 @@ if(i>10){
 						<h2>If anidados</h2>
 						<p>El condicional es una estructura básica del lenguaje y muy sencilla. Aunque es fácil de identificar los condicionales anidados en el diagrama de flujo, la implementación en el código puede ser un poco confusa, por tanto en esta sección aclararemos con un ejemplo como funcionan los ifs anidados.</p>
 					</section>
+					<section>
+						<h2>If anidados</h2>
+						<p>El condicional es una estructura básica del lenguaje y muy sencilla. Aunque es fácil de identificar los condicionales anidados en el diagrama de flujo, la implementación en el código puede ser un poco confusa, por tanto en esta sección aclararemos con un ejemplo como funcionan los ifs anidados.</p>
+					</section>
+					<!-- section>h2{If anidados}+img -->
+					<section>
+						<h2>If anidados</h2>
+						<a href="img/if_anidados_diagrama.jpg" target="_blank">
+							<img src="img/if_anidados_diagrama.jpg" alt="">
+						</a>
+					</section>
+					<section>
+						<h2>If anidados</h2>
+						<pre>
+							<code data-trim data-noescape>
+int i = 2;
+
+if(i == 1){
+	Console.WriteLine("uno");
+}
+else{
+	if(i==2){
+		Console.WriteLine("dos");
+	}
+	else{
+		if(i==3){
+			Console.WriteLine("tres");
+		}
+		else
+		{
+			Console.WriteLine("error");
+		}
+	}
+}
+							</code>
+						</pre>
+						<br>
+						<small>☝️ ¿Cúal es la salida del programa?</small>
+					</section>
+					<section>
+						<h2>esle if</h2>
+						<p>Permite abreviar la escritura de if anidados, combiando en una sola palabra estas dos palabras.</p>
+						<pre><code>
+uint i = 4;
+if(i==1)
+{
+	Console.WriteLine("uno");
+}else if(i==2){
+	Console.WriteLine("dos");
+}else if(i==3){
+	Console.WriteLine("tres");
+}else{
+	Console.WriteLine("error");
+}
+						</code></pre>
+						<small>☝️ ¿Cúal es el dato entero para almacenar el valor de i, más eficiente?</small>
+					</section>
+					<section>
+						<h2>Switch</h2>
+						<p>Esta estructura es una forma abreviada de escribir varios if anidados en múltiples niveles, permite escoger una opción a partir de varias candidatas.</p>
+						<pre>
+							<code data-trim data-noescape>
+int opc = 2;
+string salida = "";
+switch(opc)
+{
+	case 1: salida = "uno";
+		break;
+	case 2: salida = "dos";
+		break;
+	case 3: salida = "tres";
+	break;
+	default: salida = "error";
+}
+Console.WriteLine(salida);
+							</code>
+						</pre>
+						<small>📚 Para información detallada de su funcionamiento consultar <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/switch">aquí</a></small>
+					</section>
+					<section>
+						<h2>Corto circuito</h2>
+						<p>Se presenta durante tiempo de ejecución, al evaluar una condición que utiliza el operador OR o AND</p>
+							<ul>
+								<li>Si el primer operando es true y se compara con OR, la segunda expresión no se evalua.</li>
+								<li>Si el primer operador es false y se compara con AND, la segunda expresión no se evalua.</li>
+							</ul>
+							<br><br>
+						<small>⚡ Realice un ejemplo donde se evidencie este comportamiento.</small>
+					</section>
+					<section>
+						<h2>Recomendaciones</h2>
+						<ul>
+							<li>
+								Siempre se pueden poner puntos y comas luego de cada sentencia, si se pone un (;) Luego de un condicional, las sentencias entre llaves siguientes no hacen parte del condicional.
+							</li>
+						</ul>
+						<pre>
+							<code>
+sbyte opcion = 2;
+
+if(opcion == 1);
+{
+	Console.WriteLine("Error increible :(");
+}
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h2>Recomendaciones</h2>
+						<ul>
+							<li>
+								Cuando dentro de una estructura hay una sola sentencia, se puede evitar usar las llaves, sin embargo se recomienda usar siempre las llaves por lecturabilidad del código.
+							</li>
+							<li>
+								Las condiciones siempre son valores de verdad, por tanto es posible realizar una asignación en un condicional de un valor booleano. 💣
+							</li>
+						</ul>
+						<br><br>
+						<small>🏁 Realice una asignación en el condicional</small>
+					</section>
 				</section>
+				<section>
 				<section>
 						<h2>Operaciones con variables</h2>
 						<p>Recuerde que hay dos operaciones importantes para usar con variables, declarar la variable e inicializar la variable.</p>
@@ -305,6 +437,7 @@ if(i>10){
 						<br>
 						<small>Realice pruebas similares con otros tipos de variables.</small>
 					</section>
+				</section>
 				<!-- <section>
 					<section>
 						<h2>
