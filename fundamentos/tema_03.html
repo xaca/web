@@ -144,7 +144,7 @@ int x = int.Parse(Console.ReadLine());
 							<ul>
 								<li>Calcule el promedio de 3 números de punto flotante que se le piden al usuario. <a href="https://dotnetfiddle.net/fniXfI">Solución</a></li>
 								<li>Lea la hora (sin minutos) en formato militar, imprima <u>Buenos días</u> si hora es mayor o igual a cero y menor que 12, imprima <u>Buenas tardes</u>, si la hora es mayor o igual a 12 y menor que 18, <u>Buenas noches</u> si la hora es mayor o igual a 18 y menor que cero.</li>
-								<li>Pedir un valor al usuario y realizar una operación así: 1. Sumar. 2. Multiplicar. 3. Dividir 4.Salir (Valide los datos y las operaciones)</li>
+								<li>Pedir un valor al usuario y realizar una operación así: 1. Sumar. 2. Multiplicar. 3. Dividir 4.Salir (Valide los datos y las operaciones) <a href="https://dotnetfiddle.net/2l1j2T">Solución</a></li>
 							</ul>
 						</section>
 						<section>
@@ -177,11 +177,12 @@ int x = int.Parse(Console.ReadLine());
 							<p>Se da cuando se requiere asignar una variable de mayor capacidad a una de menor, si recuerda esta operación genera un desbordamiento, pero en este caso se le advierte de manera explicita al compilador que hay conciencia de la perdida de precisión. No hay desbordamiento pero si una perdida consentida de información.</p>
 							<pre>
 								<code data-noescape>
-	float y = 3.5f;
+	float y = 3.9999f;
 	int x = <mark>(int)</mark>y;
 	Console.WriteLine(y); //Salida 3
 								</code>
 							</pre>
+							<small>No rendondea, se trunca el dato.</small>
 						</section>
 					</section>
 					<section>
@@ -234,7 +235,7 @@ Console.WriteLine(x); //Salida -2
 						<section>
 							<h2>Incremento - Decremento</h2>
 							<p>
-								Ahora veamos el operador preincremento, el cual modifica la variable y asigna inmediatamente el valor a la variable, mientras que el posincremente, modifica la variable pero asigna el valor en la siguiente sentencia, no se asigna en la misma, veamos un ejemplo:
+								Ahora veamos el operador pre incremento, el cual modifica la variable y asigna inmediatamente el valor a la variable, mientras que el pos incremento, modifica la variable pero asigna el valor en la siguiente sentencia, no se asigna en la misma, veamos un ejemplo:
 							</p>
 							<pre>
 								<code>
@@ -280,7 +281,7 @@ while(n < m){
 								</code>
 							</pre>
 							<small>🔢 Modifique el código pero pida los valores del rango de números, siendo n &lt; m y n&gt;0 </small>
-							<small>➖ Modifique el código, para que use post incremento</small>
+							<small>➕ Modifique el código, para que use post incremento</small>
 						</section>
 						<section>
 							<h2>Ejercicios ciclo mientras que</h2>
