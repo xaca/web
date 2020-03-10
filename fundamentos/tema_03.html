@@ -44,21 +44,306 @@
 			<div class="slides">
 				
 					<section>
-						<h2>Entrada y salida de datos</h2>
-						<p>Todo valor que se le pide al usuario por medio de la consola es de tipo cadena, ya que el usuario utiliza el teclado y este le permite ingresar cualquier combinación de caracteres, números y símbolos. La entrada es clave para un programa, por tanto si se pide al usuario un número se debe validar que el usuario si haya ingresado un número con las características solicitadas.</p>
-					</section>
 					<section>
 						<h2>Entrada y salida de datos</h2>
-						<p>Términos importantes:</p>
+						<p><mark>TODO</mark> valor que se le pide al usuario por medio de la consola es de tipo cadena, ya que el usuario utiliza el teclado y este le permite ingresar cualquier combinación de caracteres, números y símbolos. La entrada es clave para un programa, por tanto si se pide al usuario un número se debe validar que el usuario si haya ingresado un número con las características solicitadas.</p>
+					</section>
+						<section>
+							<h2>Pasos para leer un dato</h2>
+							<p>Para leer un valor se recomienda seguir los siguientes pasos:</p>
+							<ol>
+								<li>
+									Declare dos variables, una de tipo alfanúmerico (cadena - string) y otra del tipo de dato que requiera usar en el programa
+								</li>
+								<li>
+									Pida el valor al usuario y guardelo en la variable cadena.
+								</li>
+								<li>
+									Valide que el dato ingresado, puede ser convertido en el dato que necesita.
+								</li>
+							</ol>
+						</section>
+						<section>
+							<h2>Pasos para leer un dato</h2>
+							<ol start="3">
+								<li>
+									Si el dato es compatible con el tipo de dato requerido, realice la conversión y guardela en una variable del tipo especifico.
+								</li>
+								<li>
+									Si el dato no se puede convertir muestre un mensaje de error y termine el programa o vuelva a solicitar el dato.
+								</li>
+							</ol>
+						</section>
+						<section>
+							<h2>Lectura de datos v1</h2>
+							<pre>
+								<code data-trim contenteditable>
+string temp;
+int numero;
+
+temp = Console.ReadLine();
+
+if(int.TryParse(temp,out numero))
+{
+  Console.WriteLine("El cuadrado del valor ingresado es " + (numero * numero));
+}
+else
+{
+  Console.WriteLine("Error en el ingreso de datos");
+}
+								</code>
+							</pre>
+							<small>El código compila y funciona, pero no hay feedback para el usuario.</small>
+						</section>
+						<section>
+							<h2>Feedback de usuario al ingresar un dato</h2>
+							<p>La consola es poco amigable con el usuario, por tanto debemos suministrar mensajes para indicarle que espera el programa que realice la persona mientras interactua con la aplicación.</p>
+						</section>
+						
+						<section>
+							<h2>Lectura de datos v2</h2>
+							<pre>
+								<code data-trim contenteditable>
+string temp;
+int numero;
+
+//Feedback inicial con la variable
+Console.WriteLine("Ingrese un valor númerico para calcular su cuadrado");
+temp = Console.ReadLine();
+
+if(int.TryParse(temp,out numero))
+{
+	Console.WriteLine("El cuadrado del valor ingresado es " + (numero * numero));
+}
+else
+{
+	Console.WriteLine("Error en el ingreso de datos");
+}
+
+//Esta instrucción espera que se lea una línea, esto evita que el programa se cierre.
+Console.ReadKey();
+								</code>
+							</pre>
+							<small>El código ya tiene feedback, el usuario sabe que debe hacer. <a href="https://dotnetfiddle.net/KEonPi">Ejecutar código.</a></small>
+						</section>
+						<section>
+							<h2>Precaución a leer los datos</h2>
+							<p>Lo más importante al leer los datos es garantizar que la información mínima que requiere el programa sea leída correctamente. Si se usa código de internet, en algunas oportunidades los datos no se leen correctamente, ocasionando un error en tiempo de ejecución.</p>
+							<pre>
+								<code>
+//OJO: NO hacer esto, posible error en tiempo de ejecución
+Console.WriteLine("Ingrese un valor");
+int x = int.Parse(Console.ReadLine());
+								</code>
+							</pre>
+						</section>
+						<section>
+							<!-- El examen hasta acá -->
+							<h2>Ejercicios</h2>
+							<p>Realice un programa que:</p>
+							<ul>
+								<li>Calcule el promedio de 3 números de punto flotante que se le piden al usuario. <a href="https://dotnetfiddle.net/fniXfI">Solución</a></li>
+								<li>Lea la hora (sin minutos) en formato militar, imprima <u>Buenos días</u> si hora es mayor o igual a cero y menor que 12, imprima <u>Buenas tardes</u>, si la hora es mayor o igual a 12 y menor que 18, <u>Buenas noches</u> si la hora es mayor o igual a 18 y menor que cero.</li>
+								<li>Pedir un valor al usuario y realizar una operación así: 1. Sumar. 2. Multiplicar. 3. Dividir 4.Salir (Valide los datos y las operaciones)</li>
+							</ul>
+						</section>
+						<section>
+							<h2>Ejercicios</h2>
+							<ul>
+								<li>
+									¿Cómo se leen por teclado los siguientes datos: bool, string, short, float, byte, decimal, double?
+								</li>
+								<li>
+									¿De que tipo es el resultado de promediar 3 número enteros?
+								</li>
+							</ul>
+						</section>
+					</section>
+					<section>
+						
+						<section>
+							<h2>Casting implícito</h2>
+							<p>El casting implicito se da cuando se asigna una variable de capacidad menor a una de mayor capacidad.</p>
+							<pre>
+								<code>
+	int x = 5;
+	float y = x;
+	Console.WriteLine(y); //Salida 5
+								</code>
+							</pre>
+						</section>
+						<section>
+							<h2>Casting explícito</h2>
+							<p>Se da cuando se requiere asignar una variable de mayor capacidad a una de menor, si recuerda esta operación genera un desbordamiento, pero en este caso se le advierte de manera explicita al compilador que hay conciencia de la perdida de precisión. No hay desbordamiento pero si una perdida consentida de información.</p>
+							<pre>
+								<code data-noescape>
+	float y = 3.5f;
+	int x = <mark>(int)</mark>y;
+	Console.WriteLine(y); //Salida 3
+								</code>
+							</pre>
+						</section>
+					</section>
+					<section>
+						<section>
+							<h2>🔂 Ciclos</h2>
+							<p>Las estructuras de control cíclicas o bucles, permiten crear operaciones repetitivas sobre determinado número de sentencias. Muy importante crear una condición que se convierta en false en las sentencias dentro del ciclo, para poder salir del bucle, si esto no sucede se presenta un error en tiempo de ejecución conocido como un ciclo infinito.</p>
+						</section>
+						<section>
+							<h2>Ciclo mientras que</h2>
+							<p>Mientras la condición es verdadera realizo operaciones.</p>
+							<img src="img/ciclo_mientras_que.jpg" alt="">
+						</section>
+						<section>
+							<h2>Incremento - Decremento</h2>
+							<p>
+								Incrementar o decrementar una variable, es una operación que se utiliza frecuentemente cuando se usan ciclos, veamos algunos ejemplos:
+							</p>
+							<pre>
+								<code>
+int x = 1;
+
+x = x + 1; // Incrementa x en una unidad
+Console.WriteLine(x); //Salida 2
+x++; // Incrementa a x en una undidad, post incremento
+Console.WriteLine(x); //Salida 3
+x+=1; // Incrementa a x en una undidad									
+Console.WriteLine(x); //Salida 4
+								</code>
+							</pre>
+						</section>
+						<section>
+							<h2>Incremento - Decremento</h2>
+							<p>
+								Ahora probemos los decrementos de una variable, es muy similar al usar el operador suma, pero lo cambiamos por resta:
+							</p>
+							<pre>
+								<code>
+int x = 1;
+
+x = x - 1; // Incrementa x en una unidad
+Console.WriteLine(x); //Salida 0
+x--; // Incrementa a x en una undidad, post incremento
+Console.WriteLine(x); //Salida -1
+x-=1; // Incrementa a x en una undidad									
+Console.WriteLine(x); //Salida -2
+								</code>
+							</pre>
+							<small>🚨 No existe el triple incremento, es decir +++ ni ---</small>
+						</section>
+						<section>
+							<h2>Incremento - Decremento</h2>
+							<p>
+								Ahora veamos el operador preincremento, el cual modifica la variable y asigna inmediatamente el valor a la variable, mientras que el posincremente, modifica la variable pero asigna el valor en la siguiente sentencia, no se asigna en la misma, veamos un ejemplo:
+							</p>
+							<pre>
+								<code>
+int x = 1;
+
+Console.WriteLine(++x); //Salida 2
+Console.WriteLine(x++); //Salida 2, asigna el valor en la siguiente sentencia					
+Console.WriteLine(x); //Salida 3
+								</code>
+							</pre>
+							<small>✏️ Realice un ejemplo usando el predecremento y postdecremento</small>
+						</section>
+
+						<section>
+							<h2>Incremento - Decremento</h2>
+							<p>
+								Los incrementos o decrementos, no siempre son sumas o restas, podemos tener incrementos usando multiplicación, división, incrementos de a 2, 3, ..n. Se pueden usar la mayoría de operadores, salvo los operadores pre y post.
+							</p>
+							<pre>
+								<code>
+int x = 1;
+x+=2;
+Console.WriteLine(x); //Salida 3, incremento en dos
+x*=4;
+Console.WriteLine(x); //Salida 12, incremento en 4
+x/=3;					
+Console.WriteLine(x); //Salida 4, decremento en 3
+								</code>
+							</pre>
+							<small>✏️ Utilice incrementos o decrementos usando otros operadores</small>
+						</section>
+						<section>
+							<h2>Ciclo mientras que</h2>
+							<p>Volviendo a los ciclos, realicemos un primer ejemplo. Imprimir los números de 1 hasta 100.</p>
+							<pre>
+								<code data-trim data-noescape>
+int n = 1, m = 100;
+
+while(n < m){
+	Console.WriteLine(n);
+	n = n + 1;
+}	
+								</code>
+							</pre>
+							<small>🔢 Modifique el código pero pida los valores del rango de números, siendo n &lt; m y n&gt;0 </small>
+							<small>➖ Modifique el código, para que use post incremento</small>
+						</section>
+						<section>
+							<h2>Ejercicios ciclo mientras que</h2>
+							<ul>
+								<li>Cree un "menú infinito", que permita seleccionar entre las siguientes opciones: 1. suma, 2. resta, 3. multpilicar, 4. dividir. 5. Para salir</li>
+								<li>Calcule la suma de los primeros n números naturales</li>
+								<li>Calcule el promedio de n números.</li>
+							</ul>
+						</section>
+						<section>
+						<h3>Sección especial, serie de fibonacci.</h3>
+						<img src="img/fibonacci.jpg" height="100%" width="400">
+					</section>
+					<section data-background="https://media.giphy.com/media/dh33gjlp6pApG/giphy.gif">
+						<h2>La sucesión de Fibonacci</h2>
+						<p style="color:white;background:black;opacity:.7; padding:5px;">
+							También conocida como secuencia de Fibonacci o incorrectamente como serie de Fibonacci, es en sí una sucesión matemática infinita. Consta de una serie de números naturales que se suman de a 2, a partir de 0 y 1. Básicamente, la sucesión de Fibonacci se realiza sumando siempre los últimos 2 números (Todos los números presentes en la sucesión se llaman números de Fibonacci) de la siguiente manera:
+						</p>
+						<pre>
+							<code data-trim data-noescape>
+							 0,1,1,2,3,5,8,13,21,34...	
+							</code>
+						</pre>
+					</section>
+					<section>
+						<iframe width="100%" height="600" src="https://www.youtube.com/embed/DKGsBUxRcV0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</section>
+					<section>
+						<h3>Realizar el pseudocodigo y el diagrama de flujo de los siguientes ejercicios.</h3>
 						<ul>
-							<li>Representación de una cadena</li>
-							<li>Lectura de una cadena</li>
-							<li>Conversión de una cadena a un número (Si los valores son compatibles)</li>
-							<li>Casting explicito e implícito</li>
-							<li>Validaciones en tiempo de ejecución</li>
+							<li>El usuario ingresa el termino que quiere calcular de la serie de fibonacci y el algoritmo lo resuelve.</li>
+							<li>Algoritmo que imprime la suma de los primeros n valores de la serie de fibonacci.</li>
+							<li>Algoritmo que imprime los números en orden decreciente de la serie de fibonacci.</li>
+							<li>Algoritmo que multiplica los números de fibonacci.</li>
 						</ul>
 					</section>
-				<section>
+					<section>
+						<h3>Referentes y curiosidades</h3>
+						<img src="img/670px-Understand-the-Fibonacci-Sequence-Step-2Bullet1.jpg">
+					</section>
+					<section>
+						<img src="img/fibonacci-water.jpg">
+					</section>
+					<section>
+						<h2>Referentes y curiosidades Serie de Fibonacci</h2>
+						<ul>
+							<li>
+								<a href="http://www.math.rutgers.edu/~erowland/fibonacci.html">Calculadora online (Mire que pasa con números grandes de fibonacci, ejemplo 5000)</a>
+							</li>
+							<li>
+								<a href="https://www.tumblr.com/tagged/fibonacci">Referentes varios</a>
+							</li>
+							<li>
+								<a href="https://www.pinterest.com/pamimi/fibonacci-fascination/">+ referentes</a>
+							</li>
+							<li>
+								<a href="https://es.pinterest.com/kateinoregon/fibonacci-sequence-golden-spiral/">Muchos más</a>
+							</li>
+						</ul>
+					</section>
+				</section>
+					</section>
+				<!-- <section>
 					<section>
 						<h2>Taller #3</h2>
 						<p>Se pone a prueba el uso de las diferentes estructuras de control, operaciones básicas de entrada y salida y operaciones básicas con cadenas. Recuerde: TODO LO QUE SE LEE POR TECLADO ES DE TIPO CADENA (string)</p>
@@ -86,7 +371,7 @@
 							</li>
 						</ol>
 					</section>
-				</section>
+				</section> -->
 				<section>
 					<section>
 						<h2>Algunos códigos vistos en clase</h2>
