@@ -400,6 +400,7 @@ justify-content:center;
 							<li>Pseudo-clases</li>
 							<li>Tipos de fuentes predefinidas</li>
 							<li>Tipos de fuentes personalizadas</li>
+							<li><a href="#/google_fonts">Google fonts</a></li>
 						</ul>
 					</section>
 					<section>
@@ -605,6 +606,149 @@ justify-content:center;
 							</a>
 						</h3>
 						<img src="img/tipografia_personalizada_02.gif" alt="">
+					</section>
+					<section id="google_fonts">
+						<h2>Google fonts</h2>
+						<p>Por medio de las fuentes personalizadas, es posible convertir* una tipografía para usarla en la hoja de estilos, sin embargo las fuentes son diseñadas para diferentes usos, por tanto aunque es posible tener una versión de una tipografía para usar en una publicación, no siempre el resultado gráfico es el mejor. </p>
+						<small>* El diseñador debe contar con licencia de uso del archivo, además realizar pruebas de caracteres especiales y render de la tipografía convertida.</small>
+					</section>
+					<section>
+						<h2>Google fonts</h2>
+						<p>Google, centralizo en un CDN* una selección de fuentes, diseñadas para pantalla, las cuales se renderizan bien, tienen una familia con varios estilos y además se puede usar online - offline. </p>
+						<small>* Una red de distribución de contenidos es una red superpuesta de computadoras que contienen copias de datos, colocados en varios puntos de una red con el fin de maximizar el ancho de banda para el acceso a los datos de clientes por la red </small>
+					</section>
+					<section>
+						<h3>Pasos para vincular fuentes desde google fonts</h3>			
+						<ul>
+							<li>
+								Ir a <a href="https://fonts.google.com/">google fonts</a>
+							</li>
+							<li>
+								Seleccionar la(s) fuentes que se van a usar, presionando el botón +
+							</li>
+							<li>
+								En el cuadro Family selected, personalizar los estilos disponibles de la fuente, seleccionando los necesarios. (thin, light, regular)
+							</li>
+							<li>
+								Copiar el link, para la vinculación standard
+							</li>
+							<li>
+								Usar el estilo, en la sección Specify CSS
+							</li>
+							<li>
+								Por medio de font-weight, cambiar el estilo, usando el código de tamaño (thin:100, light:300, regular:400, bold:700)
+							</li>
+						</ul>
+					</section>					
+				</section>
+				<section>
+					<section>
+						<h2>Media queries</h2>
+
+						<p>Las media queries (en español "consultas de medios") son útiles cuando deseas modificar tu página web o aplicación en función del tipo de dispositivo (como una impresora o una pantalla) o de características y parámetros específicos (como la resolución de la pantalla o el ancho del viewport del navegador).</p>		
+						<small>Fuente: <a href="https://developer.mozilla.org/es/docs/CSS/Media_queries" target="_blank">MDN: CSS media queries</a>	</small>
+					</section>
+					<section>
+						<h2>Media queries</h2>
+						<p>Las media queries (en español "consultas de medios") son útiles cuando deseas modificar tu página web o aplicación en función del tipo de dispositivo (como una impresora o una pantalla) o de características y parámetros específicos (como la resolución de la pantalla o el ancho del viewport del navegador).</p>		
+						<p>Cada día se incorporan nuevos anchos de pantalla, dependiendo de los diferentes dispositivos existentes, en esta pagina, se puede encontrar los principales <a href="https://css-tricks.com/snippets/css/media-queries-for-standard-devices/" target="_blank">media queries</a>, dependiendo de los dispositivos.</p>
+					</section>
+					<!-- https://medium.com/@sawanrathod/css3-media-query-cheat-sheet-1fab77ea3cb8
+
+					https://medium.com/beginners-guide-to-mobile-web-development/media-queries-54a1a463356f
+
+					https://www.freecodecamp.org/news/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862/ -->
+					<section>
+						<h2>Media queries</h2>
+						<p>El secreto detras del diseño responsive, es simplemente definir breakpoints (Puntos de quiebra) donde se activan estilos especificos para la versión del viewport que esta visualizando el navegador.</p>
+						<p>Una forma de probar si un sitio es responsive, es simplemente haciendo un resize o redimensionamiento del ancho del navegador o por medio de las herramientas de desarrollador. (Click derecho inspeccionar)</p>
+					</section>
+					<section>
+						<h2>Media queries - breakpoints</h2>
+						<a href="img/media_queries_breakpoints.jpg" target="_blank">
+						<img src="img/media_queries_breakpoints.jpg" alt="">
+						</a>
+						<br>
+						<small>Ejemplos <a href="https://mediaqueri.es/" target="_blank">media queries</a></small>
+					</section>
+					<section>
+						<h2>Media querie para mobile</h2>
+						<pre>
+							<code data-trim data-noescape>
+/*Celular*/
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+   /*
+	Estilos que se aplicaran en celular
+   */
+    
+}
+							</code>
+						</pre>
+						<small>Portrait - retrato: Posición vertical</small>
+						<small>Landscape - apaisado: Posición horizontal</small>
+					</section>
+					<section>
+						<h2>Media querie para tablet</h2>
+						<pre>
+							<code data-trim data-noescape>
+/*Ipad*/
+/* Portrait and Landscape */
+@media only screen 
+	and (min-device-width: 768px) 
+	and (max-device-width: 1024px) 
+	and (-webkit-min-device-pixel-ratio: 1) {
+
+		/*
+		Estilos que se aplicaran en tablet
+	    */
+	
+}
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h2>Estilos para escritorio</h2>
+						<pre>
+							<code>
+/*Escritorio*/
+/* ----------- Non-Retina Screens ----------- */
+@media screen 
+	and (min-device-width: 1024px) 
+	and (max-device-width: 1600px) 
+	and (-webkit-min-device-pixel-ratio: 1) {
+	
+		/*
+		Estilos que se aplicaran en laptop o escritorio
+	    */
+	
+}	
+							</code>
+						</pre>
+						<small>
+							<a href="https://codepen.io/xaca/pen/LYVryYx">Ejemplo, cambio de fondo dependiendo el ancho</a>, recuerde usar la vista de diseño adaptable.
+						</small>
+					</section>
+					<section>
+						<h2>Media queries - recomendaciones</h2>
+						<ul>
+							<li>
+								Los estilos que son generales para el sitio, se ponen por fuera de los media queries.
+							</li>
+							<li>
+								Se recomienda crear primero el diseño de celular y de ahí escalar a la versión de tablet y escritorio. (mobile first)
+							</li>
+							<li>
+								El diseño se vuelve condicional, es decir aplicamos reglas para cambiar la forma como se visualiza un elemento por ejemplo el display, o el orden de visualización por ejemplo las direcciones de flexbox.
+							</li>
+							<li>
+								Se recomienda usar los diferentes selectores, para poder especificar que va a cambiar en cada breakpoint.
+							</li>
+						</ul>
 					</section>
 				</section>
 				<!-- <section>
