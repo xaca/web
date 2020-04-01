@@ -1,0 +1,196 @@
+body{               
+    margin:0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Media queries: https://codepen.io/xaca/pen/LYVryYx */
+/*Celular*/
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+    body{
+        background: url(../img/wireframe_mobile_480.jpg);
+        background-color:yellow;
+        background-repeat: no-repeat;
+    }
+    
+    #menu{
+        background-color: antiquewhite;
+        width: 480px;
+        /*height: 264px;*/
+    }
+    #cabezote{
+        background-color:cornflowerblue;
+        width: 480px;
+        height: 777px; 
+        margin-top: -20px;
+    }
+    #servicios{
+        background-color:crimson;
+        width: 480px;
+        height: 1678px; 
+        margin-top: -20px;
+    }
+    #pata{
+        background-color:hotpink;
+        width: 480px;
+        height: 386px; 
+    }
+    #controles_menu{
+        background-color: burlywood;
+        width: 480px;
+        height: 60px;
+        position: relative;
+    }
+    #controles_menu img{
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+    #controles_menu button{
+        width: 150px;
+        height:60px;
+        background-color: lemonchiffon;
+        border: 1px solid whitesmoke;
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+    }
+    #lista_menu{
+        display: none;
+    }
+    #imagen_cabezote{
+        max-width: 90%;
+        margin:20px;
+    }
+    .titulo_seccion{            
+        padding-top: 50px;
+        text-align: center;
+    }
+    #entradilla_cabezote{
+        padding-left: 20px;
+    }
+    .parrafo_seccion{
+        width: 400px;
+        margin: 0 auto;            
+    }
+    .descripcion_cabezote{
+        margin-top:40px;
+    }
+    
+    .parrafo_breve{
+        width: 350px;
+        margin:0 auto;
+        text-decoration:underline;
+        margin-top: 45px;
+    }
+    .imagen_svg{
+        width: 50px;
+        height: 50px;
+    }
+    #contenedor_iconos_cabezote{
+        width: 350px;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 30px;
+    }
+    .contenedor_servicio{
+        text-align: center;
+        width: 400px;
+        margin:0 auto;
+        margin-bottom: 70px;
+    }
+    .contenedor_servicio img{
+        max-width: 50%;
+    }
+    .boton_servicios{
+        width: 200px;
+        height: 50px;
+        background-color: khaki;
+        color:black;
+        cursor: pointer;
+        margin-top:30px;
+    }
+    #call_to_action_servicios{
+        margin-top:-30px;
+        text-align: center;
+    }
+    
+    #call_to_action_servicios button{
+        background-color: greenyellow;
+        width: 300px;
+        height: 70px;
+        color:indigo;  
+        font-weight: bold;          
+    }
+    .item_pata{
+        display: block;
+        background-color: mediumslateblue;
+        height: 65px;
+        text-align: center;
+        line-height: 68px;
+    }
+    #item1_pata{
+        background-color: midnightblue;
+    }
+    
+    #formulario{
+        width: 480px;
+        background-color: olive;
+        height: 240px;            
+        margin-top: -20px;
+    }
+    #email_formulario{
+        width: 300px;
+        height: 35px;
+        
+    }
+    #formulario button{
+        width: 305px;
+        margin-top: 5px;
+    }
+    #formulario div{
+        width: 320px;
+        margin: 0 auto;            
+    }
+    
+}
+
+/*Ipad*/
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+    body{
+        background: url(../img/wireframe_tablet_768.jpg);
+        /*background-color:red;*/
+        background-repeat: no-repeat;
+    }
+    
+    #cabezote, #formulario, #pata, #servicios{
+        display: none;
+    }  
+    #menu{
+        background-color: darkcyan;
+        margin-top: -16px;
+        height: 73px;
+        padding-top: 5px;
+    }
+    #controles_menu{
+        display: none;
+    }
+    #lista_menu{
+        text-align: center;
+    }
+    #lista_menu li{
+        display: inline-block;
+        background-color: cornflowerblue;
+        vertical-align: middle;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,59 @@
+https://mediaqueri.es/efo/
+https://mediaqueri.es/crr/
+https://blog.prototypr.io/atomic-design-dise%C3%B1o-at%C3%B3mico-113411bc7816
+
+https://www.tilde.io
+
+https://www.screenshotmachine.com/ (El mejor, captura responsive)
+https://css-tricks.com/full-page-screenshots-browsers/
+https://snapx.io/
+https://web-capture.net/
+
+
+Cambios en mobile
+
+Ajuste menu
+
+#controles_menu{
+        background-color: burlywood;
+        width: 480px;
+        height: 60px;
+        position: relative;
+    }
+    #controles_menu img{
+        position: absolute;
+        top:10px;
+        left: 10px;
+    }
+    #controles_menu button{
+        width: 150px;
+        height:60px;
+        background-color: lemonchiffon;
+        border: 1px solid whitesmoke;
+        cursor: pointer;
+
+        position: absolute;
+        right: 0;
+    }
+
+Ajustes en tablet
+
+#menu{
+        background-color: green;
+        margin-top:-16px;
+    }  
+    #controles_menu{
+        display: none;
+    }
+    #lista_menu{
+        display: block; 
+        text-align: center;
+        padding-top:10px;       
+    }
+    #lista_menu li{
+        display:inline-block;
+        cursor:pointer;
+        background:cornflowerblue;
+        color:cornsilk;
+        vertical-align: middle;
+    }    
