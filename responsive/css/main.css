@@ -2,7 +2,61 @@ body{
     margin:0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-
+.titulo_seccion{            
+    padding-top: 50px;
+    text-align: center;
+}
+.parrafo_breve{
+    width: 350px;
+    margin:0 auto;
+    text-decoration:underline;
+    margin-top: 45px;
+}
+.imagen_svg{
+    width: 50px;
+    height: 50px;
+}
+#imagen_cabezote{
+    display: block;
+    margin: 20px auto;
+}
+.descripcion_cabezote{
+    margin-top:40px;
+}    
+#contenedor_iconos_cabezote{
+    width: 350px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 30px;
+}
+.parrafo_seccion{
+    width: 400px;
+    margin: 0 auto;            
+}  
+#call_to_action_servicios{
+    margin-top:-30px;
+    text-align: center;
+}
+#email_formulario{
+    width: 300px;
+    height: 35px;
+    
+}
+#formulario button{
+    width: 305px;
+    margin-top: 5px;
+}
+#formulario div{
+    width: 320px;
+    margin: 0 auto;            
+}
+#call_to_action_servicios button{
+    background-color: greenyellow;
+    width: 300px;
+    height: 70px;
+    color:indigo;  
+    font-weight: bold;          
+}
 /* Media queries: https://codepen.io/xaca/pen/LYVryYx */
 /*Celular*/
 /* Portrait and Landscape */
@@ -61,42 +115,13 @@ body{
     }
     #lista_menu{
         display: none;
-    }
+    }    
     #imagen_cabezote{
         max-width: 90%;
-        margin:20px;
-    }
-    .titulo_seccion{            
-        padding-top: 50px;
-        text-align: center;
     }
     #entradilla_cabezote{
         padding-left: 20px;
-    }
-    .parrafo_seccion{
-        width: 400px;
-        margin: 0 auto;            
-    }
-    .descripcion_cabezote{
-        margin-top:40px;
-    }
-    
-    .parrafo_breve{
-        width: 350px;
-        margin:0 auto;
-        text-decoration:underline;
-        margin-top: 45px;
-    }
-    .imagen_svg{
-        width: 50px;
-        height: 50px;
-    }
-    #contenedor_iconos_cabezote{
-        width: 350px;
-        margin: 0 auto;
-        text-align: center;
-        margin-top: 30px;
-    }
+    }      
     .contenedor_servicio{
         text-align: center;
         width: 400px;
@@ -114,18 +139,14 @@ body{
         cursor: pointer;
         margin-top:30px;
     }
-    #call_to_action_servicios{
-        margin-top:-30px;
-        text-align: center;
+
+    #formulario{
+        width: 480px;
+        background-color: olive;
+        height: 240px;            
+        margin-top: -20px;
     }
     
-    #call_to_action_servicios button{
-        background-color: greenyellow;
-        width: 300px;
-        height: 70px;
-        color:indigo;  
-        font-weight: bold;          
-    }
     .item_pata{
         display: block;
         background-color: mediumslateblue;
@@ -136,27 +157,10 @@ body{
     #item1_pata{
         background-color: midnightblue;
     }
-    
-    #formulario{
-        width: 480px;
-        background-color: olive;
-        height: 240px;            
-        margin-top: -20px;
+    #derechos_reservados_pata
+    {
+        display: none;
     }
-    #email_formulario{
-        width: 300px;
-        height: 35px;
-        
-    }
-    #formulario button{
-        width: 305px;
-        margin-top: 5px;
-    }
-    #formulario div{
-        width: 320px;
-        margin: 0 auto;            
-    }
-    
 }
 
 /*Ipad*/
@@ -171,26 +175,93 @@ body{
         /*background-color:red;*/
         background-repeat: no-repeat;
     }
-    
-    #cabezote, #formulario, #pata, #servicios{
+    /*Este estilo se usa para ir modificando cada estilo a la vez */
+    /*section, footer{
         display: none;
-    }  
+    }*/
     #menu{
         background-color: darkcyan;
-        margin-top: -16px;
-        height: 73px;
-        padding-top: 5px;
+        margin-top:-16px; 
+        height: 73px;       
     }
     #controles_menu{
         display: none;
     }
     #lista_menu{
         text-align: center;
+        padding-top: 11px;
     }
     #lista_menu li{
         display: inline-block;
-        background-color: cornflowerblue;
         vertical-align: middle;
         cursor: pointer;
+    }
+    #cabezote{
+        background-color:deepskyblue;
+        width: 768px;
+        height: 804px; 
+        margin-top: -20px;
+    }
+    #imagen_cabezote{
+        max-width: 60%;        
+    }
+    #entradilla_cabezote{
+        width: 400px;
+        margin: 20px auto;
+    } 
+    #servicios{
+        background-color:crimson;
+        width: 768px;
+        height: 948px; 
+        margin-top: -20px;
+        text-align: center;
+    }
+    .parrafo_tablet{
+        width: 186px;
+        margin: 0 auto;
+        text-align: left;
+    }
+    .contenedor_servicio{
+        text-align: center;
+        width: 235px;
+        margin:0 auto;
+        margin-bottom: 70px;
+        display: inline-block;
+    }
+    .contenedor_servicio img{
+        max-width: 88%;
+    }
+    .boton_servicios{
+        width: 200px;
+        height: 50px;
+        background-color: khaki;
+        color:black;
+        cursor: pointer;
+        margin-top:30px;
+    }
+    #call_to_action_servicios{
+        margin-top: 0px;
+    }
+    #formulario{
+        width: 768px;
+        background-color: olive;
+        height: 240px;            
+        margin-top: -20px;
+    }   
+    #pata{
+        text-align: center;
+        background-color: gainsboro;
+        height: 107px;
+    }
+    .item_pata{
+        height: 65px;
+        text-align: center;
+        line-height: 68px;
+        text-decoration: none;
+    }
+    
+    #derechos_reservados_pata
+    {
+        margin-bottom: 20px;
     }
 }
