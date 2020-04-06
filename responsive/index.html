@@ -5,19 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="css/main.css">
-    <style>
-        
-        
-    </style>
+    <link rel="stylesheet" href="css/animate.css">
+    <script>
+        var boton, lista;
+        window.onload = ()=>{
+            boton = document.getElementById("boton_menu");
+            lista = document.getElementById("lista_menu");
+            boton.addEventListener("click",()=>{
+                lista.classList.toggle("ocultar");
+                lista.classList.add("animated","fadeIn");
+                boton.innerHTML = boton.innerHTML=="v Menú"?"^ Menú":"v Menú";
+            });
+        }
+    </script>    
 </head>
 <body>
    <nav id="menu">
        <!-- Menú de navegación , funciona similar a un div -->
        <div id="controles_menu">
            <img src="img/logo_480.png" alt="">
-           <button>Menú</button>
+           <button id="boton_menu">v Menú</button>
        </div>
-       <ul id="lista_menu">
+       <ul id="lista_menu" class="ocultar">
            <li><img src="img/logo_768.png" alt=""></li>
            <li>Item 1</li>
            <li>Item 2</li>
@@ -96,6 +105,5 @@
             <a href="mailto:contacto@prueba.com">contacto@prueba.com</a>
         </div>
    </footer>
-
 </body>
 </html>

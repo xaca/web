@@ -12,13 +12,13 @@ body{
     text-decoration:underline;
     margin-top: 45px;
 }
+#imagen_cabezote{
+    display: block;
+    margin:20px auto;
+}
 .imagen_svg{
     width: 50px;
     height: 50px;
-}
-#imagen_cabezote{
-    display: block;
-    margin: 20px auto;
 }
 .descripcion_cabezote{
     margin-top:40px;
@@ -40,7 +40,6 @@ body{
 #email_formulario{
     width: 300px;
     height: 35px;
-    
 }
 #formulario button{
     width: 305px;
@@ -69,33 +68,32 @@ body{
         background: url(../img/wireframe_mobile_480.jpg);
         background-color:yellow;
         background-repeat: no-repeat;
-    }
-    
+    }    
     #menu{
         background-color: antiquewhite;
-        width: 480px;
-        /*height: 264px;*/
+        /*width: 480px;
+        height: 264px;*/
     }
     #cabezote{
         background-color:cornflowerblue;
-        width: 480px;
+        /*width: 480px;*/
         height: 777px; 
         margin-top: -20px;
     }
     #servicios{
         background-color:crimson;
-        width: 480px;
+        /* width: 480px; */
         height: 1678px; 
         margin-top: -20px;
     }
     #pata{
         background-color:hotpink;
-        width: 480px;
+        /* width: 480px; */
         height: 386px; 
     }
     #controles_menu{
         background-color: burlywood;
-        width: 480px;
+        /*width: 480px;*/
         height: 60px;
         position: relative;
     }
@@ -113,9 +111,28 @@ body{
         position: absolute;
         right: 0;
     }
-    #lista_menu{
+    .ocultar{
         display: none;
+    }
+    #lista_menu li{
+        list-style: none;  
+        margin-left: -38px;
+        height: 22px; 
+        cursor: pointer;     
+    }
+    #lista_menu li:nth-child(2){
+        margin-top: -16px;
+    }
+    #lista_menu li:nth-child(2n){
+        background: bisque;
+    }
+    #lista_menu{ 
+        text-align: center;       
+        height: 90px;
     }    
+    #lista_menu li:first-child{
+        display: none;
+    }
     #imagen_cabezote{
         max-width: 90%;
     }
@@ -141,7 +158,7 @@ body{
     }
 
     #formulario{
-        width: 480px;
+        /* width: 480px; */
         background-color: olive;
         height: 240px;            
         margin-top: -20px;
@@ -198,7 +215,7 @@ body{
     }
     #cabezote{
         background-color:deepskyblue;
-        width: 768px;
+        /* width: 768px; */
         height: 804px; 
         margin-top: -20px;
     }
@@ -211,7 +228,7 @@ body{
     } 
     #servicios{
         background-color:crimson;
-        width: 768px;
+        /* width: 768px; */
         height: 948px; 
         margin-top: -20px;
         text-align: center;
@@ -243,7 +260,7 @@ body{
         margin-top: 0px;
     }
     #formulario{
-        width: 768px;
+        /* width: 768px; */
         background-color: olive;
         height: 240px;            
         margin-top: -20px;
