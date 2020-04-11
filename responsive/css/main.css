@@ -215,7 +215,6 @@ body{
     }
     #cabezote{
         background-color:deepskyblue;
-        /* width: 768px; */
         height: 804px; 
         margin-top: -20px;
     }
@@ -228,10 +227,9 @@ body{
     } 
     #servicios{
         background-color:crimson;
-        /* width: 768px; */
-        height: 948px; 
         margin-top: -20px;
         text-align: center;
+        padding-bottom: 20px;
     }
     .parrafo_tablet{
         width: 186px;
