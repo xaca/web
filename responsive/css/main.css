@@ -296,7 +296,33 @@ body{
     #controles_menu{
         display: none;
     }
+    #menu{
+        background: honeydew;
+        margin-top: -16px;
+        height: 70px;
+    }
     #lista_menu li{
         margin-right: 10px;
+    }
+    #cabezote{
+        background-color: powderblue;
+        margin-top: -20px;
+    }
+    #entradilla_cabezote{
+        text-align: center;
+        width: 800px;
+        margin:10px auto;
+    }
+    #principal_cabezote{
+        width: 1280px;
+        display: flex;
+        margin:0 auto;
+    }
+    #imagen_cabezote{
+        margin-right: 30px;
+    }
+    #descripcion_cabezote{
+        margin-top: 310px;
+        padding: 20px;
     }
 }
