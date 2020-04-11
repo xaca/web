@@ -60,9 +60,9 @@ body{
 /*Celular*/
 /* Portrait and Landscape */
 @media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 1) {
+  and (min-width: 320px) 
+  and (max-width: 480px)
+  /*and (-webkit-min-device-pixel-ratio: 1)*/ {
 
     body{
         background: url(../img/wireframe_mobile_480.jpg);
@@ -183,9 +183,9 @@ body{
 /*Ipad*/
 /* Portrait and Landscape */
 @media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
+  and (min-width: 480px) 
+  and (max-width: 1024px) 
+  /*and (-webkit-min-device-pixel-ratio: 1)*/ {
 
     body{
         background: url(../img/wireframe_tablet_768.jpg);
@@ -280,5 +280,12 @@ body{
     #derechos_reservados_pata
     {
         margin-bottom: 20px;
+    }
+}
+
+/*Escritorio*/
+@media only screen and (min-width: 1024px) {
+    body {
+      background-color:lavender;
     }
 }
