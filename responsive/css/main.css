@@ -69,6 +69,14 @@ body{
     text-decoration: none;
     color: midnightblue;
 }
+.boton_servicios{
+    width: 200px;
+    height: 50px;
+    background-color: khaki;
+    color:black;
+    cursor: pointer;
+    margin-top:30px;
+}
 /* Media queries: https://codepen.io/xaca/pen/LYVryYx */
 /*Celular*/
 /* Portrait and Landscape */
@@ -84,29 +92,23 @@ body{
     }    
     #menu{
         background-color: antiquewhite;
-        /*width: 480px;
-        height: 264px;*/
     }
     #cabezote{
         background-color:cornflowerblue;
-        /*width: 480px;*/
         height: 777px; 
         margin-top: -20px;
     }
     #servicios{
         background-color:crimson;
-        /* width: 480px; */
         height: 1678px; 
         margin-top: -20px;
     }
     #pata{
         background-color:hotpink;
-        /* width: 480px; */
         height: 386px; 
     }
     #controles_menu{
         background-color: burlywood;
-        /*width: 480px;*/
         height: 60px;
         position: relative;
     }
@@ -170,14 +172,11 @@ body{
         cursor: pointer;
         margin-top:30px;
     }
-
     #formulario{
-        /* width: 480px; */
         background-color: olive;
         height: 240px;            
         margin-top: -20px;
     }
-    
     .item_pata{
         display: block;
         background-color: mediumslateblue;
@@ -188,8 +187,7 @@ body{
     #item1_pata{
         background-color: midnightblue;
     }
-    #derechos_reservados_pata
-    {
+    #derechos_reservados_pata{
         display: none;
     }
 }
@@ -251,19 +249,10 @@ body{
     .contenedor_servicio img{
         max-width: 88%;
     }
-    .boton_servicios{
-        width: 200px;
-        height: 50px;
-        background-color: khaki;
-        color:black;
-        cursor: pointer;
-        margin-top:30px;
-    }
     #call_to_action_servicios{
         margin-top: 0px;
     }
     #formulario{
-        /* width: 768px; */
         background-color: olive;
         height: 240px;            
         margin-top: -20px;
@@ -279,9 +268,7 @@ body{
         line-height: 68px;
         text-decoration: none;
     }
-    
-    #derechos_reservados_pata
-    {
+    #derechos_reservados_pata{
         margin-bottom: 20px;
     }
 }
@@ -314,15 +301,72 @@ body{
         margin:10px auto;
     }
     #principal_cabezote{
-        width: 1280px;
+        width: 70%;
         display: flex;
-        margin:0 auto;
-    }
+        margin:0 auto;        
+    }    
     #imagen_cabezote{
         margin-right: 30px;
     }
     #descripcion_cabezote{
         margin-top: 310px;
         padding: 20px;
+    }
+    #servicios{
+        background: lightgoldenrodyellow;
+        margin-top: -20px;
+    }
+    .contenedor_servicio{
+        display: flex;
+        width: 70%;
+        margin: 70px auto;
+    }
+    .contenedor_servicio div{
+        position: relative;
+        width:60%;
+    }
+    .contenedor_servicio div h2{
+        position: absolute;
+        top:50%;
+        left:20px;
+        width: 400px;
+    }
+    .contenedor_servicio div p{
+        position: absolute;
+        top:65%;
+        left:20px;
+    }
+    .contenedor_servicio div button{
+        position: absolute;
+        top:85%;
+        left:20px;
+    }
+    .parrafo_breve{
+        margin-bottom: 20px;
+    }
+    #call_to_action_servicios{
+        padding-bottom: 30px;
+    }
+    #formulario{
+        background: whitesmoke;
+        margin-top: -20px;
+        height: 220px;
+    }
+    #formulario div{
+        width: 622px;
+    }
+    #pata{
+        text-align: center;
+        background-color: gainsboro;
+        height: 107px;
+    }
+    .item_pata{
+        height: 65px;
+        text-align: center;
+        line-height: 68px;
+        text-decoration: none;
+    }
+    #derechos_reservados_pata{
+        margin-bottom: 20px;
     }
 }
