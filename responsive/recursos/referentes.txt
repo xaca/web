@@ -13,3 +13,7 @@ Contenedor que mantiene la proporcion de aspecto
 
 https://css-tricks.com/aspect-ratio-boxes/
 https://ratiobuddy.com/
+
+https://css-tricks.com/optimizing-large-scale-displays/
+http://screensiz.es/
+https://responsiveimages.org/
