@@ -6,6 +6,15 @@
     <title></title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/animate.css">
+    <style>
+        #flecha{
+            position: fixed;
+            right:10px;
+            bottom: 20px;
+            width: 40px;
+            height: 40px;
+        }
+    </style>
     <script>
         var boton, lista;
         window.onload = ()=>{
@@ -35,6 +44,14 @@
             var trackLength = docheight - winheight
             var pctScrolled = Math.floor(scrollTop/trackLength * 100) // gets percentage scrolled (ie: 80 or NaN if tracklength == 0)
             console.log(pctScrolled + '% scrolled')
+            if(pctScrolled<10)
+            {
+                flecha.classList.add("ocultar_flecha");
+            }
+            else{
+                flecha.classList.remove("ocultar_flecha");
+            }
+            
         }
         
         window.addEventListener("scroll", function(){
@@ -44,6 +61,9 @@
     </script>    
 </head>
 <body>
+   <div id="flecha" class="ocultar_flecha">
+      <a href="#menu"><img src="img/noun_up_849687.svg" alt=""></a>
+   </div> 
    <nav id="menu">
        <!-- Menú de navegación , funciona similar a un div -->
        <div id="controles_menu">
