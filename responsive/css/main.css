@@ -56,13 +56,34 @@ body{
     color:indigo;  
     font-weight: bold;          
 }
+#lista_menu{
+    text-align: center;
+    padding-top: 11px;
+}
+#lista_menu li{
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+#lista_menu a{
+    text-decoration: none;
+    color: midnightblue;
+}
+.boton_servicios{
+    width: 200px;
+    height: 50px;
+    background-color: khaki;
+    color:black;
+    cursor: pointer;
+    margin-top:30px;
+}
 /* Media queries: https://codepen.io/xaca/pen/LYVryYx */
 /*Celular*/
 /* Portrait and Landscape */
 @media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 1) {
+  and (min-width: 320px) 
+  and (max-width: 480px)
+  /*and (-webkit-min-device-pixel-ratio: 1)*/ {
 
     body{
         background: url(../img/wireframe_mobile_480.jpg);
@@ -71,29 +92,23 @@ body{
     }    
     #menu{
         background-color: antiquewhite;
-        /*width: 480px;
-        height: 264px;*/
     }
     #cabezote{
         background-color:cornflowerblue;
-        /*width: 480px;*/
         height: 777px; 
         margin-top: -20px;
     }
     #servicios{
         background-color:crimson;
-        /* width: 480px; */
         height: 1678px; 
         margin-top: -20px;
     }
     #pata{
         background-color:hotpink;
-        /* width: 480px; */
         height: 386px; 
     }
     #controles_menu{
         background-color: burlywood;
-        /*width: 480px;*/
         height: 60px;
         position: relative;
     }
@@ -118,7 +133,8 @@ body{
         list-style: none;  
         margin-left: -38px;
         height: 22px; 
-        cursor: pointer;     
+        cursor: pointer; 
+        display: block;    
     }
     #lista_menu li:nth-child(2){
         margin-top: -16px;
@@ -156,14 +172,11 @@ body{
         cursor: pointer;
         margin-top:30px;
     }
-
     #formulario{
-        /* width: 480px; */
         background-color: olive;
         height: 240px;            
         margin-top: -20px;
     }
-    
     .item_pata{
         display: block;
         background-color: mediumslateblue;
@@ -174,8 +187,7 @@ body{
     #item1_pata{
         background-color: midnightblue;
     }
-    #derechos_reservados_pata
-    {
+    #derechos_reservados_pata{
         display: none;
     }
 }
@@ -183,9 +195,9 @@ body{
 /*Ipad*/
 /* Portrait and Landscape */
 @media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
+  and (min-width: 480px) 
+  and (max-width: 1024px) 
+  /*and (-webkit-min-device-pixel-ratio: 1)*/ {
 
     body{
         background: url(../img/wireframe_tablet_768.jpg);
@@ -197,25 +209,15 @@ body{
         display: none;
     }*/
     #menu{
-        background-color: darkcyan;
+        background-color:lightcyan;
         margin-top:-16px; 
         height: 73px;       
     }
     #controles_menu{
         display: none;
-    }
-    #lista_menu{
-        text-align: center;
-        padding-top: 11px;
-    }
-    #lista_menu li{
-        display: inline-block;
-        vertical-align: middle;
-        cursor: pointer;
-    }
+    }     
     #cabezote{
         background-color:deepskyblue;
-        /* width: 768px; */
         height: 804px; 
         margin-top: -20px;
     }
@@ -228,10 +230,9 @@ body{
     } 
     #servicios{
         background-color:crimson;
-        /* width: 768px; */
-        height: 948px; 
         margin-top: -20px;
         text-align: center;
+        padding-bottom: 20px;
     }
     .parrafo_tablet{
         width: 186px;
@@ -248,19 +249,10 @@ body{
     .contenedor_servicio img{
         max-width: 88%;
     }
-    .boton_servicios{
-        width: 200px;
-        height: 50px;
-        background-color: khaki;
-        color:black;
-        cursor: pointer;
-        margin-top:30px;
-    }
     #call_to_action_servicios{
         margin-top: 0px;
     }
     #formulario{
-        /* width: 768px; */
         background-color: olive;
         height: 240px;            
         margin-top: -20px;
@@ -276,9 +268,111 @@ body{
         line-height: 68px;
         text-decoration: none;
     }
-    
-    #derechos_reservados_pata
-    {
+    #derechos_reservados_pata{
         margin-bottom: 20px;
+    }
+}
+
+/*Escritorio*/
+@media only screen and (min-width: 1024px) {
+    body {
+        background: url(../img/wireframe_desktop_1280.jpg) top center;
+        background-color:lavender;
+        background-repeat: no-repeat;
+    }
+    #controles_menu{
+        display: none;
+    }
+    #menu{
+        background: honeydew;
+        margin-top: -16px;
+        height: 70px;
+    }
+    #lista_menu li{
+        margin-right: 10px;
+    }
+    #cabezote{
+        background-color: powderblue;
+        margin-top: -20px;
+    }
+    #entradilla_cabezote{
+        text-align: center;
+        width: 800px;
+        margin:10px auto;
+    }    
+    #servicios{
+        background: lightgoldenrodyellow;
+        margin-top: -20px;
+    }
+    .contenedor_servicio{
+        display: flex;
+        width: 70%;
+        margin: 70px auto;
+    }
+    .contenedor_servicio div{
+        position: relative;
+        width:60%;
+    }
+    .contenedor_servicio div h2{
+        position: absolute;
+        top:50%;
+        left:20px;
+        width: 400px;
+    }
+    .contenedor_servicio div p{
+        position: absolute;
+        top:65%;
+        left:20px;
+    }
+    .contenedor_servicio div button{
+        position: absolute;
+        top:85%;
+        left:20px;
+    }
+    .parrafo_breve{
+        margin-bottom: 20px;
+    }
+    #call_to_action_servicios{
+        padding-bottom: 30px;
+    }
+    #formulario{
+        background: whitesmoke;
+        margin-top: -20px;
+        height: 220px;
+    }
+    #formulario div{
+        width: 622px;
+    }
+    #pata{
+        text-align: center;
+        background-color: gainsboro;
+        height: 107px;
+    }
+    .item_pata{
+        height: 65px;
+        text-align: center;
+        line-height: 68px;
+        text-decoration: none;
+    }
+    #derechos_reservados_pata{
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (min-width: 1280px){
+    #principal_cabezote{
+        width: 70%;
+        display: flex;
+        margin:0 auto;
+    }   
+    #imagen_cabezote{
+        width: 60%;
+        max-width: 720px;
+        min-width: 360px;
+        margin-right: 30px;        
+    }
+    #descripcion_cabezote{
+        margin-top: 310px;
+        padding: 20px;
     }
 }
