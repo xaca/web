@@ -37,16 +37,7 @@ body{
     margin-top:-30px;
     text-align: center;
 }
-#email_formulario{
-    width: 300px;
-    height: 35px;
-}
-#formulario button{
-    width: 305px;
-    margin-top: 5px;
-}
 #formulario div{
-    width: 320px;
     margin: 0 auto;            
 }
 #call_to_action_servicios button{
@@ -103,8 +94,8 @@ body{
     }
     #servicios{
         background-color:crimson;
-        height: 1678px; 
         margin-top: -20px;
+        padding-bottom: 20px;
     }
     #pata{
         background-color:hotpink;
@@ -176,9 +167,9 @@ body{
         margin-top:30px;
     }
     #formulario{
-        background-color: olive;
-        height: 240px;            
+        background-color:mintcream;        
         margin-top: -20px;
+        padding-bottom: 20px;
     }
     .item_pata{
         display: block;
@@ -256,9 +247,9 @@ body{
         margin-top: 0px;
     }
     #formulario{
-        background-color: olive;
-        height: 240px;            
+        background-color: lightcyan;         
         margin-top: -20px;
+        padding-bottom: 20px;
     }   
     #pata{
         text-align: center;
@@ -337,19 +328,16 @@ body{
     }
     #call_to_action_servicios{
         padding-bottom: 30px;
-    }
-    #formulario{
-        background: whitesmoke;
-        margin-top: -20px;
-        height: 220px;
-    }
-    #formulario div{
-        width: 622px;
-    }
+    }    
     #pata{
         text-align: center;
         background-color: gainsboro;
         height: 107px;
+    }
+    #formulario{
+        background: whitesmoke;
+        margin-top: -20px;
+        padding-bottom: 20px;
     }
     .item_pata{
         height: 65px;
@@ -373,6 +361,11 @@ body{
         max-width: 720px;
         min-width: 360px;
         margin-right: 30px;        
+    }
+    #formulario{
+        background: whitesmoke;
+        margin-top: -20px;
+        padding-bottom: 20px;
     }
     #descripcion_cabezote{
         margin-top: 310px;
