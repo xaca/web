@@ -1,6 +1,7 @@
 body{               
     margin:0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow-x: hidden;
 }
 .titulo_seccion{            
     padding-top: 50px;
@@ -46,7 +47,6 @@ body{
     margin-top: 5px;
 }
 #formulario div{
-    width: 320px;
     margin: 0 auto;            
 }
 #call_to_action_servicios button{
@@ -176,9 +176,9 @@ body{
         margin-top:30px;
     }
     #formulario{
-        background-color: olive;
-        height: 240px;            
+        background-color: olive;          
         margin-top: -20px;
+        padding-bottom: 20px;
     }
     .item_pata{
         display: block;
@@ -256,9 +256,9 @@ body{
         margin-top: 0px;
     }
     #formulario{
-        background-color: olive;
-        height: 240px;            
+        background-color: olive;         
         margin-top: -20px;
+        padding-bottom: 20px;
     }   
     #pata{
         text-align: center;
@@ -278,77 +278,53 @@ body{
 
 /*Escritorio*/
 @media only screen and (min-width: 1024px) {
-    body {
-        background: url(../img/wireframe_desktop_1280.jpg) top center;
-        background-color:lavender;
-        background-repeat: no-repeat;
-    }
-    #controles_menu{
-        display: none;
-    }
-    #menu{
-        background: honeydew;
+   body{
+       background: url(../img/wireframe_desktop_1280.jpg) no-repeat top center;
+   }
+
+   #controles_menu{
+       display: none;
+   }
+
+   #menu{
+        background-color: mintcream;
+        height: 73px;
         margin-top: -16px;
-        height: 70px;
-    }
-    #lista_menu li{
-        margin-right: 10px;
-    }
-    #cabezote{
-        background-color: powderblue;
+   }
+
+   #entradilla_cabezote{
+       text-align: center;
+   }
+
+   #cabezote{
+        background-color: palegreen;
         margin-top: -20px;
-    }
-    #entradilla_cabezote{
-        text-align: center;
-        width: 800px;
-        margin:10px auto;
-    }    
-    #servicios{
-        background: lightgoldenrodyellow;
+   } 
+
+   #servicios{
+      background-color: cornsilk;
+      margin-top: -20px;
+      padding-bottom: 20px;
+   } 
+   .contenedor_servicio{
+       width: 1130px;
+       margin:0 auto;
+       margin-bottom: 70px;
+       display: flex;
+   }   
+   .contenido_servicio{
+        margin-left: 41px;
+        height: 224px;
+        margin-top: 370px;
+   }
+   #formulario{
+        background-color: deeppink;
         margin-top: -20px;
-    }
-    .contenedor_servicio{
-        display: flex;
-        width: 70%;
-        margin: 70px auto;
-    }
-    .contenedor_servicio div{
-        position: relative;
-        width:60%;
-    }
-    .contenedor_servicio div h2{
-        position: absolute;
-        top:50%;
-        left:20px;
-        width: 400px;
-    }
-    .contenedor_servicio div p{
-        position: absolute;
-        top:65%;
-        left:20px;
-    }
-    .contenedor_servicio div button{
-        position: absolute;
-        top:85%;
-        left:20px;
-    }
-    .parrafo_breve{
-        margin-bottom: 20px;
-    }
-    #call_to_action_servicios{
-        padding-bottom: 30px;
-    }
-    #formulario{
-        background: whitesmoke;
-        margin-top: -20px;
-        height: 220px;
-    }
-    #formulario div{
-        width: 622px;
-    }
+        padding-bottom: 20px;
+   } 
     #pata{
         text-align: center;
-        background-color: gainsboro;
+        background-color:yellow;
         height: 107px;
     }
     .item_pata{

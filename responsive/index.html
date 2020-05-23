@@ -107,9 +107,10 @@
    </section>
    <section id="servicios">
         <h2 class="titulo_seccion">Título</h2>
+
         <div class="contenedor_servicio">
             <img src="img/imagen_gente_01.jpg" alt="">
-            <div>
+            <div class="contenido_servicio">
                 <h2>Lorem ipsum dolor sit amet.</h2>
                 <p class="parrafo_seccion parrafo_tablet">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate numquam odit excepturi incidunt et ipsam aliquid quis mollitia nobis repellat illo magni dicta, fugiat ipsum fuga accusamus. Nulla, voluptate eius.</p>
                 <button class="boton_servicios">Enlace</button>
@@ -117,7 +118,7 @@
         </div>
         <div class="contenedor_servicio">
             <img src="img/imagen_gente_02.jpg" alt="">
-            <div>
+            <div class="contenido_servicio">
                 <h2>Lorem ipsum dolor sit amet.</h2>
                 <p class="parrafo_seccion parrafo_tablet">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate numquam odit excepturi incidunt et ipsam aliquid quis mollitia nobis repellat illo magni dicta, fugiat ipsum fuga accusamus. Nulla, voluptate eius.</p>
                 <button class="boton_servicios">Enlace</button>
@@ -125,7 +126,7 @@
         </div>
         <div class="contenedor_servicio">
             <img src="img/imagen_gente_03.jpg" alt="">
-            <div>
+            <div class="contenido_servicio">
                 <h2>Lorem ipsum dolor sit amet.</h2>
                 <p class="parrafo_seccion parrafo_tablet">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate numquam odit excepturi incidunt et ipsam aliquid quis mollitia nobis repellat illo magni dicta, fugiat ipsum fuga accusamus. Nulla, voluptate eius.</p>
                 <button class="boton_servicios">Enlace</button>
@@ -140,10 +141,24 @@
    </section>
    <section id="formulario">
        <h2 class="titulo_seccion">Formulario</h2>
-        <div>
-            <input type="text" id="email_formulario" placeholder="E-mail">
-            <button class="boton_servicios">Registrar</button>
+
+       <!-- MailerLite Universal -->
+        <script>
+        (function(m,a,i,l,e,r){ m['MailerLiteObject']=e;function f(){
+        var c={ a:arguments,q:[]};var r=this.push(c);return "number"!=typeof r?r:f.bind(c.q);}
+        f.q=f.q||[];m[e]=m[e]||f.bind(f.q);m[e].q=m[e].q||f.q;r=a.createElement(i);
+        var _=a.getElementsByTagName(i)[0];r.async=1;r.src=l+'?v'+(~~(new Date().getTime()/1000000));
+        _.parentNode.insertBefore(r,_);})(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
+        
+        var ml_account = ml('accounts', '2022654', 'y2x2r3v6s5', 'load');
+        </script>
+        <!-- End MailerLite Universal -->
+    
+       <div class="ml-form-embed"
+       data-account="2022654:y2x2r3v6s5"
+       data-form="2025694:h7g9e4">
         </div>
+
     </section>
    <footer id="pata">
         <a id="item1_pata" class="item_pata" href="">Item 1</a>
